@@ -46,3 +46,41 @@ timeline control (pause, reverse, seek)"
         Day 3 –ScrollTrigger + Lenis smooth scrolling
 Learn: ScrollTrigger: trigger, start, end, markers · scrub & toggleActions · pin basics · Lenis setup and
 syncing Lenis with ScrollTrigger"
+
+
+
+
+
+        Day 3: ScrollTrigger + Lenis Smooth Scrolling
+        Learning Today:
+
+         Today I learned how to create scroll-driven animations using GSAP ScrollTrigger and how to integrate Lenis Smooth Scrolling with ScrollTrigger for a modern, premium scrolling experience. I covered the following topics:
+
+         ScrollTrigger Basics including trigger, start, end, and markers for controlling when animations begin and end.
+         Scrub & ToggleActions to synchronize animations with the user's scroll and control animation behavior while scrolling forward and backward.
+         Pin Basics to keep sections fixed during scrolling for interactive storytelling effects.
+         Lenis Smooth Scrolling setup and configuration for creating buttery smooth scrolling.
+         Syncing Lenis with ScrollTrigger to ensure smooth scrolling works perfectly with GSAP scroll-based animations.
+
+        Project Completed:
+
+        For today's practice, I built a 5-section scrolling demo using GSAP ScrollTrigger and Lenis. The project includes:
+
+         Smooth scrolling using Lenis integrated with GSAP.
+         Scroll-triggered box animation with scaling and rotation.
+         Text reveal animations from both left and right directions.
+         Horizontal scrolling text section using Pin and Scrub.
+         Scroll-linked image scale animation.
+         Real-time debugging using ScrollTrigger Markers.
+         Responsive full-screen section layout for smooth scrolling practice.
+
+        Through this project, I learned how to build modern scroll-based interactions, synchronize animations with the user's scroll position, and integrate Lenis with ScrollTrigger to create smooth, professional scrolling experiences commonly used in creative and award-winning websites.
+
+ Next Goal:
+ DAY 4 Advanced ScrollTrigger
+       Learn: pinning sections · horizontal scroll inside vertical scroll · scrub-linked progress · parallax layers
+       Build / practice:
+       •  Horizontal-scrolling gallery section
+       •  A pinned section with staged content changes
+       •  Scroll progress indicator
+       •  Multi-layer parallax hero

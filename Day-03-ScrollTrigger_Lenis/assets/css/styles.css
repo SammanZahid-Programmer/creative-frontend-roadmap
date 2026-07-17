@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%
+}
+body{
+    overflow-x: hidden;
+}
+#page1{
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page2{
+    width: 100%;
+    height: 100%;
+    background-color:burlywood;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#page3{
+    width: 100%;
+    height: 100%;
+    background-color:cadetblue;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+     flex-direction: column;
+    gap: 10px;
+}
+#page4{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(42, 126, 221);
+    padding:1% 0;
+     overflow:hidden;
+      padding-right: 2%;
+     
+}
+#page5{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(0, 0, 0);
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+#page6{
+    width: 100%;
+    height: 100%;
+    background-color:rgb(89, 61, 61);
+}
+#box{
+       width: 300px;
+    height: 300px;
+    background-color:yellow;
+}
+#page1
+ .scrl_head{
+      top: 6%;
+    left: 2%;
+    position: absolute;
+}
+#page3 h1{
+    font-size: 60px;
+    position: relative;
+    background-color: brown;
+    padding: 10px 20px;
+}
+
+#page3 h2{
+    font-size: 60px;
+    position: relative;
+    background-color: burlywood;
+      padding: 10px 20px;
+}
+#page4 h1{
+font-size: 40vw;
+font-family: sans-serif;
+font-weight: 600;
+letter-spacing: -26px;
+  white-space:nowrap;
+ 
+}
+#page5 img{
+    height: 56%;
+    width: 45%;
+
+}
