@@ -84,3 +84,40 @@ syncing Lenis with ScrollTrigger"
        •  A pinned section with staged content changes
        •  Scroll progress indicator
        •  Multi-layer parallax hero
+
+
+
+
+ Day 4: Advanced ScrollTrigger
+
+    Learning Today:Today I learned how to create advanced scroll-driven interactions using GSAP ScrollTrigger. I focused on pinning sections, horizontal scrolling inside vertical scrolling, scrub-linked progress animations, and multi-layer parallax effects to create immersive and modern web experiences. I covered the following topics:
+
+    Pinning Sections to keep specific sections fixed during scrolling and create interactive storytelling experiences.
+
+    Horizontal Scroll Inside Vertical Scroll to create horizontal-scrolling content while the user continues scrolling vertically.
+
+    Scrub-Linked Progress to synchronize animations and progress indicators directly with the user's scroll position.
+
+    Parallax Layers to create depth and movement by animating multiple layers at different speeds during scrolling.
+
+    Build / Practice:
+
+    For today's practice, I built an advanced scroll-based website experience using GSAP ScrollTrigger. The project includes:
+
+    • Horizontal-scrolling gallery section with multiple cards.
+    • A pinned storytelling section with staged content changes.
+    • Scroll-linked progress indicator that updates according to the scroll position.
+    • Multi-layer parallax hero section with different movement speeds.
+    • Scroll-triggered image and content animations.
+    • Responsive layout for desktop, tablet, and mobile devices.
+    • Mobile testing to handle pinned sections and touch-based scrolling behavior.
+
+       Through this project, I learned how to combine advanced ScrollTrigger features to create immersive scroll-based interactions and modern storytelling experiences similar to creative agency and product websites. I also learned the importance of testing pinned sections on mobile devices because scrolling and pinning behavior can differ on touch screens.
+
+Next Goal:
+DAY 5 Mouse & Pointer Interactions
+
+Learn: gsap.quickTo / quickSetter · lerp-based following · getBoundingClientRect for magnetic effects
+
+
+
