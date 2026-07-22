@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box{
+    height: 10px;
+    width: 10px;
+    position: fixed;
+    border-radius: 50%;
+    background-color:#fff;
+      z-index: 9999;
+          pointer-events: none;
+    font-size: 2.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.imgbox{
+    height: 32vw;
+    width: 50vw;
+    position: relative;
+
+}
+.imgbox img{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.ovrly{
+   height: 32vw;
+    width: 50vw;  
+    position: absolute;
+    background-color: transparent;
+    z-index: 9;
+     pointer-events: none;
+}
+
+
+
+
+
+
+
+
+.mgntic_section{
+ min-width: 58vh;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 29px;
+    background-color: #070707fa;
+}
+
+.mgntic_para{
+    color: #aaa;
+}
+
+.mgntic_btn{
+    width: 158px;
+    height: 158px;
+    border-radius: 50%;
+    border: none;
+    font-size: clamp(12px,1vw,16px);
+    background-color: #fff;
+}
+
+.att_section{
+    min-height: 100vh;
+    background-color: #f4efe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.att_box{
+    position: relative;
+    width: 1005;
+    height:60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.att_para{
+    position: absolute;
+   top: -79px;
+    left: 19px;
+    color:#666 ;
+}
+
+.att_img{
+      width: 358px;
+    height: 393px;
+    overflow: hidden;
+}
+
+.att_img img{
+      width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.tlt_section{
+    padding: 78px 5.9vw;
+    background-color: black;
+}
+.tlt_box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+.tlt_card{
+    background-color: #1a1a1a;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.tlt_img{
+    height: 258px;
+    overflow: hidden;
+}
+
+.tlt_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tlt_cntnt{
+    padding: 19px;
+    color: white;
+}
+
+@media(max-width:767px){
+    .mgntic_section {
+  min-width: 45vh;
+}
+.main {
+    height: 40%;
+}
+.att_section{
+    min-height: 68vh;
+}
+.att_para {
+    top: 12px;
+    left: 107px;
+}
+.tlt_cntnt h3{
+    font-size: 15px;
+}
+.tlt_cntnt {
+    padding: 11px;
+}
+.tlt_cntnt p{
+    font-size: 14px;
+}
+}
