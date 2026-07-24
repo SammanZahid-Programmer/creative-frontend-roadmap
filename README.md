@@ -121,3 +121,81 @@ Learn: gsap.quickTo / quickSetter · lerp-based following · getBoundingClientRe
 
 
 
+
+   Day 5: Mouse & Pointer Interactions
+
+        Learning Today:Today I learned how to create interactive mouse and pointer-based experiences using GSAP. I focused on optimizing mouse-driven animations with gsap.quickTo() and gsap.quickSetter(), creating smooth lerp-based following effects, and using getBoundingClientRect() to calculate element positions for magnetic interactions. I covered the following topics:
+
+       gsap.quickTo() to create smooth and optimized animations for frequently changing values such as mouse movement and pointer interactions.
+       gsap.quickSetter() to efficiently update properties repeatedly during high-frequency pointer events without creating new tweens each time.
+       Lerp-Based Following to create smooth and natural movement by gradually interpolating an element's position toward the mouse or pointer position.
+       getBoundingClientRect() to calculate the position and dimensions of elements and use pointer coordinates to create accurate magnetic and interactive effects.
+
+       Build / Practice:
+
+       For today's practice, I built an interactive motion playground using GSAP mouse and pointer interactions. The project includes:
+
+       • Custom cursor with interactive hover states that respond to different elements.
+
+       • Magnetic buttons that smoothly attract toward the pointer when the mouse moves near them.
+
+       • Image-following effect where images smoothly follow the cursor position.
+
+       • Tilt-on-hover cards that rotate based on the pointer's position inside the card.
+
+       • Smooth pointer movement using gsap.quickTo() and gsap.quickSetter().
+
+       • Lerp-based following effect for creating natural and fluid motion.
+
+       • getBoundingClientRect() based calculations for accurate pointer positioning and magnetic effects.
+
+       • Responsive behavior with custom cursor and pointer interactions disabled on touch devices using matchMedia("(pointer: fine)").
+
+       Through this project, I learned how to combine GSAP utilities with JavaScript pointer events to create smooth, responsive, and engaging micro-interactions. I also learned how optimized animation techniques such as quickTo(), quickSetter(), and lerp-based movement can improve the performance of frequently triggered mouse interactions. The project helped me understand how small pointer-based interactions can make a website feel more dynamic and interactive.
+
+Next Goal: DAY 6 Micro-interactions + Motion Accessibility _ gsap.matchMedia() for responsive and reduced-motion animations · prefers-reduced-motion · FLIP basics (optional)
+
+
+
+   Day 6: Micro-interactions + Motion Accessibility
+
+       Learning Today:Today I learned how to create polished UI micro-interactions while keeping animations responsive and accessible. I focused on using gsap.matchMedia() to control animations based on screen size and user motion preferences, and explored prefers-reduced-motion to provide a comfortable experience for users who prefer minimal motion. I also explored the basics of FLIP animations. I covered the following topics:
+
+      gsap.matchMedia() to create responsive GSAP animations and apply different animation logic based on device and screen size.
+      prefers-reduced-motion to detect when users have enabled reduced-motion preferences and provide instant or simplified states instead of continuous animations.
+      Animated Navigation / Burger Menu to create a responsive navigation system with smooth open and close transitions and animated menu icon states.
+      Modal Open / Close Transitions to create smooth modal animations using GSAP timelines, overlay transitions, scaling effects, and reversible animations.
+      Card Hover Systems to add polished hover interactions and visual feedback to UI cards.
+      FLIP Basics to understand how the First, Last, Invert, and Play technique can be used to animate layout and position changes smoothly.
+
+      Build / Practice:
+
+       For today's practice, I built a polished and responsive UI component set focused on micro-interactions and motion accessibility. The project includes:
+
+      • Animated responsive navigation with a mobile burger menu.
+
+      • Burger menu icon animation that transforms between menu and close states.
+
+      • Modal component with smooth open and close transitions.
+
+      • Modal overlay animation with click-outside and Escape key support.
+
+      • Interactive cards with hover effects and visual feedback.
+
+      • Button micro-interactions with subtle press and hover animations.
+
+      • Responsive layout for desktop, tablet, and mobile devices.
+
+      • GSAP timelines for coordinating multiple UI animations.
+
+      • gsap.matchMedia() implementation for responsive animation behavior.
+
+      • prefers-reduced-motion support to provide instant states and minimize unnecessary motion for users who prefer reduced animation.
+
+      • Lenis smooth scrolling integrated into the overall motion experience.
+
+      • Accessibility-focused interaction handling with keyboard support and visible focus states.
+
+      Through this project, I learned that modern motion design is not only about creating visually appealing animations but also about making those animations accessible and responsive. I learned how to use gsap.matchMedia() and prefers-reduced-motion to adapt animations according to the user's preferences and device. I also learned how micro-interactions such as navigation transitions, modal animations, card hover effects, and button feedback can make a UI feel more polished and natural when they are used thoughtfully.
+
+Next Goal: DAY 7 – Week 1 Motion Project / Final Integration _Combining GSAP timelines, ScrollTrigger, Lenis, mouse interactions, micro-interactions, responsive animation systems, and reduced-motion accessibility into one polished creative frontend experience.
