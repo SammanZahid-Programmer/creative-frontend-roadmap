@@ -145,3 +145,13 @@ tlt_card.forEach(function(card){
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
