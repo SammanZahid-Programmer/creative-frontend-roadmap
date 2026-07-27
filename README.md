@@ -199,3 +199,125 @@ Next Goal: DAY 6 Micro-interactions + Motion Accessibility _ gsap.matchMedia() f
       Through this project, I learned that modern motion design is not only about creating visually appealing animations but also about making those animations accessible and responsive. I learned how to use gsap.matchMedia() and prefers-reduced-motion to adapt animations according to the user's preferences and device. I also learned how micro-interactions such as navigation transitions, modal animations, card hover effects, and button feedback can make a UI feel more polished and natural when they are used thoughtfully.
 
 Next Goal: DAY 7 – Week 1 Motion Project / Final Integration _Combining GSAP timelines, ScrollTrigger, Lenis, mouse interactions, micro-interactions, responsive animation systems, and reduced-motion accessibility into one polished creative frontend experience.
+
+
+
+
+# Day 7 — Premium Animated Landing Page
+
+A premium, interactive landing page built as the final project of **Week 1: GSAP, Lenis & Language of Motion**.
+
+The goal of this project was to combine the motion and interaction concepts learned throughout Week 1 into one complete, polished landing page experience.
+
+## ✨ Features
+
+- Premium animated landing page
+- GSAP-powered page animations
+- Smooth scrolling with Lenis
+- Choreographed loading screen
+- Animated percentage loader
+- SplitText-style hero text reveal
+- Hero entrance animations
+- Custom animated cursor
+- Magnetic CTA buttons
+- Scroll-driven animations
+- Parallax image effect
+- Scroll-based marquee section
+- Pinned process section
+- Horizontal scroll section
+- Interactive service image previews
+- Tilt-on-hover cards
+- Animated mobile navigation menu
+- Responsive design
+- Reduced-motion accessibility support
+- Smooth transitions and micro-interactions
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- GSAP
+- GSAP ScrollTrigger
+- GSAP MatchMedia
+- Lenis Smooth Scroll
+- Google Fonts
+
+## 🎯 GSAP Concepts Practiced
+
+This project combines the major concepts learned during Week 1:
+
+- `gsap.timeline()`
+- `gsap.to()`
+- `gsap.from()`
+- Position parameters
+- `ScrollTrigger`
+- `scrub`
+- `pin`
+- `quickTo()`
+- Magnetic interactions
+- Custom cursor interactions
+- Parallax animations
+- Horizontal scrolling
+- Hover animations
+- Tilt effects
+- `gsap.matchMedia()`
+- Reduced-motion support
+
+## 📂 Project Sections
+
+The landing page includes multiple interactive sections:
+
+1. Animated Loader
+2. Hero Section
+3. Marquee Section
+4. About Section
+5. Services Section
+6. Horizontal Projects Section
+7. Process Section
+8. Interactive Cards
+9. Statement Section
+10. Contact Section
+11. Responsive Mobile Menu
+
+## ♿ Accessibility
+
+The project includes support for users who prefer reduced motion.
+
+Using `prefers-reduced-motion`, animations are reduced or disabled where appropriate to provide a more accessible experience.
+
+## 📱 Responsive Design
+
+The landing page is designed to work across:
+
+- Desktop
+- Tablet
+- Mobile
+
+Animations and interactions are adjusted for different screen sizes to maintain a smooth user experience.
+
+## 🚀 How to Run
+
+1. Clone the repository.
+
+2. Open the project folder.
+
+3. Open `index.html` in your browser.
+
+Or use the **Live Server** extension in VS Code for the best development experience.
+
+## 📚 Learning Outcome
+
+This project was built to bring together the concepts learned throughout Week 1 and apply them in a real-world style landing page.
+
+The main focus was on creating a smooth visual experience through choreography, scroll-based storytelling, interactive elements, and motion accessibility.
+
+## 👨‍💻 Week 1 Final Project
+
+**Day:** 7  
+**Track:** GSAP, Lenis & Language of Motion  
+**Project:** Premium Animated Landing Page
+
+---
+
+Built as part of my Creative Frontend Development learning journey.
