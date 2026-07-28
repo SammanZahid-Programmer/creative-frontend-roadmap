@@ -38,8 +38,7 @@ export default function ThreeScene(){
         camera.aspect= window.innerWidth / window.innerHeight; //camera k aspect ratio update k liye
         camera.updateProjectionMatrix(); // camera ki new setting update krne k liye 
         renderer.setSize(window.innerWidth, window.innerHeight); //for renderer k size update 
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio,2)); //for update pixel raatio
-        window.addEventListener("resize",handleResize);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio,2)); //for update pixel raatio      window.addEventListener("resize",handleResize);
     }
     // animation
     function animate(){
