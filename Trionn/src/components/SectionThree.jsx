@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import "./sectionthree.css";
+import "./Sectionthree.css";
 
 export default function SectionThree() {
 
