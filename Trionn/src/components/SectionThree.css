@@ -1,0 +1,855 @@
+/* =========================================================
+   SECTION THREE
+========================================================= */
+
+.section-three {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #000000;
+  color: #eeeeee;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP LINE CONTAINER
+========================================================= */
+
+.section-three-top-line {
+position: absolute;
+    top: clamp(49px, 3.2vh, 90px);
+    left: clamp(20px, 10.8vw, 210px);
+    right: clamp(20px, 5.8vw, 110px);
+    height: 0.7px;
+     background: #000;
+
+  z-index: 5;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   MOVING LINE
+========================================================= */
+
+.section-three-moving-line {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 0.7px;
+
+  background: #3c3e46;
+
+  transform: scaleX(0);
+
+  transform-origin: left center;
+
+  will-change: transform;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   PLUS
+========================================================= */
+
+.section-three-plus {
+  position: absolute;
+
+  top: 50%;
+  left: 64.5%;
+
+  width: clamp(
+    13px,
+    0.63vw,
+    26px
+  );
+
+  height: clamp(
+    13px,
+    0.63vw,
+    26px
+  );
+
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg);
+
+  transform-origin: center center;
+
+  z-index: 3;
+
+  will-change: transform;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PLUS HORIZONTAL
+========================================================= */
+
+.section-three-plus .plus-horizontal {
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  transform:
+    translateY(-50%);
+
+  background: #eeeeee;
+}
+
+
+/* =========================================================
+   PLUS VERTICAL
+========================================================= */
+
+.section-three-plus .plus-vertical {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 1px;
+  height: 100%;
+
+  transform:
+    translateX(-50%);
+
+  background: #eeeeee;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.section-three-content {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding-top: clamp(
+    20px,
+    3.5vh,
+    125px
+  );
+
+  padding-left: clamp(
+    20px,
+    10.8vw,
+    210px
+  );
+
+  padding-right: clamp(
+    20px,
+    5.8vw,
+    110px
+  );
+}
+
+
+/* =========================================================
+   LEFT TOP TEXT
+========================================================= */
+
+.section-three-left-top {
+  position: absolute;
+
+  top: clamp(
+    190px,
+    22.5vh,
+    215px
+  );
+
+  left: clamp(
+    20px,
+    10.8vw,
+    210px
+  );
+}
+
+
+.section-three-left-top p {
+  margin: 0;
+
+  font-size: clamp(
+    17px,
+    1.18vw,
+    23px
+  );
+
+  font-weight: 500;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================================
+   RIGHT TOP TEXT
+========================================================= */
+
+.section-three-right-top {
+  position: absolute;
+
+  top: clamp(
+    190px,
+    22.5vh,
+    215px
+  );
+
+  right: clamp(
+    20px,
+    15.2vw,
+    300px
+  );
+
+  width: min(
+    27vw,
+    390px
+  );
+}
+
+
+.section-three-right-top p {
+  margin: 0;
+
+  font-size: clamp(
+    20px,
+    1.45vw,
+    29px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.03;
+
+  letter-spacing: -0.055em;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================================
+   MORE ABOUT US
+========================================================= */
+
+.section-three-about {
+  position: absolute;
+
+  top: clamp(
+    420px,
+    51vh,
+    485px
+  );
+
+  right: clamp(
+    20px,
+    15.2vw,
+    300px
+  );
+
+  width: min(
+    27vw,
+    390px
+  );
+}
+
+
+/* =========================================================
+   MORE ABOUT US LINK
+========================================================= */
+
+.section-three-link {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding-bottom: 14px;
+
+  border-bottom: 2px solid #eeeeee;
+
+  overflow: hidden;
+
+  color: #eeeeee;
+
+  font-size: clamp(
+    17px,
+    1.18vw,
+    23px
+  );
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   LINK TEXT
+========================================================= */
+
+.section-three-link-text {
+  display: inline-block;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   LINK ARROW
+========================================================= */
+
+.section-three-link-arrow {
+  display: inline-block;
+
+  font-size: clamp(
+    20px,
+    1.3vw,
+    25px
+  );
+
+  line-height: 1;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   BOTTOM LEFT
+========================================================= */
+
+.section-three-bottom {
+  position: absolute;
+
+  left: clamp(
+    20px,
+    10.8vw,
+    210px
+  );
+
+  bottom: clamp(
+    35px,
+    5vh,
+    60px
+  );
+}
+
+
+.section-three-bottom p {
+  margin: 0;
+
+  font-size: clamp(
+    17px,
+    1.18vw,
+    23px
+  );
+
+  font-weight: 500;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.045em;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .section-three {
+    min-height: 100vh;
+  }
+
+
+  /* =======================================================
+     TOP LINE
+  ======================================================= */
+
+  .section-three-top-line {
+    top: 75px;
+
+    left: 32px;
+    right: 32px;
+  }
+
+
+  /* =======================================================
+     PLUS
+  ======================================================= */
+
+  .section-three-plus {
+    left: 65%;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .section-three-content {
+    min-height: 100vh;
+
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+
+  /* =======================================================
+     LEFT
+  ======================================================= */
+
+  .section-three-left-top {
+    top: 190px;
+
+    left: 32px;
+  }
+
+
+  .section-three-left-top p {
+    font-size: clamp(
+      16px,
+      1.8vw,
+      20px
+    );
+  }
+
+
+  /* =======================================================
+     RIGHT
+  ======================================================= */
+
+  .section-three-right-top {
+    top: 190px;
+
+    right: 8%;
+
+    width: 32vw;
+  }
+
+
+  .section-three-right-top p {
+    font-size: clamp(
+      19px,
+      2vw,
+      25px
+    );
+  }
+
+
+  /* =======================================================
+     MORE ABOUT
+  ======================================================= */
+
+  .section-three-about {
+    top: 480px;
+
+    right: 8%;
+
+    width: 32vw;
+  }
+
+
+  .section-three-link {
+    font-size: clamp(
+      16px,
+      1.8vw,
+      20px
+    );
+  }
+
+
+  /* =======================================================
+     BOTTOM
+  ======================================================= */
+
+  .section-three-bottom {
+    left: 32px;
+
+    bottom: 50px;
+  }
+
+
+  .section-three-bottom p {
+    font-size: clamp(
+      16px,
+      1.8vw,
+      20px
+    );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Below 768px
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .section-three {
+    min-height: 100svh;
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     TOP LINE
+  ======================================================= */
+
+  .section-three-top-line {
+    top: 65px;
+
+    left: 20px;
+    right: 20px;
+  }
+
+
+  /* =======================================================
+     PLUS
+  ======================================================= */
+
+  .section-three-plus {
+    left: 70%;
+
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .section-three-content {
+    min-height: 100svh;
+
+    padding: 0 20px;
+  }
+
+
+  /* =======================================================
+     LEFT TEXT
+  ======================================================= */
+
+  .section-three-left-top {
+    position: absolute;
+
+    top: 125px;
+
+    left: 20px;
+    right: 20px;
+  }
+
+
+  .section-three-left-top p {
+    font-size: 15px;
+
+    line-height: 1.04;
+
+    letter-spacing: -0.035em;
+  }
+
+
+  /* =======================================================
+     RIGHT TEXT
+  ======================================================= */
+
+  .section-three-right-top {
+    position: absolute;
+
+    top: 280px;
+
+    left: 20px;
+    right: 20px;
+
+    width: auto;
+  }
+
+
+  .section-three-right-top p {
+    font-size: clamp(
+      22px,
+      6.3vw,
+      32px
+    );
+
+    line-height: 1.02;
+
+    letter-spacing: -0.055em;
+  }
+
+
+  /* =======================================================
+     REMOVE DESKTOP BR
+  ======================================================= */
+
+  .desktop-break {
+    display: none;
+  }
+
+
+  /* =======================================================
+     MORE ABOUT US
+  ======================================================= */
+
+  .section-three-about {
+    position: absolute;
+
+    top: auto;
+
+    left: 20px;
+    right: 20px;
+
+    bottom: 145px;
+
+    width: auto;
+  }
+
+
+  .section-three-link {
+    padding-bottom: 12px;
+
+    font-size: 15px;
+
+    border-bottom-width: 1px;
+  }
+
+
+  .section-three-link-arrow {
+    font-size: 19px;
+  }
+
+
+  /* =======================================================
+     BOTTOM
+  ======================================================= */
+
+  .section-three-bottom {
+    left: 20px;
+
+    bottom: 45px;
+  }
+
+
+  .section-three-bottom p {
+    font-size: 15px;
+
+    line-height: 1.04;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   Below 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  /* =======================================================
+     TOP LINE
+  ======================================================= */
+
+  .section-three-top-line {
+    top: 58px;
+
+    left: 18px;
+    right: 18px;
+  }
+
+
+  /* =======================================================
+     PLUS
+  ======================================================= */
+
+  .section-three-plus {
+    left: 72%;
+
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .section-three-content {
+    padding: 0 18px;
+  }
+
+
+  /* =======================================================
+     LEFT
+  ======================================================= */
+
+  .section-three-left-top {
+    top: 115px;
+
+    left: 18px;
+    right: 18px;
+  }
+
+
+  .section-three-left-top p {
+    font-size: 14px;
+  }
+
+
+  /* =======================================================
+     RIGHT
+  ======================================================= */
+
+  .section-three-right-top {
+    top: 250px;
+
+    left: 18px;
+    right: 18px;
+  }
+
+
+  .section-three-right-top p {
+    font-size: clamp(
+      21px,
+      6.5vw,
+      29px
+    );
+  }
+
+
+  /* =======================================================
+     MORE ABOUT
+  ======================================================= */
+
+  .section-three-about {
+    left: 18px;
+    right: 18px;
+
+    bottom: 135px;
+  }
+
+
+  .section-three-link {
+    font-size: 14px;
+
+    padding-bottom: 11px;
+  }
+
+
+  .section-three-link-arrow {
+    font-size: 18px;
+  }
+
+
+  /* =======================================================
+     BOTTOM
+  ======================================================= */
+
+  .section-three-bottom {
+    left: 18px;
+
+    bottom: 38px;
+  }
+
+
+  .section-three-bottom p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .section-three-content {
+    padding-left: 11vw;
+    padding-right: 6vw;
+  }
+
+
+  .section-three-left-top {
+    left: 11vw;
+  }
+
+
+  .section-three-right-top {
+    right: 15vw;
+  }
+
+
+  .section-three-about {
+    right: 15vw;
+  }
+
+
+  .section-three-bottom {
+    left: 11vw;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .section-three-moving-line {
+    transform: scaleX(1) !important;
+  }
+
+
+  .section-three-plus {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg) !important;
+  }
+
+
+  .section-three-link-text,
+  .section-three-link-arrow {
+    transform: none !important;
+  }
+
+}
