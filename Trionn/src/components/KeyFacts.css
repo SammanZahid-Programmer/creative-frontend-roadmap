@@ -1,0 +1,604 @@
+/* =========================================================
+   KEY FACTS SECTION
+========================================================= */
+.keyfacts-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #eeeeee;
+  overflow: visible;
+  z-index: 10;
+}
+/* =========================================================
+   KEY FACTS HEADING
+========================================================= */
+.keyfacts-heading {
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  z-index: 100;
+  text-align: center;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.keyfacts-heading h1 {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  color: #242424;
+}
+.keyfacts-heading p {
+  margin: 28px 0 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16.7px;
+  padding-left: 43%;
+  padding-right: 43%;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+  color: #1c1c1c;
+}
+/* =========================================================
+   CARD STAGE
+========================================================= */
+.keyfacts-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  background: #eeeeee;
+  overflow: hidden;
+}
+/* =========================================================
+   THREE CARDS
+========================================================= */
+.keyfacts-cards {
+  position: absolute;
+  left: 3.9%;
+  right: 3.9%;
+  top: 0;
+  height: 100%;
+  perspective: 1600px;
+}
+/* =========================================================
+   COMMON CARD
+========================================================= */
+.keyfacts-card {
+  position: absolute;
+  top: 129px;
+  height: 68%;
+  overflow: hidden;
+  border-radius: 9px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-origin: center bottom;
+}
+/* =========================================================
+   LEFT
+========================================================= */
+.keyfacts-card-left {
+  left: 0;
+  width: calc(33.333333% - 20px);
+  background: #303136;
+  color: #ffffff;
+  z-index: 10;
+}
+/* =========================================================
+   CENTER
+========================================================= */
+.keyfacts-card-center {
+  left: calc(33.333333% + 10px);
+  width: calc(33.333333% - 20px);
+  background: #e9e7e5;
+  color: #3c3c3c;
+  z-index: 20;
+}
+/* =========================================================
+   RIGHT
+========================================================= */
+.keyfacts-card-right {
+  right: 0;
+  width: calc(33.333333% - 20px);
+  background: #303136;
+  color: #ffffff;
+  z-index: 30;
+  cursor: pointer;
+}
+/* =========================================================
+   CARD TITLE
+========================================================= */
+.keyfacts-card-title {
+  position: absolute;
+  left: 43px;
+  top: 41px;
+  z-index: 40;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+/* =========================================================
+   LEFT VIDEO
+========================================================= */
+.keyfacts-left-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  display: block;
+}
+/* =========================================================
+   LEFT OVERLAY
+========================================================= */
+.keyfacts-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.03) 0%,
+    rgba(0, 0, 0, 0.02) 55%,
+    rgba(0, 0, 0, 0.62) 100%
+  );
+}
+/* =========================================================
+   LEFT CHANGING IMAGES
+========================================================= */
+.keyfacts-award-images {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  top: 77%;
+  left: 11%;
+  pointer-events: none;
+}
+.keyfacts-award-image {
+  position: absolute;
+  inset: 0;
+  width: 20%;
+  height: 27%;
+  
+  opacity: 0;
+  transform: scale(1.025);
+  transition:
+    opacity 0.65s ease,
+    transform 1s ease;
+}
+.keyfacts-award-image.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* =========================================================
+   BOTTOM CARD CONTENT
+========================================================= */
+.keyfacts-bottom {
+  position: absolute;
+  left: 39px;
+  right: 43px;
+  bottom: 40px;
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+}
+.keyfacts-bottom p {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: rgb(251, 238, 221);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.13;
+  letter-spacing: -0.045em;
+}
+/* =========================================================
+   NUMBERS
+========================================================= */
+.keyfacts-number {
+  flex-shrink: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: rgb(231, 228, 224);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+.keyfacts-number span {
+  position: relative;
+  top: -2px;
+  margin-left: 2px;
+  font-size: 0.42em;
+}
+/* =========================================================
+   CENTER CIRCLE
+========================================================= */
+.keyfacts-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 178px;
+  aspect-ratio: 1;
+  transform: translate(-50%, -53%);
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.keyfacts-circle > span {
+  display: block;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.075em;
+}
+.keyfacts-circle > span > span {
+  position: relative;
+  top: -2px;
+  font-size: 0.42em;
+}
+/* =========================================================
+   CENTER BOTTOM TEXT
+========================================================= */
+.keyfacts-center-copy {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  width: 90%;
+  margin: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.13;
+  letter-spacing: -0.045em;
+}
+/* =========================================================
+   RIGHT VIDEO
+========================================================= */
+.keyfacts-right-video {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  top: 102px;
+  height: 58%;
+  overflow: hidden;
+  z-index: 5;
+  background: #222326;
+}
+.keyfacts-right-video > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+.keyfacts-card-right:hover .keyfacts-right-video > video {
+  transform: scale(1.015);
+}
+/* =========================================================
+   NAVBAR
+========================================================= */
+/*
+   IMPORTANT:
+   Normal state:
+   Logo/Text = WHITE
+   Let's Talk = BLACK text + WHITE background
+   KeyFacts state:
+   Logo/Text = BLACK
+   Let's Talk = WHITE text + BLACK background
+*/
+/* =========================================================
+   NORMAL NAVBAR — WHITE LOGO / TEXT
+========================================================= */
+.navbar.keyfacts-navbar-light {
+  color: #ffffff !important;
+}
+.navbar.keyfacts-navbar-light .brand-symbol,
+.navbar.keyfacts-navbar-light .brand-name {
+  filter: brightness(0) invert(1) !important;
+}
+.navbar.keyfacts-navbar-light .sound-button {
+  color: #ffffff !important;
+}
+.navbar.keyfacts-navbar-light .speaker-body,
+.navbar.keyfacts-navbar-light .speaker-cone,
+.navbar.keyfacts-navbar-light .sound-wave {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+/*
+   LET'S TALK — NORMAL
+   Black text
+   White background
+*/
+.navbar.keyfacts-navbar-light .talk-button {
+  color: #111111 !important;
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+/*
+   MENU — NORMAL
+*/
+.navbar.keyfacts-navbar-light .menu-button {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.navbar.keyfacts-navbar-light .menu-lines i {
+  background-color: #ffffff !important;
+}
+/* =========================================================
+   KEYFACTS NAVBAR — BLACK LOGO / TEXT
+========================================================= */
+.navbar.keyfacts-navbar-dark {
+  color: #111111 !important;
+}
+.navbar.keyfacts-navbar-dark .brand-symbol,
+.navbar.keyfacts-navbar-dark .brand-name {
+  filter: brightness(0) !important;
+}
+.navbar.keyfacts-navbar-dark .sound-button {
+  color: #111111 !important;
+}
+/* 
+.navbar.keyfacts-navbar-dark
+.speaker-body,
+.navbar.keyfacts-navbar-dark
+.speaker-cone,
+.navbar.keyfacts-navbar-dark
+.sound-wave {
+  background-color: #111111 !important;
+  border-color: #111111 !important;
+} */
+/*
+   LET'S TALK — KEYFACTS
+   White text
+   Black background
+*/
+.navbar.keyfacts-navbar-dark .talk-button {
+  color: #ffffff !important;
+  background-color: #111111 !important;
+  border-color: #111111 !important;
+}
+/*
+   MENU — KEYFACTS
+*/
+.navbar.keyfacts-navbar-dark .menu-button {
+  color: #111111 !important;
+  border-color: #111111 !important;
+}
+.navbar.keyfacts-navbar-dark .menu-lines i {
+  background-color: #111111 !important;
+}
+/* =========================================================
+   BUSINESS PARTNERS
+========================================================= */
+.business-partners-section {
+  position: relative;
+  width: 100%;
+  min-height: 330px;
+  background: #eeeeee;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.business-partners-inner {
+  width: 73%;
+  padding-top: 0px;
+  padding-bottom: 80px;
+}
+.business-partners-title {
+  text-align: center;
+  margin-bottom: 42px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: #333333;
+}
+/* =========================================================
+   PARTNERS ROW
+========================================================= */
+.business-partners-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  width: 100%;
+}
+.business-partners-row > div {
+  min-height: 54px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+.business-partners-row > div:last-child {
+  border-right: none;
+}
+/* =========================================================
+   PARTNER TEXT
+========================================================= */
+.partner-credible {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  color: #454545;
+}
+.partner-yellowtail {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  color: #454545;
+}
+.partner-luxury {
+  display: flex !important;
+  gap: 10px;
+  justify-content: center;
+  text-align: left;
+  color: #555555;
+}
+.luxury-symbol {
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 300;
+}
+.partner-luxury span:last-child {
+  font-size: 17px;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+}
+.partner-technis {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.08em;
+  color: #454545;
+}
+.partner-ockto {
+  display: flex !important;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  color: #454545;
+}
+.ockto-symbol {
+  font-size: 28px;
+  line-height: 1;
+}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1100px) {
+  .keyfacts-heading {
+    top: 125px;
+  }
+  .keyfacts-heading h1 {
+    font-size: 72px;
+  }
+  .keyfacts-heading p {
+    margin-top: 22px;
+    font-size: 18px;
+  }
+  .keyfacts-card-title {
+    left: 30px;
+    top: 35px;
+    font-size: 16px;
+  }
+  .keyfacts-bottom {
+    left: 30px;
+    right: 28px;
+    bottom: 30px;
+  }
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 16px;
+  }
+  .keyfacts-number {
+    font-size: 60px;
+  }
+  .keyfacts-circle {
+    width: 205px;
+  }
+  .keyfacts-circle > span {
+    font-size: 55px;
+  }
+  .keyfacts-right-video {
+    top: 95px;
+    height: 56%;
+  }
+}
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 767px) {
+  .keyfacts-heading {
+    top: 95px;
+  }
+  .keyfacts-heading h1 {
+    font-size: 48px;
+  }
+  .keyfacts-heading p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .keyfacts-stage {
+    min-height: 650px;
+  }
+  .keyfacts-cards {
+    left: 18px;
+    right: 18px;
+  }
+  .keyfacts-card-left,
+  .keyfacts-card-center,
+  .keyfacts-card-right {
+    width: calc(33.333333% - 12px);
+  }
+  .keyfacts-card-center {
+    left: calc(33.333333% + 6px);
+  }
+  .keyfacts-card-title {
+    left: 20px;
+    top: 24px;
+    font-size: 12px;
+  }
+  .keyfacts-bottom {
+    left: 20px;
+    right: 18px;
+    bottom: 24px;
+  }
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 12px;
+  }
+  .keyfacts-number {
+    font-size: 45px;
+  }
+  .keyfacts-circle {
+    width: 145px;
+  }
+  .keyfacts-circle > span {
+    font-size: 38px;
+  }
+  .keyfacts-right-video {
+    top: 75px;
+    height: 52%;
+  }
+  .business-partners-inner {
+    width: 94%;
+    padding-top: 55px;
+  }
+  .business-partners-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .business-partners-row > div {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    padding-bottom: 20px;
+  }
+  .business-partners-row > div:last-child {
+    border-bottom: none;
+  }
+}

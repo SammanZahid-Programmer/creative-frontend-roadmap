@@ -1,365 +1,209 @@
 /* =========================================================
    SECTION TWO — ABOUT
 ========================================================= */
-
 .about-section {
   position: relative;
-
   width: 100%;
   min-height: auto;
-
   background: #000000;
   color: #eeeeee;
-
   overflow: hidden;
 }
-
-
 /* =========================================================
    ABOUT INTRO
 ========================================================= */
-
 .about-intro {
   position: relative;
-
   width: 100%;
-
   /*
     Keep this section compact so
     SectionThree comes closer.
   */
   min-height: 52vh;
-
   padding-top: clamp(110px, 9vw, 170px);
   padding-bottom: 35px;
 }
-
-
 /* =========================================================
    ABOUT LABEL
 ========================================================= */
-
 .about-label {
   position: absolute;
-
   top: clamp(110px, 9vw, 170px);
   left: clamp(24px, 3.2vw, 60px);
-
-  font-size: clamp(
-    14px,
-    0.95vw,
-    19px
-  );
-
+  font-size: clamp(14px, 0.95vw, 19px);
   font-weight: 500;
-
   line-height: 1;
-
   letter-spacing: -0.02em;
-
   color: #eeeeee;
-
   white-space: nowrap;
 }
-
-
 /* =========================================================
    BIG STATEMENT
 ========================================================= */
-
 .about-statement {
   position: relative;
-
-  width: min(
-    80vw,
-    1540px
-  );
-
+  width: min(80vw, 1540px);
   margin-left: auto;
-
-  margin-right: clamp(
-    24px,
-    4vw,
-    75px
-  );
-
-  font-size: clamp(
-    44px,
-    6.15vw,
-    116px
-  );
-
+  margin-right: clamp(24px, 4vw, 75px);
+  font-size: clamp(44px, 6.15vw, 116px);
   font-weight: 500;
-
   line-height: 0.93;
-
   letter-spacing: -0.065em;
-
   text-align: left;
-
   color: #eeeeee;
 }
-
-
 /* =========================================================
    INDIVIDUAL LETTER
 ========================================================= */
-
 .about-letter {
   display: inline-block;
-
-  will-change:
-    transform,
-    opacity,
-    filter;
+  will-change: transform, opacity, filter;
 }
-
-
 /* =========================================================
    SPACES
 ========================================================= */
-
 .about-space {
   width: 0.28em;
 }
-
-
 /* =========================================================
    TABLET
 ========================================================= */
-
 @media (max-width: 1024px) {
-
   .about-intro {
     min-height: 55vh;
-
     padding-top: 120px;
     padding-bottom: 0;
   }
-
-
   /* -------------------------------------------------------
      LABEL
   ------------------------------------------------------- */
-
   .about-label {
     position: relative;
-
     top: auto;
     left: auto;
-
     margin-left: 32px;
     margin-bottom: 65px;
   }
-
-
   /* -------------------------------------------------------
      STATEMENT
   ------------------------------------------------------- */
-
   .about-statement {
     width: auto;
-
     margin-left: 32px;
     margin-right: 32px;
-
-    font-size: clamp(
-      48px,
-      7.5vw,
-      82px
-    );
-
+    font-size: clamp(48px, 7.5vw, 82px);
     line-height: 0.95;
-
     letter-spacing: -0.055em;
   }
-
 }
-
-
 /* =========================================================
    MOBILE
 ========================================================= */
-
 @media (max-width: 767px) {
-
   .about-section {
     overflow: hidden;
   }
-
-
   .about-intro {
     /*
       Reduced from 105vh.
       This keeps SectionThree closer.
     */
     min-height: 60vh;
-
     padding-top: 105px;
     padding-bottom: 50px;
   }
-
-
   /* -------------------------------------------------------
      LABEL
   ------------------------------------------------------- */
-
   .about-label {
     position: relative;
-
     top: auto;
     left: auto;
-
     margin-left: 20px;
     margin-bottom: 48px;
-
     font-size: 13px;
   }
-
-
   /* -------------------------------------------------------
      STATEMENT
   ------------------------------------------------------- */
-
   .about-statement {
     width: auto;
-
     margin-left: 20px;
     margin-right: 20px;
-
-    font-size: clamp(
-      38px,
-      10.8vw,
-      68px
-    );
-
+    font-size: clamp(38px, 10.8vw, 68px);
     line-height: 0.96;
-
     letter-spacing: -0.06em;
   }
-
-
   /* -------------------------------------------------------
      SPACES
   ------------------------------------------------------- */
-
   .about-space {
     width: 0.24em;
   }
-
 }
-
-
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
-
 @media (max-width: 480px) {
-
   .about-intro {
     min-height: 50vh;
-
     padding-top: 95px;
     padding-bottom: 20px;
   }
-
-
   /* -------------------------------------------------------
      LABEL
   ------------------------------------------------------- */
-
   .about-label {
     margin-left: 18px;
-
     margin-bottom: 42px;
-
     font-size: 13px;
   }
-
-
   /* -------------------------------------------------------
      STATEMENT
   ------------------------------------------------------- */
-
   .about-statement {
     margin-left: 18px;
     margin-right: 18px;
-
-    font-size: clamp(
-      34px,
-      10.5vw,
-      52px
-    );
-
+    font-size: clamp(34px, 10.5vw, 52px);
     line-height: 0.98;
-
     letter-spacing: -0.055em;
   }
-
-
   /* -------------------------------------------------------
      SPACES
   ------------------------------------------------------- */
-
   .about-space {
     width: 0.24em;
   }
-
 }
-
-
 /* =========================================================
    VERY SMALL MOBILE
 ========================================================= */
-
 @media (max-width: 360px) {
-
   .about-intro {
     min-height: 55vh;
-
     padding-top: 90px;
     padding-bottom: 15px;
   }
-
-
   .about-label {
     margin-left: 16px;
     margin-bottom: 38px;
-
     font-size: 12px;
   }
-
-
   .about-statement {
     margin-left: 16px;
     margin-right: 16px;
-
-    font-size: clamp(
-      32px,
-      10.3vw,
-      46px
-    );
-
+    font-size: clamp(32px, 10.3vw, 46px);
     line-height: 1;
-
     letter-spacing: -0.052em;
   }
-
 }
-
-
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   .about-letter {
     opacity: 1 !important;
-
     transform: none !important;
-
     filter: none !important;
   }
-
 }

@@ -1,23 +1,11 @@
 import { useEffect } from "react";
 import gsap from "gsap";
-
-export default function MenuPanel({
-  open,
-  onClose,
-}) {
+export default function MenuPanel({ open, onClose }) {
   useEffect(() => {
     if (!open) return;
-
-    const panel =
-      document.querySelector(".menu-panel");
-
-    const items =
-      document.querySelectorAll(
-        ".menu-item"
-      );
-
+    const panel = document.querySelector(".menu-panel");
+    const items = document.querySelectorAll(".menu-item");
     const timeline = gsap.timeline();
-
     timeline.fromTo(
       panel,
       {
@@ -27,9 +15,8 @@ export default function MenuPanel({
         x: "0%",
         duration: 0.8,
         ease: "power4.out",
-      }
+      },
     );
-
     timeline.fromTo(
       items,
       {
@@ -45,100 +32,57 @@ export default function MenuPanel({
         stagger: 0.08,
         ease: "power3.out",
       },
-      "-=0.35"
+      "-=0.35",
     );
-
     return () => {
       timeline.kill();
     };
   }, [open]);
-
   if (!open) return null;
-
   return (
     <aside className="menu-panel">
-      {/* TOP CONTROLS */}
+      {}
       <div className="menu-panel-top">
         <div className="panel-controls">
-          <button
-            className="panel-sound"
-            aria-label="Sound"
-          >
+          <button className="panel-sound" aria-label="Sound">
             ◖×)
           </button>
-
-          <button className="panel-talk">
-            LET'S TALK
-          </button>
-
-          <button
-            className="panel-close"
-            onClick={onClose}
-          >
+          <button className="panel-talk">LET'S TALK</button>
+          <button className="panel-close" onClick={onClose}>
             MENU
             <span>×</span>
           </button>
         </div>
       </div>
-
-      {/* NAVIGATION */}
+      {}
       <nav className="menu-navigation">
-        <a
-          href="#work"
-          className="menu-item"
-        >
+        <a href="#work" className="menu-item">
           Work
         </a>
-
-        <a
-          href="#services"
-          className="menu-item"
-        >
+        <a href="#services" className="menu-item">
           Services
         </a>
-
-        <a
-          href="#about"
-          className="menu-item"
-        >
+        <a href="#about" className="menu-item">
           About
         </a>
-
-        <a
-          href="#contact"
-          className="menu-item"
-        >
+        <a href="#contact" className="menu-item">
           Contact
         </a>
       </nav>
-
-      {/* STORY */}
-      <button className="story-button">
-        ✦ THE TRIONN NAME STORY
-      </button>
-
-      {/* BOTTOM */}
+      {}
+      <button className="story-button">✦ THE TRIONN NAME STORY</button>
+      {}
       <div className="panel-bottom">
         <div className="business">
-          <span>
-            BUSINESS ENQUIRY
-          </span>
-
+          <span>BUSINESS ENQUIRY</span>
           <p>
             E. &nbsp;
-            <a href="mailto:hello@trionn.com">
-              hello@trionn.com
-            </a>
+            <a href="mailto:hello@trionn.com">hello@trionn.com</a>
           </p>
-
-          <p>
-            P. &nbsp; +91 9824182099
-          </p>
+          <p>P. &nbsp; +91 9824182099</p>
         </div>
-
         <div className="socials">
           <span>SOCIAL</span>
-
           <div className="social-grid">
             <a href="#">LinkedIn</a>
             <a href="#">Facebook</a>
