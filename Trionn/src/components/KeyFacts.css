@@ -9,6 +9,7 @@
   overflow: visible;
   z-index: 10;
 }
+
 /* =========================================================
    KEY FACTS HEADING
 ========================================================= */
@@ -23,6 +24,7 @@
   pointer-events: none;
   will-change: transform, opacity;
 }
+
 .keyfacts-heading h1 {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -32,6 +34,7 @@
   letter-spacing: -0.075em;
   color: #242424;
 }
+
 .keyfacts-heading p {
   margin: 28px 0 0;
   font-family: "Inter", Arial, sans-serif;
@@ -43,6 +46,7 @@
   letter-spacing: -0.045em;
   color: #1c1c1c;
 }
+
 /* =========================================================
    CARD STAGE
 ========================================================= */
@@ -54,6 +58,7 @@
   background: #eeeeee;
   overflow: hidden;
 }
+
 /* =========================================================
    THREE CARDS
 ========================================================= */
@@ -65,6 +70,7 @@
   height: 100%;
   perspective: 1600px;
 }
+
 /* =========================================================
    COMMON CARD
 ========================================================= */
@@ -78,6 +84,7 @@
   backface-visibility: hidden;
   transform-origin: center bottom;
 }
+
 /* =========================================================
    LEFT
 ========================================================= */
@@ -88,6 +95,7 @@
   color: #ffffff;
   z-index: 10;
 }
+
 /* =========================================================
    CENTER
 ========================================================= */
@@ -98,6 +106,7 @@
   color: #3c3c3c;
   z-index: 20;
 }
+
 /* =========================================================
    RIGHT
 ========================================================= */
@@ -109,6 +118,7 @@
   z-index: 30;
   cursor: pointer;
 }
+
 /* =========================================================
    CARD TITLE
 ========================================================= */
@@ -124,6 +134,7 @@
   letter-spacing: -0.045em;
   white-space: nowrap;
 }
+
 /* =========================================================
    LEFT VIDEO
 ========================================================= */
@@ -136,6 +147,7 @@
   z-index: 1;
   display: block;
 }
+
 /* =========================================================
    LEFT OVERLAY
 ========================================================= */
@@ -151,6 +163,7 @@
     rgba(0, 0, 0, 0.62) 100%
   );
 }
+
 /* =========================================================
    LEFT CHANGING IMAGES
 ========================================================= */
@@ -163,22 +176,24 @@
   left: 11%;
   pointer-events: none;
 }
+
 .keyfacts-award-image {
   position: absolute;
   inset: 0;
   width: 20%;
   height: 27%;
-  
   opacity: 0;
   transform: scale(1.025);
   transition:
     opacity 0.65s ease,
     transform 1s ease;
 }
+
 .keyfacts-award-image.is-active {
   opacity: 1;
   transform: scale(1);
 }
+
 /* =========================================================
    BOTTOM CARD CONTENT
 ========================================================= */
@@ -193,6 +208,7 @@
   justify-content: space-between;
   gap: 15px;
 }
+
 .keyfacts-bottom p {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -202,6 +218,7 @@
   line-height: 1.13;
   letter-spacing: -0.045em;
 }
+
 /* =========================================================
    NUMBERS
 ========================================================= */
@@ -214,12 +231,14 @@
   line-height: 0.82;
   letter-spacing: -0.08em;
 }
+
 .keyfacts-number span {
   position: relative;
   top: -2px;
   margin-left: 2px;
   font-size: 0.42em;
 }
+
 /* =========================================================
    CENTER CIRCLE
 ========================================================= */
@@ -236,6 +255,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .keyfacts-circle > span {
   display: block;
   font-family: "Inter", Arial, sans-serif;
@@ -244,11 +264,13 @@
   line-height: 1;
   letter-spacing: -0.075em;
 }
+
 .keyfacts-circle > span > span {
   position: relative;
   top: -2px;
   font-size: 0.42em;
 }
+
 /* =========================================================
    CENTER BOTTOM TEXT
 ========================================================= */
@@ -266,6 +288,7 @@
   line-height: 1.13;
   letter-spacing: -0.045em;
 }
+
 /* =========================================================
    RIGHT VIDEO
 ========================================================= */
@@ -279,6 +302,7 @@
   z-index: 5;
   background: #222326;
 }
+
 .keyfacts-right-video > video {
   display: block;
   width: 100%;
@@ -287,50 +311,59 @@
   transform: scale(1);
   transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1);
 }
+
 .keyfacts-card-right:hover .keyfacts-right-video > video {
   transform: scale(1.015);
 }
+
 /* =========================================================
    NAVBAR
 ========================================================= */
+
 /*
    IMPORTANT:
+
    Normal state:
    Logo/Text = WHITE
    Let's Talk = BLACK text + WHITE background
+
    KeyFacts state:
    Logo/Text = BLACK
    Let's Talk = WHITE text + BLACK background
 */
+
 /* =========================================================
    NORMAL NAVBAR — WHITE LOGO / TEXT
 ========================================================= */
 .navbar.keyfacts-navbar-light {
   color: #ffffff !important;
 }
+
 .navbar.keyfacts-navbar-light .brand-symbol,
 .navbar.keyfacts-navbar-light .brand-name {
   filter: brightness(0) invert(1) !important;
 }
+
 .navbar.keyfacts-navbar-light .sound-button {
   color: #ffffff !important;
 }
+
 .navbar.keyfacts-navbar-light .speaker-body,
 .navbar.keyfacts-navbar-light .speaker-cone,
 .navbar.keyfacts-navbar-light .sound-wave {
   background-color: #ffffff !important;
   border-color: #ffffff !important;
 }
+
 /*
    LET'S TALK — NORMAL
-   Black text
-   White background
 */
 .navbar.keyfacts-navbar-light .talk-button {
   color: #111111 !important;
   background-color: #ffffff !important;
   border-color: #ffffff !important;
 }
+
 /*
    MENU — NORMAL
 */
@@ -338,23 +371,28 @@
   color: #ffffff !important;
   border-color: #ffffff !important;
 }
+
 .navbar.keyfacts-navbar-light .menu-lines i {
   background-color: #ffffff !important;
 }
+
 /* =========================================================
    KEYFACTS NAVBAR — BLACK LOGO / TEXT
 ========================================================= */
 .navbar.keyfacts-navbar-dark {
   color: #111111 !important;
 }
+
 .navbar.keyfacts-navbar-dark .brand-symbol,
 .navbar.keyfacts-navbar-dark .brand-name {
   filter: brightness(0) !important;
 }
+
 .navbar.keyfacts-navbar-dark .sound-button {
   color: #111111 !important;
 }
-/* 
+
+/*
 .navbar.keyfacts-navbar-dark
 .speaker-body,
 .navbar.keyfacts-navbar-dark
@@ -363,17 +401,18 @@
 .sound-wave {
   background-color: #111111 !important;
   border-color: #111111 !important;
-} */
+}
+*/
+
 /*
    LET'S TALK — KEYFACTS
-   White text
-   Black background
 */
 .navbar.keyfacts-navbar-dark .talk-button {
   color: #ffffff !important;
   background-color: #111111 !important;
   border-color: #111111 !important;
 }
+
 /*
    MENU — KEYFACTS
 */
@@ -381,9 +420,11 @@
   color: #111111 !important;
   border-color: #111111 !important;
 }
+
 .navbar.keyfacts-navbar-dark .menu-lines i {
   background-color: #111111 !important;
 }
+
 /* =========================================================
    BUSINESS PARTNERS
 ========================================================= */
@@ -397,11 +438,13 @@
   align-items: flex-start;
   justify-content: center;
 }
+
 .business-partners-inner {
   width: 73%;
-  padding-top: 0px;
+  padding-top: 0;
   padding-bottom: 80px;
 }
+
 .business-partners-title {
   text-align: center;
   margin-bottom: 42px;
@@ -412,6 +455,7 @@
   letter-spacing: -0.045em;
   color: #333333;
 }
+
 /* =========================================================
    PARTNERS ROW
 ========================================================= */
@@ -421,6 +465,7 @@
   align-items: center;
   width: 100%;
 }
+
 .business-partners-row > div {
   min-height: 54px;
   padding: 0 25px;
@@ -429,9 +474,11 @@
   justify-content: center;
   border-right: 1px solid rgba(0, 0, 0, 0.07);
 }
+
 .business-partners-row > div:last-child {
   border-right: none;
 }
+
 /* =========================================================
    PARTNER TEXT
 ========================================================= */
@@ -442,6 +489,7 @@
   letter-spacing: -0.08em;
   color: #454545;
 }
+
 .partner-yellowtail {
   font-family: Arial, sans-serif;
   font-size: 24px;
@@ -449,6 +497,7 @@
   letter-spacing: -0.07em;
   color: #454545;
 }
+
 .partner-luxury {
   display: flex !important;
   gap: 10px;
@@ -456,16 +505,19 @@
   text-align: left;
   color: #555555;
 }
+
 .luxury-symbol {
   font-size: 38px;
   line-height: 1;
   font-weight: 300;
 }
+
 .partner-luxury span:last-child {
   font-size: 17px;
   line-height: 0.9;
   letter-spacing: 0.02em;
 }
+
 .partner-technis {
   font-family: Arial, sans-serif;
   font-size: 24px;
@@ -474,6 +526,7 @@
   letter-spacing: -0.08em;
   color: #454545;
 }
+
 .partner-ockto {
   display: flex !important;
   gap: 8px;
@@ -483,122 +536,661 @@
   letter-spacing: -0.055em;
   color: #454545;
 }
+
 .ockto-symbol {
   font-size: 28px;
   line-height: 1;
 }
+
 /* =========================================================
-   RESPONSIVE
+   LARGE LAPTOP / DESKTOP
+   1200px - 1600px
 ========================================================= */
-@media (max-width: 1100px) {
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .keyfacts-heading h1 {
+    font-size: clamp(58px, 4.2vw, 66px);
+  }
+
+  .keyfacts-heading p {
+    padding-left: 38%;
+    padding-right: 38%;
+    font-size: clamp(14px, 1vw, 16.7px);
+  }
+
+  .keyfacts-card {
+    top: 125px;
+    height: 69%;
+  }
+
+  .keyfacts-card-title {
+    left: 36px;
+    top: 38px;
+  }
+
+  .keyfacts-bottom {
+    left: 34px;
+    right: 36px;
+    bottom: 36px;
+  }
+
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 14px;
+  }
+
+  .keyfacts-number {
+    font-size: 38px;
+  }
+
+  .keyfacts-circle {
+    width: 165px;
+  }
+
+  .keyfacts-circle > span {
+    font-size: 41px;
+  }
+
+  .keyfacts-right-video {
+    top: 95px;
+    height: 58%;
+  }
+
+  .business-partners-inner {
+    width: 78%;
+  }
+}
+
+/* =========================================================
+   LAPTOP
+   992px - 1199px
+========================================================= */
+@media (min-width: 992px) and (max-width: 1199px) {
   .keyfacts-heading {
     top: 125px;
   }
+
   .keyfacts-heading h1 {
-    font-size: 72px;
+    font-size: 58px;
   }
+
   .keyfacts-heading p {
     margin-top: 22px;
-    font-size: 18px;
+    padding-left: 34%;
+    padding-right: 34%;
+    font-size: 15px;
   }
-  .keyfacts-card-title {
-    left: 30px;
-    top: 35px;
-    font-size: 16px;
-  }
-  .keyfacts-bottom {
-    left: 30px;
-    right: 28px;
-    bottom: 30px;
-  }
-  .keyfacts-bottom p,
-  .keyfacts-center-copy {
-    font-size: 16px;
-  }
-  .keyfacts-number {
-    font-size: 60px;
-  }
-  .keyfacts-circle {
-    width: 205px;
-  }
-  .keyfacts-circle > span {
-    font-size: 55px;
-  }
-  .keyfacts-right-video {
-    top: 95px;
-    height: 56%;
-  }
-}
-/* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 767px) {
-  .keyfacts-heading {
-    top: 95px;
-  }
-  .keyfacts-heading h1 {
-    font-size: 48px;
-  }
-  .keyfacts-heading p {
-    margin-top: 16px;
-    font-size: 14px;
-  }
+
   .keyfacts-stage {
     min-height: 650px;
   }
+
   .keyfacts-cards {
-    left: 18px;
-    right: 18px;
+    left: 3%;
+    right: 3%;
   }
+
+  .keyfacts-card {
+    top: 120px;
+    height: 69%;
+  }
+
+  .keyfacts-card-title {
+    left: 28px;
+    top: 32px;
+    font-size: 12px;
+  }
+
+  .keyfacts-bottom {
+    left: 27px;
+    right: 27px;
+    bottom: 30px;
+    gap: 10px;
+  }
+
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 13px;
+  }
+
+  .keyfacts-number {
+    font-size: 34px;
+  }
+
+  .keyfacts-circle {
+    width: 145px;
+  }
+
+  .keyfacts-circle > span {
+    font-size: 37px;
+  }
+
+  .keyfacts-right-video {
+    left: 8%;
+    right: 8%;
+    top: 85px;
+    height: 57%;
+  }
+
+  .business-partners-inner {
+    width: 84%;
+  }
+
+  .business-partners-row > div {
+    padding: 0 15px;
+  }
+
+  .partner-credible {
+    font-size: 22px;
+  }
+
+  .partner-yellowtail {
+    font-size: 21px;
+  }
+
+  .partner-technis {
+    font-size: 21px;
+  }
+
+  .partner-ockto {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   768px - 991px
+========================================================= */
+@media (min-width: 768px) and (max-width: 991px) {
+  .keyfacts-heading {
+    top: 105px;
+  }
+
+  .keyfacts-heading h1 {
+    font-size: 52px;
+  }
+
+  .keyfacts-heading p {
+    margin-top: 18px;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-size: 14px;
+  }
+
+  .keyfacts-stage {
+    height: 100vh;
+    min-height: 620px;
+  }
+
+  .keyfacts-cards {
+    left: 22px;
+    right: 22px;
+  }
+
+  .keyfacts-card {
+    top: 105px;
+    height: 70%;
+    border-radius: 8px;
+  }
+
   .keyfacts-card-left,
   .keyfacts-card-center,
   .keyfacts-card-right {
-    width: calc(33.333333% - 12px);
+    width: calc(33.333333% - 14px);
   }
+
   .keyfacts-card-center {
-    left: calc(33.333333% + 6px);
+    left: calc(33.333333% + 7px);
   }
+
   .keyfacts-card-title {
     left: 20px;
-    top: 24px;
-    font-size: 12px;
+    top: 27px;
+    font-size: 11px;
   }
+
   .keyfacts-bottom {
     left: 20px;
     right: 18px;
     bottom: 24px;
+    gap: 8px;
   }
+
   .keyfacts-bottom p,
   .keyfacts-center-copy {
+    font-size: 11px;
+  }
+
+  .keyfacts-number {
+    font-size: 29px;
+  }
+
+  .keyfacts-circle {
+    width: 125px;
+  }
+
+  .keyfacts-circle > span {
+    font-size: 32px;
+  }
+
+  .keyfacts-right-video {
+    left: 8%;
+    right: 8%;
+    top: 70px;
+    height: 55%;
+  }
+
+  .keyfacts-award-images {
+    top: 74%;
+    left: 10%;
+  }
+
+  .business-partners-section {
+    min-height: 300px;
+  }
+
+  .business-partners-inner {
+    width: 90%;
+    padding-bottom: 60px;
+  }
+
+  .business-partners-title {
+    margin-bottom: 30px;
+  }
+
+  .business-partners-row > div {
+    padding: 0 10px;
+  }
+
+  .partner-credible {
+    font-size: 19px;
+  }
+
+  .partner-yellowtail {
+    font-size: 18px;
+  }
+
+  .partner-luxury {
+    gap: 5px;
+  }
+
+  .luxury-symbol {
+    font-size: 29px;
+  }
+
+  .partner-luxury span:last-child {
     font-size: 12px;
   }
-  .keyfacts-number {
+
+  .partner-technis {
+    font-size: 18px;
+  }
+
+  .partner-ockto {
+    gap: 5px;
+    font-size: 16px;
+  }
+
+  .ockto-symbol {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   481px - 767px
+========================================================= */
+@media (min-width: 481px) and (max-width: 767px) {
+  .keyfacts-heading {
+    top: 90px;
+  }
+
+  .keyfacts-heading h1 {
     font-size: 45px;
   }
+
+  .keyfacts-heading p {
+    margin-top: 15px;
+    padding-left: 18%;
+    padding-right: 18%;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .keyfacts-stage {
+    height: 100vh;
+    min-height: 650px;
+  }
+
+  .keyfacts-cards {
+    left: 16px;
+    right: 16px;
+  }
+
+  .keyfacts-card {
+    top: 95px;
+    height: 70%;
+    border-radius: 8px;
+  }
+
+  .keyfacts-card-left,
+  .keyfacts-card-center,
+  .keyfacts-card-right {
+    width: calc(33.333333% - 10px);
+  }
+
+  .keyfacts-card-center {
+    left: calc(33.333333% + 5px);
+  }
+
+  .keyfacts-card-title {
+    left: 15px;
+    top: 22px;
+    font-size: 10px;
+  }
+
+  .keyfacts-bottom {
+    left: 15px;
+    right: 14px;
+    bottom: 20px;
+    gap: 5px;
+  }
+
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 10px;
+  }
+
+  .keyfacts-number {
+    font-size: 25px;
+  }
+
   .keyfacts-circle {
-    width: 145px;
+    width: 105px;
   }
+
   .keyfacts-circle > span {
-    font-size: 38px;
+    font-size: 27px;
   }
+
   .keyfacts-right-video {
-    top: 75px;
-    height: 52%;
+    left: 8%;
+    right: 8%;
+    top: 60px;
+    height: 54%;
   }
+
+  .keyfacts-award-images {
+    top: 73%;
+    left: 10%;
+  }
+
+  .business-partners-section {
+    min-height: auto;
+  }
+
   .business-partners-inner {
-    width: 94%;
-    padding-top: 55px;
+    width: 92%;
+    padding-top: 45px;
+    padding-bottom: 55px;
   }
+
+  .business-partners-title {
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+
   .business-partners-row {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 0;
   }
+
   .business-partners-row > div {
+    min-height: 55px;
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    padding-bottom: 20px;
+    padding: 10px 0;
   }
+
   .business-partners-row > div:last-child {
     border-bottom: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 480px
+========================================================= */
+@media (max-width: 480px) {
+  .keyfacts-heading {
+    top: 78px;
+  }
+
+  .keyfacts-heading h1 {
+    font-size: 38px;
+  }
+
+  .keyfacts-heading p {
+    margin-top: 13px;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .keyfacts-stage {
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  .keyfacts-cards {
+    left: 10px;
+    right: 10px;
+  }
+
+  .keyfacts-card {
+    top: 85px;
+    height: 69%;
+    border-radius: 7px;
+  }
+
+  .keyfacts-card-left,
+  .keyfacts-card-center,
+  .keyfacts-card-right {
+    width: calc(33.333333% - 8px);
+  }
+
+  .keyfacts-card-center {
+    left: calc(33.333333% + 4px);
+  }
+
+  .keyfacts-card-title {
+    left: 10px;
+    top: 18px;
+    font-size: 8px;
+    letter-spacing: -0.04em;
+  }
+
+  .keyfacts-bottom {
+    left: 10px;
+    right: 9px;
+    bottom: 15px;
+    gap: 3px;
+    align-items: flex-end;
+  }
+
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 8px;
+    line-height: 1.1;
+  }
+
+  .keyfacts-number {
+    font-size: 20px;
+  }
+
+  .keyfacts-number span {
+    top: -1px;
+    margin-left: 1px;
+  }
+
+  .keyfacts-circle {
+    width: 82px;
+  }
+
+  .keyfacts-circle > span {
+    font-size: 22px;
+  }
+
+  .keyfacts-circle > span > span {
+    top: -1px;
+  }
+
+  .keyfacts-center-copy {
+    width: 92%;
+    bottom: 16px;
+  }
+
+  .keyfacts-right-video {
+    left: 7%;
+    right: 7%;
+    top: 52px;
+    height: 52%;
+  }
+
+  .keyfacts-award-images {
+    top: 72%;
+    left: 9%;
+  }
+
+  .keyfacts-award-image {
+    width: 24%;
+    height: 25%;
+  }
+
+  .business-partners-section {
+    min-height: auto;
+  }
+
+  .business-partners-inner {
+    width: 92%;
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .business-partners-title {
+    margin-bottom: 22px;
+    font-size: 11px;
+  }
+
+  .business-partners-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .business-partners-row > div {
+    min-height: 50px;
+    padding: 10px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .business-partners-row > div:last-child {
+    border-bottom: none;
+  }
+
+  .partner-credible {
+    font-size: 21px;
+  }
+
+  .partner-yellowtail {
+    font-size: 20px;
+  }
+
+  .partner-luxury {
+    gap: 7px;
+  }
+
+  .luxury-symbol {
+    font-size: 30px;
+  }
+
+  .partner-luxury span:last-child {
+    font-size: 13px;
+  }
+
+  .partner-technis {
+    font-size: 20px;
+  }
+
+  .partner-ockto {
+    gap: 6px;
+    font-size: 18px;
+  }
+
+  .ockto-symbol {
+    font-size: 23px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+   BELOW 360px
+========================================================= */
+@media (max-width: 359px) {
+  .keyfacts-heading {
+    top: 70px;
+  }
+
+  .keyfacts-heading h1 {
+    font-size: 34px;
+  }
+
+  .keyfacts-heading p {
+    padding-left: 12%;
+    padding-right: 12%;
+    font-size: 11px;
+  }
+
+  .keyfacts-cards {
+    left: 7px;
+    right: 7px;
+  }
+
+  .keyfacts-card {
+    top: 78px;
+  }
+
+  .keyfacts-card-title {
+    left: 8px;
+    top: 15px;
+    font-size: 7px;
+  }
+
+  .keyfacts-bottom {
+    left: 8px;
+    right: 7px;
+    bottom: 12px;
+  }
+
+  .keyfacts-bottom p,
+  .keyfacts-center-copy {
+    font-size: 7px;
+  }
+
+  .keyfacts-number {
+    font-size: 17px;
+  }
+
+  .keyfacts-circle {
+    width: 70px;
+  }
+
+  .keyfacts-circle > span {
+    font-size: 19px;
+  }
+
+  .keyfacts-right-video {
+    top: 47px;
+    height: 50%;
   }
 }
