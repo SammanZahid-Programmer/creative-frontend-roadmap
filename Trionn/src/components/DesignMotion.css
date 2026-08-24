@@ -1,0 +1,599 @@
+/* =========================================================
+   SECTION
+========================================================= */
+
+.design-motion-section {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+
+  min-height: 600px;
+
+  overflow: hidden;
+
+  background: #e8e8e4;
+
+  color: #414141;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.design-title,
+.motion-title {
+  position: absolute;
+
+  left: 50%;
+
+  margin: 0;
+
+  transform: translateX(-50%);
+
+  white-space: nowrap;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      55px,
+      7vw,
+      120px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+
+  color: #414141;
+
+  z-index: 4;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* DESIGN */
+
+.design-title {
+  top: 35%;
+}
+
+
+/* MOTION */
+
+.motion-title {
+  top: 54%;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.design-description {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  margin: 0;
+
+  width: max-content;
+
+  text-align: center;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      9px,
+      0.75vw,
+      14px
+    );
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+
+  color: #4c4c4c;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   ORBIT STAGE
+========================================================= */
+
+.orbit-stage {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 0;
+  height: 0;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INDIVIDUAL IMAGE
+========================================================= */
+
+.orbit-image {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width:
+    clamp(
+      145px,
+      15vw,
+      280px
+    );
+
+  aspect-ratio:
+    1.35 / 1;
+
+  overflow: hidden;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 4px;
+
+  background: #e7e7e7;
+
+  box-shadow:
+    0 20px 45px
+    rgba(
+      0,
+      0,
+      0,
+      0.13
+    );
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.orbit-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FINAL GRID
+========================================================= */
+
+.final-grid {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  width:
+    min(
+      76vw,
+      1080px
+    );
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  grid-template-rows:
+    repeat(
+      2,
+      auto
+    );
+
+  gap:
+    clamp(
+      9px,
+      1.4vw,
+      22px
+    );
+
+  opacity: 0;
+
+  z-index: 12;
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   FINAL IMAGE
+========================================================= */
+
+.final-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio:
+    1.85 / 1;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  background: #ededed;
+
+  box-shadow:
+    0 18px 40px
+    rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+.final-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   BOTTOM INFO
+========================================================= */
+
+.design-bottom-info {
+  position: absolute;
+
+  left:
+    clamp(
+      18px,
+      2.5vw,
+      45px
+    );
+
+  bottom:
+    clamp(
+      20px,
+      5vh,
+      65px
+    );
+
+  z-index: 20;
+}
+
+
+.design-bottom-info p {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+font-size:clamp(
+      9px,
+      2.75vw,
+      18px
+    );
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+
+  color: #494949;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.design-link {
+  position: absolute;
+
+  right:
+    clamp(
+      18px,
+      2.5vw,
+      45px
+    );
+
+  bottom:
+    clamp(
+      20px,
+      5vh,
+      65px
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width:
+    clamp(
+      125px,
+      11vw,
+      170px
+    );
+
+  padding-bottom: 8px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      60,
+      60,
+      60,
+      0.6
+    );
+
+  text-decoration: none;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+font-size: clamp(8px, 1.69vw, 11px);
+
+  letter-spacing: 0.04em;
+
+  color: #464646;
+
+  z-index: 20;
+
+  transition:
+    width 0.3s ease;
+}
+
+
+.design-link:hover {
+  width:
+    clamp(
+      145px,
+      13vw,
+      195px
+    );
+}
+
+
+.design-link span {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .design-title,
+  .motion-title {
+    font-size:
+      clamp(
+        48px,
+        10vw,
+        90px
+      );
+  }
+
+
+  .design-title {
+    top: 34%;
+  }
+
+
+  .motion-title {
+    top: 54%;
+  }
+
+
+  .orbit-image {
+    width: 190px;
+  }
+
+
+  .final-grid {
+    width: 84vw;
+
+    gap: 10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .design-motion-section {
+    min-height: 580px;
+  }
+
+
+  .design-title,
+  .motion-title {
+    font-size:
+      clamp(
+        40px,
+        13.5vw,
+        70px
+      );
+  }
+
+
+  .design-title {
+    top: 36%;
+  }
+
+
+  .motion-title {
+    top: 54%;
+  }
+
+
+  .design-description {
+    top: 48%;
+
+    font-size: 8px;
+  }
+
+
+  /*
+  Images slightly smaller on mobile.
+  */
+
+  .orbit-image {
+    width: 130px;
+
+    border-radius: 3px;
+  }
+
+
+  /*
+  Final 3 + 3
+  */
+
+  .final-grid {
+    width: 92vw;
+
+    gap: 6px;
+  }
+
+
+  .final-image {
+    border-radius: 3px;
+  }
+
+
+  .design-bottom-info {
+    left: 15px;
+    bottom: 18px;
+  }
+
+
+  .design-bottom-info p {
+    font-size: 8px;
+  }
+
+
+  .design-link {
+    right: 15px;
+    bottom: 18px;
+
+    width: 110px;
+
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .design-title,
+  .motion-title {
+    font-size: 38px;
+  }
+
+
+  .orbit-image {
+    width: 115px;
+  }
+
+
+  .final-grid {
+    width: 94vw;
+
+    gap: 4px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .design-motion-section * {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

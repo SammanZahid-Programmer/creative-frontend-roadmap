@@ -1,11 +1,12 @@
 /* =========================================================
    KEY FACTS SECTION
 ========================================================= */
+
 .keyfacts-section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: #eeeeee;
+  background: #f4f4f2 !important;
   overflow: visible;
   z-index: 10;
 }
@@ -13,6 +14,7 @@
 /* =========================================================
    KEY FACTS HEADING
 ========================================================= */
+
 .keyfacts-heading {
   position: absolute;
   top: 155px;
@@ -50,18 +52,20 @@
 /* =========================================================
    CARD STAGE
 ========================================================= */
+
 .keyfacts-stage {
   position: relative;
   width: 100%;
   height: 100vh;
   min-height: 700px;
-  background: #eeeeee;
+  background: #f4f4f2;
   overflow: hidden;
 }
 
 /* =========================================================
    THREE CARDS
 ========================================================= */
+
 .keyfacts-cards {
   position: absolute;
   left: 3.9%;
@@ -74,6 +78,7 @@
 /* =========================================================
    COMMON CARD
 ========================================================= */
+
 .keyfacts-card {
   position: absolute;
   top: 129px;
@@ -88,6 +93,7 @@
 /* =========================================================
    LEFT
 ========================================================= */
+
 .keyfacts-card-left {
   left: 0;
   width: calc(33.333333% - 20px);
@@ -99,6 +105,7 @@
 /* =========================================================
    CENTER
 ========================================================= */
+
 .keyfacts-card-center {
   left: calc(33.333333% + 10px);
   width: calc(33.333333% - 20px);
@@ -110,6 +117,7 @@
 /* =========================================================
    RIGHT
 ========================================================= */
+
 .keyfacts-card-right {
   right: 0;
   width: calc(33.333333% - 20px);
@@ -122,11 +130,13 @@
 /* =========================================================
    CARD TITLE
 ========================================================= */
+
 .keyfacts-card-title {
   position: absolute;
   left: 43px;
   top: 41px;
   z-index: 40;
+
   font-family: "Inter", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -138,12 +148,16 @@
 /* =========================================================
    LEFT VIDEO
 ========================================================= */
+
 .keyfacts-left-video {
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   z-index: 1;
   display: block;
 }
@@ -151,11 +165,14 @@
 /* =========================================================
    LEFT OVERLAY
 ========================================================= */
+
 .keyfacts-overlay {
   position: absolute;
   inset: 0;
+
   z-index: 3;
   pointer-events: none;
+
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.03) 0%,
@@ -167,23 +184,31 @@
 /* =========================================================
    LEFT CHANGING IMAGES
 ========================================================= */
+
 .keyfacts-award-images {
   position: absolute;
   inset: 0;
+
   z-index: 5;
   overflow: hidden;
+
   top: 77%;
   left: 11%;
+
   pointer-events: none;
 }
 
 .keyfacts-award-image {
   position: absolute;
   inset: 0;
+
   width: 20%;
   height: 27%;
+
   opacity: 0;
+
   transform: scale(1.025);
+
   transition:
     opacity 0.65s ease,
     transform 1s ease;
@@ -197,24 +222,33 @@
 /* =========================================================
    BOTTOM CARD CONTENT
 ========================================================= */
+
 .keyfacts-bottom {
   position: absolute;
+
   left: 39px;
   right: 43px;
   bottom: 40px;
+
   z-index: 50;
+
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
   gap: 15px;
 }
 
 .keyfacts-bottom p {
   margin: 0;
+
   font-family: "Inter", Arial, sans-serif;
+
   color: rgb(251, 238, 221);
+
   font-size: 15px;
   font-weight: 400;
+
   line-height: 1.13;
   letter-spacing: -0.045em;
 }
@@ -222,35 +256,48 @@
 /* =========================================================
    NUMBERS
 ========================================================= */
+
 .keyfacts-number {
   flex-shrink: 0;
+
   font-family: "Inter", Arial, sans-serif;
+
   color: rgb(231, 228, 224);
+
   font-size: 40px;
   font-weight: 400;
+
   line-height: 0.82;
   letter-spacing: -0.08em;
 }
 
 .keyfacts-number span {
   position: relative;
+
   top: -2px;
   margin-left: 2px;
+
   font-size: 0.42em;
 }
 
 /* =========================================================
    CENTER CIRCLE
 ========================================================= */
+
 .keyfacts-circle {
   position: absolute;
+
   left: 50%;
   top: 50%;
+
   width: 178px;
   aspect-ratio: 1;
+
   transform: translate(-50%, -53%);
+
   border-radius: 50%;
   background: #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,33 +305,47 @@
 
 .keyfacts-circle > span {
   display: block;
+
   font-family: "Inter", Arial, sans-serif;
+
   font-size: 44px;
   font-weight: 400;
+
   line-height: 1;
   letter-spacing: -0.075em;
 }
 
 .keyfacts-circle > span > span {
   position: relative;
+
   top: -2px;
+
   font-size: 0.42em;
 }
 
 /* =========================================================
    CENTER BOTTOM TEXT
 ========================================================= */
+
 .keyfacts-center-copy {
   position: absolute;
+
   left: 50%;
   bottom: 40px;
+
   width: 90%;
+
   margin: 0;
+
   transform: translateX(-50%);
+
   text-align: center;
+
   font-family: "Inter", Arial, sans-serif;
+
   font-size: 15px;
   font-weight: 300;
+
   line-height: 1.13;
   letter-spacing: -0.045em;
 }
@@ -292,27 +353,44 @@
 /* =========================================================
    RIGHT VIDEO
 ========================================================= */
+
 .keyfacts-right-video {
   position: absolute;
+
   left: 9%;
   right: 9%;
   top: 102px;
+
   height: 58%;
+
   overflow: hidden;
+
   z-index: 5;
+
   background: #222326;
 }
 
 .keyfacts-right-video > video {
   display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   transform: scale(1);
-  transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.25, 1);
+
+  transition:
+    transform 0.8s cubic-bezier(
+      0.2,
+      0.65,
+      0.25,
+      1
+    );
 }
 
-.keyfacts-card-right:hover .keyfacts-right-video > video {
+.keyfacts-card-right:hover
+.keyfacts-right-video > video {
   transform: scale(1.015);
 }
 
@@ -320,159 +398,151 @@
    NAVBAR
 ========================================================= */
 
-/*
-   IMPORTANT:
-
-   Normal state:
-   Logo/Text = WHITE
-   Let's Talk = BLACK text + WHITE background
-
-   KeyFacts state:
-   Logo/Text = BLACK
-   Let's Talk = WHITE text + BLACK background
-*/
-
-/* =========================================================
-   NORMAL NAVBAR — WHITE LOGO / TEXT
-========================================================= */
 .navbar.keyfacts-navbar-light {
   color: #ffffff !important;
 }
 
-.navbar.keyfacts-navbar-light .brand-symbol,
-.navbar.keyfacts-navbar-light .brand-name {
-  filter: brightness(0) invert(1) !important;
+.navbar.keyfacts-navbar-light
+.sound-button {
+  color: #353333 !important;
 }
 
-.navbar.keyfacts-navbar-light .sound-button {
-  color: #ffffff !important;
+.navbar.keyfacts-navbar-light
+.speaker-body,
+.navbar.keyfacts-navbar-light
+.speaker-cone,
+.navbar.keyfacts-navbar-light
+.sound-wave {
+  background-color: #585757 !important;
+  border-color: #605d5d !important;
 }
 
-.navbar.keyfacts-navbar-light .speaker-body,
-.navbar.keyfacts-navbar-light .speaker-cone,
-.navbar.keyfacts-navbar-light .sound-wave {
-  background-color: #ffffff !important;
-  border-color: #ffffff !important;
-}
-
-/*
-   LET'S TALK — NORMAL
-*/
-.navbar.keyfacts-navbar-light .talk-button {
+.navbar.keyfacts-navbar-light
+.talk-button {
   color: #111111 !important;
   background-color: #ffffff !important;
   border-color: #ffffff !important;
 }
 
-/*
-   MENU — NORMAL
-*/
-.navbar.keyfacts-navbar-light .menu-button {
-  color: #ffffff !important;
-  border-color: #ffffff !important;
+.navbar.keyfacts-navbar-light
+.menu-button {
+  color: #fff !important;
+  border-color: #fff !important;
 }
 
-.navbar.keyfacts-navbar-light .menu-lines i {
-  background-color: #ffffff !important;
+.navbar.keyfacts-navbar-light
+.menu-lines i {
+  background-color: #fff !important;
 }
 
 /* =========================================================
-   KEYFACTS NAVBAR — BLACK LOGO / TEXT
+   KEYFACTS NAVBAR
 ========================================================= */
+
 .navbar.keyfacts-navbar-dark {
   color: #111111 !important;
 }
 
-.navbar.keyfacts-navbar-dark .brand-symbol,
-.navbar.keyfacts-navbar-dark .brand-name {
+.navbar.keyfacts-navbar-dark
+.brand-symbol,
+.navbar.keyfacts-navbar-dark
+.brand-name {
   filter: brightness(0) !important;
 }
 
-.navbar.keyfacts-navbar-dark .sound-button {
+.navbar.keyfacts-navbar-dark
+.sound-button {
   color: #111111 !important;
 }
 
-/*
 .navbar.keyfacts-navbar-dark
-.speaker-body,
-.navbar.keyfacts-navbar-dark
-.speaker-cone,
-.navbar.keyfacts-navbar-dark
-.sound-wave {
-  background-color: #111111 !important;
-  border-color: #111111 !important;
-}
-*/
-
-/*
-   LET'S TALK — KEYFACTS
-*/
-.navbar.keyfacts-navbar-dark .talk-button {
+.talk-button {
   color: #ffffff !important;
   background-color: #111111 !important;
   border-color: #111111 !important;
 }
 
-/*
-   MENU — KEYFACTS
-*/
-.navbar.keyfacts-navbar-dark .menu-button {
+.navbar.keyfacts-navbar-dark
+.menu-button {
   color: #111111 !important;
   border-color: #111111 !important;
 }
 
-.navbar.keyfacts-navbar-dark .menu-lines i {
+.navbar.keyfacts-navbar-dark
+.menu-lines i {
   background-color: #111111 !important;
 }
 
 /* =========================================================
    BUSINESS PARTNERS
 ========================================================= */
+
 .business-partners-section {
   position: relative;
+
   width: 100%;
-  min-height: 330px;
-  background: #eeeeee;
+  min-height: 200px;
+
+  background: #f4f4f2;
+
   z-index: 5;
+
   display: flex;
+
   align-items: flex-start;
   justify-content: center;
 }
 
 .business-partners-inner {
   width: 73%;
+
   padding-top: 0;
   padding-bottom: 80px;
 }
 
 .business-partners-title {
   text-align: center;
+
   margin-bottom: 42px;
+
   font-family: "Inter", Arial, sans-serif;
+
   font-size: 14px;
   font-weight: 400;
+
   line-height: 1;
   letter-spacing: -0.045em;
+
   color: #333333;
 }
 
 /* =========================================================
    PARTNERS ROW
 ========================================================= */
+
 .business-partners-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
   align-items: center;
+
   width: 100%;
 }
 
 .business-partners-row > div {
   min-height: 54px;
+
   padding: 0 25px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.07);
+
+  border-right:
+    1px solid rgba(0, 0, 0, 0.07);
 }
 
 .business-partners-row > div:last-child {
@@ -482,79 +552,115 @@
 /* =========================================================
    PARTNER TEXT
 ========================================================= */
+
 .partner-credible {
   font-family: Arial, sans-serif;
+
   font-size: 25px;
   font-weight: 700;
+
   letter-spacing: -0.08em;
+
   color: #454545;
 }
 
 .partner-yellowtail {
   font-family: Arial, sans-serif;
+
   font-size: 24px;
   font-weight: 600;
+
   letter-spacing: -0.07em;
+
   color: #454545;
 }
 
 .partner-luxury {
   display: flex !important;
+
   gap: 10px;
+
   justify-content: center;
+
   text-align: left;
+
   color: #555555;
 }
 
 .luxury-symbol {
   font-size: 38px;
+
   line-height: 1;
+
   font-weight: 300;
 }
 
 .partner-luxury span:last-child {
   font-size: 17px;
+
   line-height: 0.9;
+
   letter-spacing: 0.02em;
 }
 
 .partner-technis {
   font-family: Arial, sans-serif;
+
   font-size: 24px;
   font-weight: 700;
   font-style: italic;
+
   letter-spacing: -0.08em;
+
   color: #454545;
 }
 
 .partner-ockto {
   display: flex !important;
+
   gap: 8px;
+
   font-family: Arial, sans-serif;
+
   font-size: 22px;
   font-weight: 700;
+
   letter-spacing: -0.055em;
+
   color: #454545;
 }
 
 .ockto-symbol {
   font-size: 28px;
+
   line-height: 1;
 }
+
 
 /* =========================================================
    LARGE LAPTOP / DESKTOP
    1200px - 1600px
 ========================================================= */
+
 @media (min-width: 1200px) and (max-width: 1600px) {
+
   .keyfacts-heading h1 {
-    font-size: clamp(58px, 4.2vw, 66px);
+    font-size: clamp(
+      58px,
+      4.2vw,
+      66px
+    );
   }
 
   .keyfacts-heading p {
     padding-left: 38%;
     padding-right: 38%;
-    font-size: clamp(14px, 1vw, 16.7px);
+
+    font-size: clamp(
+      14px,
+      1vw,
+      16.7px
+    );
   }
 
   .keyfacts-card {
@@ -600,11 +706,14 @@
   }
 }
 
+
 /* =========================================================
    LAPTOP
    992px - 1199px
 ========================================================= */
+
 @media (min-width: 992px) and (max-width: 1199px) {
+
   .keyfacts-heading {
     top: 125px;
   }
@@ -615,8 +724,10 @@
 
   .keyfacts-heading p {
     margin-top: 22px;
+
     padding-left: 34%;
     padding-right: 34%;
+
     font-size: 15px;
   }
 
@@ -637,13 +748,16 @@
   .keyfacts-card-title {
     left: 28px;
     top: 32px;
+
     font-size: 12px;
   }
 
   .keyfacts-bottom {
     left: 27px;
     right: 27px;
+
     bottom: 30px;
+
     gap: 10px;
   }
 
@@ -667,7 +781,9 @@
   .keyfacts-right-video {
     left: 8%;
     right: 8%;
+
     top: 85px;
+
     height: 57%;
   }
 
@@ -696,11 +812,14 @@
   }
 }
 
+
 /* =========================================================
    TABLET
    768px - 991px
 ========================================================= */
+
 @media (min-width: 768px) and (max-width: 991px) {
+
   .keyfacts-heading {
     top: 105px;
   }
@@ -711,8 +830,10 @@
 
   .keyfacts-heading p {
     margin-top: 18px;
+
     padding-left: 25%;
     padding-right: 25%;
+
     font-size: 14px;
   }
 
@@ -728,30 +849,39 @@
 
   .keyfacts-card {
     top: 105px;
+
     height: 70%;
+
     border-radius: 8px;
   }
 
   .keyfacts-card-left,
   .keyfacts-card-center,
   .keyfacts-card-right {
-    width: calc(33.333333% - 14px);
+    width: calc(
+      33.333333% - 14px
+    );
   }
 
   .keyfacts-card-center {
-    left: calc(33.333333% + 7px);
+    left: calc(
+      33.333333% + 7px
+    );
   }
 
   .keyfacts-card-title {
     left: 20px;
     top: 27px;
+
     font-size: 11px;
   }
 
   .keyfacts-bottom {
     left: 20px;
     right: 18px;
+
     bottom: 24px;
+
     gap: 8px;
   }
 
@@ -775,7 +905,9 @@
   .keyfacts-right-video {
     left: 8%;
     right: 8%;
+
     top: 70px;
+
     height: 55%;
   }
 
@@ -790,6 +922,7 @@
 
   .business-partners-inner {
     width: 90%;
+
     padding-bottom: 60px;
   }
 
@@ -835,13 +968,24 @@
   }
 }
 
+
 /* =========================================================
    MOBILE
    481px - 767px
+
+   IMPORTANT:
+   ONE CARD AT A TIME
 ========================================================= */
+
 @media (min-width: 481px) and (max-width: 767px) {
+
+  .keyfacts-section {
+    min-height: 100vh;
+  }
+
   .keyfacts-heading {
     top: 90px;
+    left:5%;
   }
 
   .keyfacts-heading h1 {
@@ -850,8 +994,10 @@
 
   .keyfacts-heading p {
     margin-top: 15px;
+
     padding-left: 18%;
     padding-right: 18%;
+
     font-size: 13px;
     line-height: 1.2;
   }
@@ -861,106 +1007,197 @@
     min-height: 650px;
   }
 
+  /*
+    IMPORTANT:
+
+    Cards become full width.
+    They are stacked exactly on top of each other.
+    GSAP moves them one-by-one.
+  */
+
   .keyfacts-cards {
     left: 16px;
     right: 16px;
+
+    top: 0;
+
+    height: 100%;
   }
 
   .keyfacts-card {
     top: 95px;
+
+    left: 0 !important;
+    right: auto !important;
+
+    width: 100% !important;
+
     height: 70%;
+
     border-radius: 8px;
   }
 
-  .keyfacts-card-left,
-  .keyfacts-card-center,
-  .keyfacts-card-right {
-    width: calc(33.333333% - 10px);
+  /*
+    Layer order.
+    Only the active card becomes visible
+    through GSAP movement.
+  */
+
+  .keyfacts-card-left {
+    z-index: 10;
   }
 
   .keyfacts-card-center {
-    left: calc(33.333333% + 5px);
+    z-index: 20;
+  }
+
+  .keyfacts-card-right {
+    z-index: 30;
   }
 
   .keyfacts-card-title {
-    left: 15px;
-    top: 22px;
-    font-size: 10px;
+    left: 22px;
+    top: 25px;
+
+    font-size: 11px;
   }
 
   .keyfacts-bottom {
-    left: 15px;
-    right: 14px;
-    bottom: 20px;
-    gap: 5px;
+    left: 22px;
+    right: 20px;
+
+    bottom: 24px;
+
+    gap: 8px;
   }
 
   .keyfacts-bottom p,
   .keyfacts-center-copy {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .keyfacts-number {
-    font-size: 25px;
+    font-size: 31px;
   }
 
   .keyfacts-circle {
-    width: 105px;
+    width: 145px;
   }
 
   .keyfacts-circle > span {
-    font-size: 27px;
+    font-size: 36px;
   }
 
   .keyfacts-right-video {
-    left: 8%;
-    right: 8%;
-    top: 60px;
-    height: 54%;
+    left: 9%;
+    right: 9%;
+
+    top: 72px;
+
+    height: 55%;
   }
 
   .keyfacts-award-images {
-    top: 73%;
+    top: 74%;
     left: 10%;
   }
+
+  .keyfacts-award-image {
+    width: 25%;
+    height: 27%;
+  }
+
+  /*
+    Business partners
+    become vertical.
+  */
 
   .business-partners-section {
     min-height: auto;
   }
 
   .business-partners-inner {
-    width: 92%;
+    width: 88%;
+
     padding-top: 45px;
     padding-bottom: 55px;
   }
 
   .business-partners-title {
     margin-bottom: 28px;
+
     font-size: 12px;
   }
 
   .business-partners-row {
     grid-template-columns: 1fr;
+
     gap: 0;
   }
 
   .business-partners-row > div {
     min-height: 55px;
+
     border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+    border-bottom:
+      1px solid rgba(0, 0, 0, 0.07);
+
     padding: 10px 0;
   }
 
   .business-partners-row > div:last-child {
     border-bottom: none;
   }
+
+  .partner-credible {
+    font-size: 22px;
+  }
+
+  .partner-yellowtail {
+    font-size: 21px;
+  }
+
+  .partner-luxury {
+    gap: 7px;
+  }
+
+  .luxury-symbol {
+    font-size: 30px;
+  }
+
+  .partner-luxury span:last-child {
+    font-size: 13px;
+  }
+
+  .partner-technis {
+    font-size: 21px;
+  }
+
+  .partner-ockto {
+    gap: 6px;
+    font-size: 18px;
+  }
+
+  .ockto-symbol {
+    font-size: 23px;
+  }
 }
+
 
 /* =========================================================
    SMALL MOBILE
    320px - 480px
+
+   ONE CARD AT A TIME
 ========================================================= */
+
 @media (max-width: 480px) {
+
+  .keyfacts-section {
+    min-height: 100vh;
+  }
+
   .keyfacts-heading {
     top: 78px;
   }
@@ -971,9 +1208,12 @@
 
   .keyfacts-heading p {
     margin-top: 13px;
+
     padding-left: 15%;
     padding-right: 15%;
+
     font-size: 12px;
+
     line-height: 1.2;
   }
 
@@ -982,50 +1222,82 @@
     min-height: 600px;
   }
 
+  /* =====================================================
+     ONE FULL-WIDTH CARD
+  ===================================================== */
+
   .keyfacts-cards {
     left: 10px;
     right: 10px;
+
+    top: 0;
+
+    height: 100%;
   }
 
   .keyfacts-card {
     top: 85px;
+
+    left: 0 !important;
+    right: auto !important;
+
+    width: 100% !important;
+
     height: 69%;
+
     border-radius: 7px;
   }
 
-  .keyfacts-card-left,
-  .keyfacts-card-center,
-  .keyfacts-card-right {
-    width: calc(33.333333% - 8px);
+  .keyfacts-card-left {
+    z-index: 10;
   }
 
   .keyfacts-card-center {
-    left: calc(33.333333% + 4px);
+    z-index: 20;
   }
 
+  .keyfacts-card-right {
+    z-index: 30;
+  }
+
+  /* =====================================================
+     CARD TITLE
+  ===================================================== */
+
   .keyfacts-card-title {
-    left: 10px;
+    left: 16px;
+
     top: 18px;
-    font-size: 8px;
+
+    font-size: 10px;
+
     letter-spacing: -0.04em;
   }
 
+  /* =====================================================
+     BOTTOM
+  ===================================================== */
+
   .keyfacts-bottom {
-    left: 10px;
-    right: 9px;
-    bottom: 15px;
-    gap: 3px;
+    left: 16px;
+    right: 14px;
+
+    bottom: 16px;
+
+    gap: 5px;
+
     align-items: flex-end;
   }
 
   .keyfacts-bottom p,
   .keyfacts-center-copy {
-    font-size: 8px;
+    font-size: 10px;
+
     line-height: 1.1;
   }
 
   .keyfacts-number {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .keyfacts-number span {
@@ -1033,12 +1305,16 @@
     margin-left: 1px;
   }
 
+  /* =====================================================
+     CENTER CIRCLE
+  ===================================================== */
+
   .keyfacts-circle {
-    width: 82px;
+    width: 105px;
   }
 
   .keyfacts-circle > span {
-    font-size: 22px;
+    font-size: 27px;
   }
 
   .keyfacts-circle > span > span {
@@ -1047,25 +1323,39 @@
 
   .keyfacts-center-copy {
     width: 92%;
-    bottom: 16px;
+    bottom: 17px;
   }
+
+  /* =====================================================
+     RIGHT VIDEO
+  ===================================================== */
 
   .keyfacts-right-video {
-    left: 7%;
-    right: 7%;
-    top: 52px;
-    height: 52%;
+    left: 8%;
+    right: 8%;
+
+    top: 58px;
+
+    height: 54%;
   }
 
+  /* =====================================================
+     AWARD IMAGES
+  ===================================================== */
+
   .keyfacts-award-images {
-    top: 72%;
+    top: 73%;
     left: 9%;
   }
 
   .keyfacts-award-image {
-    width: 24%;
+    width: 25%;
     height: 25%;
   }
+
+  /* =====================================================
+     BUSINESS PARTNERS
+  ===================================================== */
 
   .business-partners-section {
     min-height: auto;
@@ -1073,25 +1363,32 @@
 
   .business-partners-inner {
     width: 92%;
+
     padding-top: 40px;
     padding-bottom: 45px;
   }
 
   .business-partners-title {
     margin-bottom: 22px;
+
     font-size: 11px;
   }
 
   .business-partners-row {
     grid-template-columns: 1fr;
+
     gap: 0;
   }
 
   .business-partners-row > div {
     min-height: 50px;
+
     padding: 10px 0;
+
     border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+    border-bottom:
+      1px solid rgba(0, 0, 0, 0.07);
   }
 
   .business-partners-row > div:last-child {
@@ -1132,11 +1429,14 @@
   }
 }
 
+
 /* =========================================================
    VERY SMALL SCREENS
    BELOW 360px
 ========================================================= */
+
 @media (max-width: 359px) {
+
   .keyfacts-heading {
     top: 70px;
   }
@@ -1148,6 +1448,7 @@
   .keyfacts-heading p {
     padding-left: 12%;
     padding-right: 12%;
+
     font-size: 11px;
   }
 
@@ -1158,17 +1459,21 @@
 
   .keyfacts-card {
     top: 78px;
+
+    width: 100% !important;
   }
 
   .keyfacts-card-title {
     left: 8px;
     top: 15px;
+
     font-size: 7px;
   }
 
   .keyfacts-bottom {
     left: 8px;
     right: 7px;
+
     bottom: 12px;
   }
 
@@ -1192,5 +1497,107 @@
   .keyfacts-right-video {
     top: 47px;
     height: 50%;
+  }
+
+  .keyfacts-award-images {
+    top: 71%;
+  }
+}
+
+
+/* =========================================================
+   EXTRA WIDE SCREENS
+   1601px+
+   
+   Keeps original desktop look but prevents cards
+   from becoming unnecessarily huge.
+========================================================= */
+
+@media (min-width: 1601px) {
+
+  .keyfacts-heading h1 {
+    font-size: 66px;
+  }
+
+  .keyfacts-heading p {
+    padding-left: 43%;
+    padding-right: 43%;
+  }
+
+  .keyfacts-card {
+    max-height: 610px;
+  }
+
+  .business-partners-inner {
+    max-width: 1200px;
+  }
+}
+
+
+/* =========================================================
+   HEIGHT-BASED RESPONSIVE FIX
+   FOR SHORT LAPTOP SCREENS
+========================================================= */
+
+@media (min-width: 768px) and (max-height: 800px) {
+
+  .keyfacts-card {
+    top: 105px;
+    height: 70%;
+  }
+
+  .keyfacts-heading {
+    top: 105px;
+  }
+
+  .keyfacts-right-video {
+    top: 80px;
+    height: 55%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE
+========================================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+  .keyfacts-heading {
+    top: 45px;
+  }
+
+  .keyfacts-heading h1 {
+    font-size: 32px;
+  }
+
+  .keyfacts-heading p {
+    margin-top: 8px;
+    font-size: 10px;
+
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  .keyfacts-stage {
+    min-height: 500px;
+  }
+
+  .keyfacts-card {
+    top: 65px;
+    height: 75%;
+  }
+
+  .keyfacts-card-title {
+    top: 15px;
+  }
+
+  .keyfacts-right-video {
+    top: 48px;
+    height: 55%;
+  }
+
+  .keyfacts-bottom {
+    bottom: 14px;
   }
 }

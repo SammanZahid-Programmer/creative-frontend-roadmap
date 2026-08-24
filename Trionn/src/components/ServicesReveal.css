@@ -1,0 +1,780 @@
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.srvx7-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #080b10;
+}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.srvx7-video {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   DARK LAYER
+========================================================= */
+
+.srvx7-dark-layer {
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(3, 6, 10, 0.58);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   WHITE LAYER
+========================================================= */
+
+.srvx7-white-layer {
+  position: absolute;
+  inset: 0;
+
+  background: #f2f2ef;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.srvx7-label {
+  position: absolute;
+
+  top: 11%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 50;
+
+  color: #111;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   ROCK LAYER
+========================================================= */
+
+.srvx7-rock-layer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   ROCK
+========================================================= */
+
+.srvx7-rock {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(43vw, 620px);
+  max-width: 75vw;
+
+  height: auto;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  object-fit: contain;
+
+  will-change:
+    transform,
+    opacity;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.srvx7-content {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  z-index: 30;
+
+  width: 100%;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.srvx7-content h2 {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #111;
+
+  font-size:
+    clamp(
+      46px,
+      7vw,
+      118px
+    );
+
+  line-height: 0.88;
+
+  font-weight: 500;
+
+  letter-spacing: -0.06em;
+
+  text-align: center;
+}
+
+/* FIRST WHITE SCREEN TEXT */
+
+.srvx7-content-first h2 {
+  color: #111;
+}
+
+/* SECOND VIDEO TEXT */
+
+.srvx7-content-second h2 {
+  color: #ffffff;
+
+  text-shadow:
+    0 5px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.3
+    );
+}
+
+/* =========================================================
+   BOTTOM CONTENT
+========================================================= */
+
+.srvx7-bottom {
+  position: absolute;
+
+  left: 0;
+  bottom: 34px;
+
+  width: 100%;
+
+  padding:
+    0
+    42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 40;
+
+  font-size: 12px;
+
+  letter-spacing: 0.02em;
+
+  pointer-events: none;
+}
+
+/* FIRST */
+
+.srvx7-bottom-first {
+  color: #111;
+}
+
+/* SECOND */
+
+.srvx7-bottom-second {
+  color: #ffffff;
+}
+
+/* =========================================================
+   BOTTOM CENTER
+========================================================= */
+
+.srvx7-bottom-center {
+  position: absolute;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STAR
+========================================================= */
+
+.srvx7-star {
+  font-size: 15px;
+}
+
+/* =========================================================
+   VIEW SERVICES
+========================================================= */
+
+.srvx7-services-link {
+  margin-left: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  pointer-events: auto;
+
+  border-bottom:
+    1px solid
+    currentColor;
+
+  padding-bottom: 7px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   CARDS LAYER
+========================================================= */
+
+.srvx7-cards-layer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 35;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.srvx7-service-card {
+  position: absolute;
+
+  width:
+    clamp(
+      240px,
+      25vw,
+      420px
+    );
+
+  min-height: 203px;
+
+  background:
+    rgba(
+      7,
+      10,
+      16,
+      0.22
+    );
+
+  backdrop-filter:
+    blur(8px);
+
+  /* border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.025
+    ); */
+
+  /* box-shadow:
+    0
+    25px
+    70px
+    rgba(
+      0,
+      0,
+      0,
+      0.3
+    ); */
+
+  overflow: hidden;
+
+  will-change:
+    transform,
+    opacity;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LEFT CARD
+========================================================= */
+
+.srvx7-service-card-left {
+  left: 17%;
+  bottom: 16%;
+}
+
+/* =========================================================
+   RIGHT CARD
+========================================================= */
+
+.srvx7-service-card-right {
+  right: 17%;
+  bottom: 16%;
+}
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.srvx7-card-image {
+  position: absolute;
+padding-top: 22px;
+    padding-left: 65%;
+  inset: 0;
+
+  opacity: 0.2;
+
+  /* overflow: visible; */
+}
+
+/* IMAGE */
+
+.srvx7-card-image img {
+  width: 60%;
+  height: 34%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter:
+    grayscale(1)
+    contrast(1.05);
+
+  opacity: 1.9;
+}
+
+/* =========================================================
+   CARD DARK OVERLAY
+========================================================= */
+
+.srvx7-card-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(
+        5,
+        8,
+        13,
+        0.3
+      )
+      0%,
+      rgba(
+        5,
+        8,
+        13,
+        0.95
+      )
+      100%
+    );
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.srvx7-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 201px;
+
+  padding:
+    34px
+    34px
+    28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.srvx7-card-content h3 {
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      18px,
+      1.14vw,
+      42px
+    );
+
+  line-height: 0.95;
+
+  font-weight: 500;
+
+  letter-spacing: -0.05em;
+}
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.srvx7-card-content p {
+  margin: 0;
+
+  max-width: 300px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+
+  font-size: 14px;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+  max-width: 900px
+) {
+  .srvx7-rock {
+    width: 62vw;
+  }
+
+  .srvx7-service-card {
+    width: 32vw;
+
+    min-height: 220px;
+  }
+
+  .srvx7-card-content {
+    min-height: 220px;
+
+    padding: 25px;
+  }
+
+  .srvx7-service-card-left {
+    left: 5%;
+  }
+
+  .srvx7-service-card-right {
+    right: 5%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+  max-width: 640px
+) {
+  .srvx7-label {
+    top: 12%;
+    font-size: 11px;
+  }
+
+  .srvx7-rock {
+    width: 82vw;
+    max-width: 82vw;
+  }
+
+  .srvx7-content h2 {
+    font-size:
+      clamp(
+        40px,
+        13vw,
+        72px
+      );
+  }
+
+  .srvx7-bottom {
+    bottom: 20px;
+
+    padding:
+      0
+      18px;
+
+    font-size: 9px;
+  }
+
+  .srvx7-bottom-center {
+    display: none;
+  }
+
+  /* =======================================================
+     MOBILE SERVICE CARDS
+     
+     IMPORTANT:
+     Cards are now centered and nearly full width.
+     GSAP animation itself is NOT changed.
+  ======================================================= */
+
+  .srvx7-cards-layer {
+    inset: 0;
+
+    z-index: 35;
+
+    pointer-events: none;
+
+    /* Keeps cards inside viewport */
+    overflow: hidden;
+  }
+
+  .srvx7-service-card {
+    /*
+       Full-width mobile card
+       with small side breathing room.
+    */
+
+    width: calc(100vw - 28px);
+
+    max-width: none;
+
+    min-height: 210px;
+
+    left: 14px;
+    right: auto;
+
+    /*
+       Center vertically around the
+       main visual area.
+    */
+
+    top: 50%;
+    bottom: auto;
+
+    transform-origin: center center;
+
+    background:
+      rgba(
+        7,
+        10,
+        16,
+        0.30
+      );
+
+    backdrop-filter:
+      blur(8px);
+
+    -webkit-backdrop-filter:
+      blur(8px);
+
+    overflow: hidden;
+  }
+
+  /*
+     BOTH left and right cards use
+     the SAME physical position.
+
+     GSAP still controls their
+     xPercent / yPercent movement.
+  */
+
+  .srvx7-service-card-left{
+    left: 14px;
+    right: auto;
+
+    top: 60%;
+    bottom: auto;
+
+    margin: 0;
+
+    /*
+       Only CSS positioning.
+       GSAP remains responsible for
+       the actual animation.
+    */
+  }
+
+  .srvx7-service-card-right {
+    left: 14px;
+    right: auto;
+
+    top: 30%;
+    bottom: auto;
+
+    margin: 0;
+
+    /*
+       Only CSS positioning.
+       GSAP remains responsible for
+       the actual animation.
+    */
+  }
+  /* =======================================================
+     CARD IMAGE
+  ======================================================= */
+
+  .srvx7-card-image {
+    padding-top: 18px;
+    padding-left: 60%;
+
+    inset: 0;
+
+    opacity: 0.2;
+  }
+
+  .srvx7-card-image img {
+    width: 58%;
+    height: 38%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+      grayscale(1)
+      contrast(1.05);
+
+    opacity: 1.9;
+  }
+
+  /* =======================================================
+     CARD CONTENT
+  ======================================================= */
+
+  .srvx7-card-content {
+    min-height: 210px;
+
+    padding:
+      24px
+      24px
+      22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
+
+  /* =======================================================
+     CARD TITLE
+  ======================================================= */
+
+  .srvx7-card-content h3 {
+    font-size: 28px;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+  }
+
+  /* =======================================================
+     CARD DESCRIPTION
+  ======================================================= */
+
+  .srvx7-card-content p {
+    max-width: 290px;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+  }
+}

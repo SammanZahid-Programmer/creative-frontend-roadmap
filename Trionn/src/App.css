@@ -2,9 +2,11 @@
   width: 100%;
   min-height: 100vh;
 }
+
 /* =========================================
    HERO
 ========================================= */
+
 .hero {
   position: relative;
   width: 100%;
@@ -13,22 +15,27 @@
   overflow: hidden;
   background: #080808;
 }
+
 /* =========================================
    3D SCENE
 ========================================= */
+
 .hero-scene {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: auto;
 }
+
 .hero-scene canvas {
   width: 100% !important;
   height: 100% !important;
 }
+
 /* =========================================
    NAVBAR
 ========================================= */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -36,1299 +43,3692 @@
   width: 100%;
   height: 115px;
   padding: 27px 48px;
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
   z-index: 100;
   pointer-events: none;
+
+  transition:
+    color 0.45s ease,
+    background-color 0.45s ease;
+}
+.blast-icon{
+  margin-left: 6px;
+  margin-right: 6px;
 }
 .brand,
 .nav-actions {
   pointer-events: auto;
 }
+
 /* =========================================
    BRAND
 ========================================= */
+
 .brand {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .brand-symbol {
   width: 32px;
   height: auto;
   display: block;
-  /* BLACK → WHITE */
-  filter: brightness(0) invert(1);
+
+  transition: filter 0.45s ease;
 }
+
 .brand-name {
   width: 105px;
   height: auto;
   display: block;
-  /* BLACK → WHITE */
-  filter: brightness(0) invert(1);
+
+  transition: filter 0.45s ease;
 }
-/* .brand sup {
-  font-size: 8px;
-  margin-left: -4px;
-  align-self: flex-start;
-  margin-top: 2px;
-} */
-.brand-symbol span {
-  position: absolute;
-  display: block;
-  width: 27px;
-  height: 4px;
-  background: #eeeeee;
-  transform-origin: left center;
-  border-radius: 2px;
-}
-.brand-symbol span:nth-child(1) {
-  left: 6px;
-  top: 7px;
-  transform: rotate(-52deg);
-}
-.brand-symbol span:nth-child(2) {
-  left: 1px;
-  top: 14px;
-  transform: rotate(18deg);
-}
-.brand-symbol span:nth-child(3) {
-  left: 8px;
-  top: 21px;
-  transform: rotate(-57deg);
-}
+
 /* =========================================
    NAV ACTIONS
 ========================================= */
+
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .sound-button,
 .talk-button,
 .menu-button {
   height: 43px;
   border-radius: 25px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* SOUND */
+
+/* =========================================
+   SOUND
+========================================= */
+
 .sound-button {
   position: relative;
+
   width: 37px;
   height: 37px;
+
   border: none;
   border-radius: 50%;
-  background: #242424;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   cursor: pointer;
   padding: 0;
+
   transition:
     background 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease,
+    color 0.35s ease;
 }
+
 .sound-button:hover {
-  background: #303030;
   transform: scale(1.05);
 }
-/* SPEAKER */
+
+/* =========================================
+   SPEAKER
+========================================= */
+
 .speaker-icon {
   position: relative;
   width: 19px;
   height: 18px;
+
   display: flex;
   align-items: center;
 }
-/* small speaker body */
+
 .speaker-body {
   position: absolute;
+
   left: 1px;
   top: 6px;
+
   width: 4px;
   height: 7px;
-  background: #989797;
+
   border-radius: 1px;
+
+  transition: background-color 0.35s ease;
 }
-/* speaker cone */
+
 .speaker-cone {
   position: absolute;
+
   left: 1px;
   top: 3px;
+
   width: 9px;
   height: 13px;
-  background: #989797;
-  clip-path: polygon(0 35%, 45% 35%, 100% 0, 100% 100%, 45% 65%, 0 65%);
+
+  clip-path: polygon(
+    0 35%,
+    45% 35%,
+    100% 0,
+    100% 100%,
+    45% 65%,
+    0 65%
+  );
+
+  transition:
+    background-color 0.35s ease,
+    opacity 0.35s ease;
 }
-/* sound waves */
+
+/* =========================================
+   SOUND WAVES
+========================================= */
+
 .sound-wave {
   position: absolute;
-  border: 1.5px solid #989797;
+
+  border: 1.5px solid;
   border-left: 0;
   border-top-color: transparent;
   border-bottom-color: transparent;
+
   border-radius: 50%;
+
   transform: rotate(0deg);
+
+  transition:
+    border-color 0.35s ease,
+    opacity 0.35s ease;
 }
+
 .wave-one {
   width: 6px;
   height: 11px;
+
   left: 10px;
   top: 3px;
 }
+
 .wave-two {
   width: 10px;
   height: 17px;
+
   left: 10px;
   top: 0;
 }
-/* MUTED */
+
+/* =========================================
+   MUTED
+========================================= */
+
 .sound-off .sound-wave {
   display: none;
 }
+
 .sound-off .speaker-cone {
   opacity: 0.8;
 }
+
 .sound-off::after {
   content: "";
+
   position: absolute;
+
   width: 16px;
   height: 1.5px;
-  background: #989797;
+
   transform: rotate(-45deg);
+
+  transition: background-color 0.35s ease;
 }
-/* LET'S TALK */
+
+/* =========================================
+   LET'S TALK
+========================================= */
+
 .talk-button {
   position: relative;
+
   min-width: 97px;
   height: 31px;
+
   letter-spacing: -1px;
-  padding: 0px 9px;
+  padding: 0 9px;
+
   overflow: hidden;
-  background: #f1f1f1;
-  color: #111;
+
   font-size: 14.6px;
   font-weight: 500;
+
+  border: 1px solid transparent;
+
   transition:
     transform 0.35s ease,
-    background 0.35s ease;
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
 }
+
 .talk-button:hover {
   transform: scale(1.025);
 }
+
 .talk-default,
 .talk-hover {
   display: block;
+
   transition:
     transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.25s ease;
 }
+
 .talk-hover {
   position: absolute;
+
   left: 0;
   right: 0;
+
   transform: translateY(120%) scale(0.85);
   opacity: 0;
 }
+
 .talk-button:hover .talk-default {
   transform: translateY(-120%) scale(0.85);
   opacity: 0;
 }
+
 .talk-button:hover .talk-hover {
   transform: translateY(0) scale(1);
   opacity: 1;
 }
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu-button {
+  min-width: 98px;
+  height: 32px;
+
+  padding: 0 8px;
+  gap: 10px;
+
+  background: transparent;
+
+  border: 1px solid;
+
+  font-size: 14.5px;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.menu-button:hover {
+  background: #eeeeee;
+  color: #111;
+  border-color: #eeeeee;
+}
+
+.menu-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-lines i {
+  display: block;
+
+  width: 13px;
+  height: 1px;
+
+  background: currentColor;
+
+  transition: background-color 0.35s ease;
+}
+
 /* =========================================================
-   KEY FACTS NAVBAR COLOR STATES
+   NAVBAR THEME SYSTEM
 ========================================================= */
+
 /*
-============================================================
-LIGHT BACKGROUND
-============================================================
-Cream / grey section ke upar:
-Logo       = BLACK
-Let's Talk = BLACK
-Menu       = BLACK
-Sound      = BLACK
+   DARK THEME
+   -----------------------------
+   Used when background behind navbar
+   is black / very dark.
+
+   Result:
+   Logo       = WHITE
+   Sound      = WHITE
+   Let's Talk = DARK BUTTON
+   Menu       = WHITE
 */
-.navbar.navbar-keyfacts-light {
-  color: #222222;
-}
-.navbar.navbar-keyfacts-light .brand-symbol,
-.navbar.navbar-keyfacts-light .brand-name {
-  filter: brightness(0);
-}
-/* Let's Talk */
-.navbar.navbar-keyfacts-light .talk-button {
-  background: #252525;
+
+.navbar-dark {
   color: #ffffff;
-  border-color: #252525;
 }
-/* Menu */
-.navbar.navbar-keyfacts-light .menu-button {
-  color: #222222;
-  border-color: #222222;
+
+/* LOGO */
+
+.navbar-dark .brand-symbol,
+.navbar-dark .brand-name {
+  filter: brightness(0) invert(1);
 }
-/* Sound */
-.navbar.navbar-keyfacts-light .sound-button {
-  background: #d3d3d3;
-  color: #222222;
-}
-/* Menu */
-.navbar.navbar-keyfacts-dark .menu-button {
-  color: #ffffff;
-  border-color: #ffffff;
-}
-/* Sound */
-.navbar.navbar-keyfacts-dark .sound-button {
+
+/* SOUND */
+
+.navbar-dark .sound-button {
   background: rgba(255, 255, 255, 0.13);
   color: #ffffff;
 }
+
+.navbar-dark .speaker-body,
+.navbar-dark .speaker-cone {
+  background: #989797;
+}
+
+.navbar-dark .sound-wave {
+  border-color: #989797;
+}
+
+.navbar-dark .sound-off::after {
+  background: #989797;
+}
+
+/* LET'S TALK */
+
+.navbar-dark .talk-button {
+  background: #f1f1f1;
+  color: #111111;
+  border-color: #f1f1f1;
+}
+
+/* MENU */
+
+.navbar-dark .menu-button {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+
 /*
-============================================================
-SMOOTH COLOR TRANSITION
-============================================================
+   LIGHT THEME
+   -----------------------------
+   Used when background behind navbar
+   is white / cream / grey / any light color.
+
+   Result:
+   Logo       = BLACK
+   Sound      = BLACK
+   Let's Talk = BLACK BUTTON
+   Menu       = BLACK
 */
+
+.navbar-light {
+  color: #111111;
+}
+
+/* LOGO */
+
+.navbar-light .brand-symbol,
+.navbar-light .brand-name {
+  filter: brightness(0);
+}
+
+/* SOUND */
+
+.navbar-light .sound-button {
+  background: rgba(17, 17, 17, 0.08);
+  color: #111111;
+}
+
+.navbar-light .speaker-body,
+.navbar-light .speaker-cone {
+  background: #555555;
+}
+
+.navbar-light .sound-wave {
+  border-color: #555555;
+}
+
+.navbar-light .sound-off::after {
+  background: #555555;
+}
+
+/* LET'S TALK */
+
+.navbar-light .talk-button {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+/* MENU */
+
+.navbar-light .menu-button {
+  background: transparent;
+  color: #111111;
+  border-color: rgba(17, 17, 17, 0.75);
+}
+
+/* =========================================================
+   NAVBAR SMOOTH THEME TRANSITION
+========================================================= */
+
 .navbar,
 .navbar .brand-symbol,
 .navbar .brand-name,
+.navbar .sound-button,
 .navbar .talk-button,
 .navbar .menu-button,
-.navbar .sound-button {
+.navbar .menu-button span,
+.navbar .menu-lines i,
+.navbar .speaker-body,
+.navbar .speaker-cone,
+.navbar .sound-wave {
   transition:
     color 0.35s ease,
     background-color 0.35s ease,
     border-color 0.35s ease,
     filter 0.35s ease;
 }
-/* MENU */
-.menu-button {
-  min-width: 98px;
-  height: 32px;
-  padding: 0 8px;
-  gap: 10px;
-  background: transparent;
-  border: 1px solid #575656;
-  color: #898686;
-  font-size: 14.5px;
-  transition:
-    background 0.4s ease,
-    color 0.4s ease,
-    border-color 0.4s ease;
-}
-.menu-button:hover {
-  background: #eeeeee;
-  color: #111;
-  border-color: #eeeeee;
-}
-.menu-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.menu-lines i {
-  display: block;
-  width: 13px;
-  height: 1px;
-  background: currentColor;
-}
+
+
 /* =========================================
    HERO CONTENT
 ========================================= */
+
 .hero-content {
   position: absolute;
   z-index: 10;
+
   left: 48px;
   top: 19%;
+
   width: 700px;
+
   pointer-events: none;
 }
+
 .hero-content h1 {
   margin: 0;
+
   color: #d7d7d9;
+
   font-size: clamp(64px, 6.2vw, 124px);
+
   line-height: 0.87;
+
   font-weight: 400;
+
   letter-spacing: -0.075em;
 }
+
 .hero-content h1 span {
   display: inline-block;
+
   min-width: 7.2ch;
-  will-change: opacity, transform, filter;
+
+  will-change:
+    opacity,
+    transform,
+    filter;
 }
+
+
 /* =========================================
    CTA LINKS
 ========================================= */
+
 .hero-links {
   margin-top: 21px;
+
   display: flex;
   gap: 27px;
+
   pointer-events: auto;
+}
+/* =========================================================
+   MAGNETIC BUTTON
+========================================================= */
+
+.hero-links .magnetic-link {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  color: inherit;
+
+  text-align: left;
+
+  font: inherit;
+}
+
+
+/* =========================================================
+   CONTACT OVERLAY
+========================================================= */
+
+.contact-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  background:
+    rgba(0, 0, 0, 0);
+
+  transition:
+    opacity 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.contact-overlay.is-open {
+  opacity: 1;
+
+  pointer-events: auto;
+
+  background:
+    rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   SIDE PANEL
+
+   IMPORTANT:
+   overflow-y auto = sirf panel scroll hoga
+   overscroll-behavior contain = scroll background
+   tak nahi jayega
+========================================================= */
+
+.contact-side-panel {
+  position: fixed;
+
+  top: 24px;
+  right: 12px;
+
+  width: min(545px, calc(100vw - 24px));
+  height: calc(100dvh - 38px);
+
+  z-index: 1000;
+
+  box-sizing: border-box;
+
+  padding: 28px 42px 34px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  overscroll-behavior: contain;
+
+  touch-action: pan-y;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+
+  background: rgba(245, 245, 244, 0.98);
+
+  color: #30343a;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    -20px 0 70px rgba(0, 0, 0, 0.3);
+
+  transform: translateX(calc(100% + 30px));
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+
+  will-change: transform;
+
+  isolation: isolate;
+}
+
+.contact-side-panel.is-open {
+  transform: translateX(0);
+
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+body.contact-panel-active {
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   PANEL SCROLLBAR
+========================================================= */
+
+.contact-side-panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+.contact-side-panel::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+
+.contact-side-panel::-webkit-scrollbar-thumb {
+  background:
+    rgba(40, 45, 52, 0.25);
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.contact-close {
+  position: absolute;
+    padding-bottom: 3px;
+  top: 10px;
+  right: 10px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.12);
+
+  background:
+    transparent;
+
+  color:
+    #737983;
+
+  font-size: 25px;
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.contact-close:hover {
+  transform:
+    rotate(90deg);
+
+  background:
+    rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.contact-side-panel h2 {
+  margin: 0;
+
+  padding-right: 40px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(32px, 2.5vw, 39px);
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.045em;
+
+  color:
+    #343941;
+}
+
+
+.contact-intro {
+  margin:
+    5px
+    0
+    17px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.3;
+
+  letter-spacing:
+    -0.03em;
+
+  color:
+    #3f454e;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+
+  padding-bottom: 5px;
+}
+
+
+/* =========================================================
+   FORM FIELD WRAPPER
+========================================================= */
+
+.form-field {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  border:
+    1px solid
+    rgba(79, 86, 96, 0.2);
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background:
+    rgba(255, 255, 255, 0.24);
+
+  color:
+    #343941;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+
+  letter-spacing:
+    -0.03em;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.contact-form input {
+  height: 53px;
+
+  padding:
+    0
+    62px
+    0
+    18px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.contact-form textarea {
+  height: 121px;
+
+  resize: vertical;
+
+  min-height: 110px;
+
+  max-height: 230px;
+
+  padding:
+    15px
+    18px
+    30px;
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color:
+    #737b86;
+
+  opacity: 1;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color:
+    rgba(35, 40, 48, 0.55);
+
+  background:
+    rgba(255, 255, 255, 0.48);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(30, 35, 42, 0.05);
+}
+
+
+/* =========================================================
+   CHARACTER COUNTER
+========================================================= */
+
+.field-counter {
+  position: absolute;
+
+  top: 50%;
+  right: 15px;
+
+  transform:
+    translateY(-50%);
+
+  pointer-events: none;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  color:
+    rgba(70, 77, 87, 0.45);
+}
+
+
+.textarea-counter {
+  top: auto;
+
+  bottom: 10px;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.contact-select-wrap {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.contact-select-wrap select {
+  height: 53px;
+
+  padding:
+    0
+    48px
+    0
+    18px;
+
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  cursor: pointer;
+}
+
+
+.select-arrow {
+  position: absolute;
+
+  top: 50%;
+  right: 18px;
+
+  transform:
+    translateY(-50%);
+
+  pointer-events: none;
+
+  font-size: 18px;
+
+  color:
+    #4c535d;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.send-inquiry {
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding:
+    12px
+    0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+
+  border-bottom:
+    1px solid
+    rgba(48, 54, 62, 0.62);
+
+  background:
+    transparent;
+
+  color:
+    #343941;
+
+  cursor: pointer;
+
+  font-family:
+    monospace;
+
+  font-size: 14px;
+
+  letter-spacing:
+    -0.02em;
+
+  transition:
+    opacity 0.3s ease,
+    padding 0.3s ease;
+}
+
+
+.send-inquiry:hover {
+  opacity: 0.55;
+
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+/* =========================================================
+   OR DIVIDER
+========================================================= */
+
+.contact-or {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin:
+    38px
+    0
+    26px;
+
+  color:
+    #6d737c;
+}
+
+
+.contact-or span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    rgba(45, 50, 58, 0.16);
+}
+
+
+.contact-or strong {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BOOK CALL
+========================================================= */
+
+.contact-call-button {
+  width: 100%;
+
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 70px;
+
+  border-radius: 9px;
+
+  border:
+    1px solid
+    rgba(37, 43, 51, 0.68);
+
+  background:
+    transparent;
+
+  color:
+    #3d444d;
+
+  cursor: pointer;
+
+  font-family:
+    monospace;
+
+  font-size: 15px;
+
+  letter-spacing:
+    -0.03em;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.contact-call-button:hover {
+  background:
+    #30353d;
+
+  color:
+    #f2f2f2;
+
+  transform:
+    translateY(-2px);
+}
+
+
+.calendar-icon {
+  font-size: 23px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.contact-email {
+  margin:
+    25px
+    0
+    0;
+
+  padding-bottom: 10px;
+
+  text-align: center;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 17px;
+
+  color:
+    #747b85;
+
+  letter-spacing:
+    -0.025em;
+}
+
+
+/* =========================================================
+   SUCCESS TOAST
+========================================================= */
+
+.contact-toast {
+  position: fixed;
+
+  left: 50%;
+  bottom: 30px;
+
+  z-index: 3000;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 280px;
+
+  padding:
+    15px
+    20px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 10px;
+
+  background:
+    rgba(20, 24, 29, 0.95);
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 15px 50px
+    rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translate(
+      -50%,
+      30px
+    );
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.contact-toast.show {
+  opacity: 1;
+
+  transform:
+    translate(
+      -50%,
+      0
+    );
+}
+
+
+.toast-check {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    #e8e8e8;
+
+  color:
+    #111;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.contact-toast strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+.contact-toast p {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-side-panel {
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    width:
+      min(
+        570px,
+        calc(100vw - 24px)
+      );
+
+    padding:
+      32px
+      30px
+      28px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-side-panel {
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    border-radius: 0;
+
+    padding:
+      62px
+      20px
+      35px;
+
+    transform:
+      translateX(100%);
+  }
+
+
+  .contact-side-panel h2 {
+    font-size:
+      clamp(31px, 9vw, 42px);
+  }
+
+
+  .contact-intro {
+    font-size: 15px;
+  }
+
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+
+  .contact-call-button {
+    gap: 25px;
+
+    font-size: 12px;
+  }
+
+
+  .contact-email {
+    font-size: 15px;
+  }
+
+
+  .contact-toast {
+    width:
+      calc(100% - 32px);
+
+    min-width: auto;
+
+    bottom: 20px;
+  }
+
 }
 .magnetic-link {
   position: relative;
+
   width: 251px;
   height: 42px;
+
   display: flex;
   align-items: center;
+
   overflow: hidden;
+
   border-bottom: 1px solid #777;
+
   color: #d4d4d4;
+
   font-family: "Courier New", monospace;
+
   font-size: 16px;
+
   letter-spacing: -0.02em;
 }
+
 .link-text {
   position: absolute;
+
   left: 0;
+
   white-space: nowrap;
+
   will-change: transform;
 }
+
 .link-arrow {
   position: absolute;
+
   right: 0;
+
   font-family: Arial, sans-serif;
+
   font-size: 16px;
+
   will-change: transform;
 }
+
+
 /* =========================================
    RIGHT INFO
 ========================================= */
+
 .hero-info {
   position: absolute;
+
   z-index: 10;
+
   right: 48px;
   bottom: 66px;
+
   width: 330px;
 }
+
 .established {
   width: 100%;
   height: 101px;
+
   display: flex;
   align-items: stretch;
+
   border: 1px solid #272b2f;
+  color: #d5d5d5;
 }
+
 .globe {
   width: 70px;
   height: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-shrink: 0;
 }
+
 .globe img {
   width: 38px;
   height: 38px;
+
   object-fit: contain;
+
   display: block;
-  .globe img {
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
-    display: block;
-    filter: brightness(0) invert(1);
-  }
+
+  filter: brightness(0) invert(1);
 }
+
 .established-copy {
   flex: 1;
+
   padding: 15px 16px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   gap: 6px;
 }
+
 .established-copy strong {
   display: block;
+
   font-size: 13px;
+
   line-height: 1.15;
+
   font-weight: 500;
 }
+
 .hero-info > p {
   margin-top: 30px;
+
   color: #bcbcbc;
-  font-size: 20px;
+
+  font-size: 15px;
+
   line-height: 1.25;
+
   letter-spacing: -0.03em;
 }
+
+
 /* =========================================
    BOTTOM CENTER
 ========================================= */
+
 .hero-bottom-text {
   position: absolute;
+
   z-index: 10;
+
   left: 50%;
   bottom: 27px;
+
   transform: translateX(-50%);
+
   text-align: center;
+
   color: #d5d5d5;
-  font-size: 17px;
+
+  font-size: 15px;
+
   line-height: 1.4;
+
   white-space: nowrap;
+
   pointer-events: none;
 }
+
 .hero-bottom-text strong {
   margin: 0 5px;
+
   font-size: 21px;
 }
+
+
 /* =========================================
    SCROLL ARROW
 ========================================= */
+
 .scroll-indicator {
   position: absolute;
+
   z-index: 20;
+
   left: 48px;
   bottom: 57px;
+
   width: 26px;
   height: 26px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid #777;
+
   border-radius: 50%;
+
   overflow: hidden;
+
   color: #aaa;
+
   pointer-events: none;
 }
+
 .scroll-indicator span {
   display: block;
-  animation: scrollArrow 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+
+  animation:
+    scrollArrow 4s
+    cubic-bezier(0.65, 0, 0.35, 1)
+    infinite;
 }
+
 @keyframes scrollArrow {
+
   0% {
     transform: translateY(-30px);
     opacity: 0;
   }
+
   12% {
     transform: translateY(0);
     opacity: 1;
   }
+
   35% {
     transform: translateY(0);
     opacity: 1;
   }
+
   55% {
     transform: translateY(30px);
     opacity: 0;
   }
+
   70% {
     transform: translateY(-30px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(-30px);
     opacity: 0;
   }
+
 }
+
+
 /* =========================================
    MENU PANEL
 ========================================= */
+
 .menu-panel {
   position: fixed;
+
   z-index: 500;
+
   top: 22px;
   right: 22px;
   bottom: 22px;
+
   width: min(560px, calc(100vw - 44px));
+
   padding: 30px 40px;
+
   overflow: hidden;
+
   background: #f4f4f4;
+
   color: #3c3c3c;
+
   border-radius: 12px;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
+
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.35);
 }
+
+
 /* PANEL TOP */
+
 .menu-panel-top {
   display: flex;
   justify-content: flex-end;
 }
+
 .panel-controls {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .panel-controls button {
   height: 42px;
+
   border: 1px solid #a8a8a8;
+
   border-radius: 25px;
+
   background: transparent;
+
   color: #333;
-  font-size: 15px;
+
+  font-size: 12.7px;
+}
+.business p a{
+  font-size: 16px;
 }
 .panel-sound {
   width: 42px;
+
   padding: 0;
+
   background: #e6e6e6 !important;
+
   border: none !important;
 }
+
 .panel-talk {
   padding: 0 22px;
+
   background: #050505 !important;
+
   color: white !important;
+
   border-color: #050505 !important;
 }
+
 .panel-close {
   display: flex;
   align-items: center;
+
   gap: 7px;
+
   padding: 0 18px;
 }
+
 .panel-close span {
   font-size: 21px;
 }
+
+
 /* NAV */
+
 .menu-navigation {
-  margin-top: 53px;
+  margin-top: 16px;
+
   display: flex;
   flex-direction: column;
 }
+
 .menu-item {
   display: block;
+
   width: max-content;
-  font-size: 34px;
+
+  font-size: 25px;
+
   line-height: 1.28;
+
   letter-spacing: -0.055em;
+
   opacity: 0;
+
   transition:
     color 0.3s ease,
     transform 0.3s ease;
 }
+
 .menu-item:hover {
   color: #888;
+
   transform: translateX(7px);
 }
+
+
 /* STORY BUTTON */
+
 .story-button {
   margin-top: 31px;
+
   padding: 11px 20px;
+
   border: 1px solid #d1d1d1;
+
   border-radius: 30px;
+
   background: transparent;
+
   color: #4b4b4b;
+
   font-size: 14px;
+
   transition:
     background 0.3s ease,
     color 0.3s ease;
 }
+
 .story-button:hover {
   background: #111;
+
   color: white;
 }
+
+
 /* PANEL BOTTOM */
+
 .panel-bottom {
   position: absolute;
+
   left: 40px;
   right: 40px;
   bottom: 38px;
 }
+
 .panel-bottom > div > span,
 .socials > span {
   color: #9b9b9b;
+
   font-size: 14px;
 }
+
 .business p {
   margin-top: 13px;
+
   color: #555;
-  font-size: 18px;
+
+  font-size: 16px;
 }
+
 .business a {
   transition: color 0.3s ease;
 }
+
 .business a:hover {
   color: #000;
 }
+
 .socials {
   margin-top: 66px;
 }
+
 .social-grid {
   margin-top: 17px;
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   row-gap: 10px;
 }
+
 .social-grid a {
-  font-size: 18px;
+  font-size: 16px;
+
   transition: color 0.3s ease;
 }
+
 .social-grid a:hover {
   color: #888;
 }
-/* =========================================
-   TABLET
-========================================= */
-@media (max-width: 1200px) {
-  .hero-content {
-    width: 610px;
-  }
-  .hero-content h1 {
-    font-size: clamp(60px, 8vw, 100px);
-  }
-  .hero-links {
-    flex-direction: column;
-    gap: 3px;
-    margin-top: 50px;
-  }
-  .hero-info {
-    width: 290px;
-  }
-  .hero-info > p {
-    font-size: 17px;
-  }
-}
-/* =========================================
-   TABLET / MOBILE
-========================================= */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 700px;
-  }
-  .navbar {
-    height: 85px;
-    padding: 20px;
-  }
-  .brand-name {
-    font-size: 23px;
-  }
-  .brand-symbol {
-    transform: scale(0.85);
-    transform-origin: left center;
-  }
-  .sound-button {
-    display: none;
-  }
-  .talk-button {
-    min-width: 115px;
-    height: 40px;
-    padding: 0 16px;
-    font-size: 13px;
-  }
-  .menu-button {
-    min-width: 94px;
-    height: 40px;
-    padding: 0 13px;
-    font-size: 13px;
-  }
-  .hero-content {
-    left: 20px;
-    right: 20px;
-    top: 21%;
-    width: auto;
-  }
-  .hero-content h1 {
-    font-size: clamp(53px, 13vw, 80px);
-    line-height: 0.9;
-  }
-  .hero-links {
-    margin-top: 42px;
-    gap: 0;
-  }
-  .magnetic-link {
-    width: min(100%, 330px);
-    height: 45px;
-    font-size: 13px;
-  }
-  .hero-info {
-    right: 20px;
-    bottom: 82px;
-    width: 300px;
-  }
-  .established {
-    height: 82px;
-  }
-  .globe {
-    font-size: 31px;
-  }
-  .established-copy strong {
-    font-size: 10px;
-  }
-  .hero-info > p {
-    display: none;
-  }
-  .hero-bottom-text {
-    bottom: 25px;
-    width: 100%;
-    padding: 0 40px;
-    font-size: 13px;
-    white-space: normal;
-  }
-  .scroll-indicator {
-    left: 20px;
-    bottom: 29px;
-  }
-  /* MENU */
-  .menu-panel {
-    top: 10px;
-    right: 10px;
-    bottom: 10px;
-    width: calc(100vw - 20px);
-    padding: 22px;
-  }
-  .panel-controls button {
-    height: 39px;
-    font-size: 12px;
-  }
-  .panel-talk {
-    padding: 0 15px;
-  }
-  .panel-close {
-    padding: 0 14px;
-  }
-  .menu-navigation {
-    margin-top: 42px;
-  }
-  .menu-item {
-    font-size: 31px;
-  }
-  .panel-bottom {
-    left: 22px;
-    right: 22px;
-    bottom: 25px;
-  }
-  .socials {
-    margin-top: 35px;
-  }
-}
-/* =========================================
-   SMALL MOBILE
-========================================= */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 18px;
-  }
-  .brand-symbol {
-    width: 24px;
-    transform: scale(0.72);
-  }
-  .brand-name {
-    font-size: 20px;
-  }
-  .brand sup {
-    font-size: 6px;
-  }
-  .talk-button {
-    display: none;
-  }
-  .menu-button {
-    min-width: 88px;
-  }
-  .hero-content {
-    top: 20%;
-  }
-  .hero-content h1 {
-    font-size: 52px;
-    letter-spacing: -0.07em;
-  }
-  .hero-content h1 span {
-    min-width: 0;
-  }
-  .hero-links {
-    margin-top: 35px;
-  }
-  .magnetic-link {
-    width: 100%;
-    font-size: 12px;
-  }
-  .hero-info {
-    left: 18px;
-    right: 18px;
-    bottom: 82px;
-    width: auto;
-  }
-  .established {
-    height: 72px;
-    width: 100%;
-  }
-  .globe {
-    width: 34%;
-    font-size: 27px;
-  }
-  .established-copy {
-    padding: 10px 12px;
-  }
-  .established-copy strong {
-    font-size: 9px;
-  }
-  .hero-bottom-text {
-    padding: 0 50px;
-    font-size: 11px;
-  }
-  .scroll-indicator {
-    display: none;
-  }
-  /* MENU */
-  .menu-panel {
-    padding: 17px;
-  }
-  .panel-controls {
-    gap: 6px;
-  }
-  .panel-controls button {
-    height: 36px;
-    font-size: 10px;
-  }
-  .panel-sound {
-    width: 36px;
-  }
-  .panel-talk {
-    padding: 0 11px;
-  }
-  .panel-close {
-    padding: 0 10px;
-  }
-  .menu-navigation {
-    margin-top: 34px;
-  }
-  .menu-item {
-    font-size: 28px;
-  }
-  .story-button {
-    margin-top: 25px;
-    padding: 9px 14px;
-    font-size: 10px;
-  }
-  .panel-bottom {
-    left: 17px;
-    right: 17px;
-    bottom: 20px;
-  }
-  .panel-bottom > div > span,
-  .socials > span {
-    font-size: 11px;
-  }
-  .business p,
-  .social-grid a {
-    font-size: 13px;
-  }
-  .socials {
-    margin-top: 25px;
-  }
-  .social-grid {
-    margin-top: 10px;
-  }
-}
+
+
 /* =========================================================
    GLOBAL SECTION SETTINGS
 ========================================================= */
+
 .motion-section {
   position: relative;
+
   width: 100%;
   min-height: 100vh;
+
   background: #050505;
+
   color: #fff;
+
   overflow: hidden;
 }
+
+
 /* =========================================================
    SECTION 2
-   LOGO BREAK / JOIN + LETTER TEXT
 ========================================================= */
+
 .break-section {
   position: relative;
+
   min-height: 100vh;
+
   width: 100%;
+
   background: #050505;
+
   color: #fff;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   overflow: hidden;
 }
-/* Main content wrapper */
+
 .break-section-inner {
   position: relative;
+
   width: min(1400px, 90%);
+
   min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 /* =========================================================
    SECTION 2 TEXT
 ========================================================= */
+
 .break-text {
   position: relative;
+
   z-index: 5;
+
   width: min(1000px, 90%);
+
   text-align: center;
+
   font-size: clamp(42px, 6.5vw, 105px);
+
   line-height: 0.95;
+
   font-weight: 500;
+
   letter-spacing: -0.055em;
+
   margin: 0;
+
   color: #4c4c4c;
+
   overflow: hidden;
 }
-/*
-   Individual letters
-*/
+
 .break-letter {
   display: inline-block;
+
   opacity: 0;
+
   transform: translateY(35px);
+
   filter: blur(8px);
-  will-change: transform, opacity, filter;
+
+  will-change:
+    transform,
+    opacity,
+    filter;
 }
-/*
-   Active white state
-*/
+
 .break-letter.is-visible {
   opacity: 1;
+
   transform: translateY(0);
+
   filter: blur(0);
 }
+
+
 /* =========================================================
    BROKEN TRIONN LOGO
 ========================================================= */
+
 .break-logo {
   position: absolute;
+
   left: 50%;
   top: 50%;
+
   transform: translate(-50%, -50%);
+
   width: min(390px, 42vw);
+
   height: auto;
+
   z-index: 2;
+
   pointer-events: none;
+
   opacity: 0;
-  will-change: transform, opacity;
+
+  will-change:
+    transform,
+    opacity;
 }
-/*
-   Every logo piece
-*/
+
 .break-logo-piece {
   position: absolute;
+
   left: 50%;
   top: 50%;
+
   width: 100%;
+
   transform-origin: center;
-  will-change: transform, opacity;
+
+  will-change:
+    transform,
+    opacity;
 }
+
+
 /* =========================================================
    LOGO PIECES
 ========================================================= */
+
 .break-piece-1 {
-  transform: translate(-50%, -50%) translate(-70px, -45px) rotate(-8deg);
+  transform:
+    translate(-50%, -50%)
+    translate(-70px, -45px)
+    rotate(-8deg);
 }
+
 .break-piece-2 {
-  transform: translate(-50%, -50%) translate(65px, -55px) rotate(8deg);
+  transform:
+    translate(-50%, -50%)
+    translate(65px, -55px)
+    rotate(8deg);
 }
+
 .break-piece-3 {
-  transform: translate(-50%, -50%) translate(-40px, 10px) rotate(-4deg);
+  transform:
+    translate(-50%, -50%)
+    translate(-40px, 10px)
+    rotate(-4deg);
 }
+
 .break-piece-4 {
-  transform: translate(-50%, -50%) translate(60px, 15px) rotate(5deg);
+  transform:
+    translate(-50%, -50%)
+    translate(60px, 15px)
+    rotate(5deg);
 }
+
 .break-piece-5 {
-  transform: translate(-50%, -50%) translate(-55px, 70px) rotate(-7deg);
+  transform:
+    translate(-50%, -50%)
+    translate(-55px, 70px)
+    rotate(-7deg);
 }
+
 .break-piece-6 {
-  transform: translate(-50%, -50%) translate(55px, 75px) rotate(7deg);
+  transform:
+    translate(-50%, -50%)
+    translate(55px, 75px)
+    rotate(7deg);
 }
+
+
 /* =========================================================
    SECTION 2 SMALL LABEL
 ========================================================= */
+
 .break-label {
   position: absolute;
+
   left: 5%;
   bottom: 7%;
+
   font-size: 11px;
+
   letter-spacing: 0.18em;
+
   text-transform: uppercase;
+
   color: rgba(255, 255, 255, 0.42);
 }
+
+
 /* =========================================================
    SECTION 3
-   PLUS + LINE + TEXT
 ========================================================= */
+
 .line-section {
   position: relative;
+
   min-height: 100vh;
+
   width: 100%;
+
   background: #050505;
+
   color: #fff;
+
   overflow: hidden;
 }
-/* Inner */
+
 .line-section-inner {
   position: relative;
+
   width: 100%;
+
   min-height: 100vh;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 }
+
+
 /* =========================================================
    PLUS SIGNS
 ========================================================= */
+
 .plus-mark {
   position: absolute;
+
   width: 22px;
   height: 22px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   color: #fff;
+
   opacity: 0.9;
+
   z-index: 5;
-  will-change: transform, opacity;
+
+  will-change:
+    transform,
+    opacity;
 }
-/*
-   Horizontal line of +
-*/
+
 .plus-mark::before {
   content: "";
+
   position: absolute;
+
   width: 22px;
   height: 1px;
+
   background: currentColor;
 }
-/*
-   Vertical line of +
-*/
+
 .plus-mark::after {
   content: "";
+
   position: absolute;
+
   width: 1px;
   height: 22px;
+
   background: currentColor;
 }
-/* Left plus */
+
 .plus-left {
   left: 7%;
   top: 50%;
-  transform: translateY(-50%) rotate(0deg);
+
+  transform:
+    translateY(-50%)
+    rotate(0deg);
 }
-/* Right plus */
+
 .plus-right {
   right: 7%;
   top: 50%;
-  transform: translateY(-50%) rotate(0deg);
+
+  transform:
+    translateY(-50%)
+    rotate(0deg);
 }
+
+
 /* =========================================================
    CONNECTING LINE
 ========================================================= */
+
 .section-line {
   position: absolute;
+
   left: 7%;
   right: 7%;
+
   top: 50%;
+
   height: 1px;
-  transform: translateY(-50%) scaleX(0);
+
+  transform:
+    translateY(-50%)
+    scaleX(0);
+
   transform-origin: left center;
+
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.85),
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.85)
   );
+
   opacity: 0;
+
   z-index: 2;
-  will-change: transform, opacity;
+
+  will-change:
+    transform,
+    opacity;
 }
+
+
 /* =========================================================
    CENTER CROSS
 ========================================================= */
+
 .section-cross {
   position: absolute;
+
   left: 50%;
   top: 50%;
+
   width: 20px;
   height: 20px;
-  transform: translate(-50%, -50%) rotate(0deg);
+
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg);
+
   z-index: 4;
+
   opacity: 0;
-  will-change: transform, opacity;
+
+  will-change:
+    transform,
+    opacity;
 }
+
 .section-cross::before {
   content: "";
+
   position: absolute;
+
   left: 50%;
   top: 0;
+
   width: 1px;
   height: 100%;
+
   background: #fff;
+
   transform: translateX(-50%);
 }
+
 .section-cross::after {
   content: "";
+
   position: absolute;
+
   top: 50%;
   left: 0;
+
   width: 100%;
   height: 1px;
+
   background: #fff;
+
   transform: translateY(-50%);
 }
+
+
 /* =========================================================
    SECTION 3 CONTENT
 ========================================================= */
+
 .line-content {
   position: relative;
+
   z-index: 10;
+
   width: min(1100px, 85%);
+
   margin-left: auto;
   margin-right: auto;
+
   text-align: center;
+
   opacity: 0;
+
   transform: translateY(50px);
+
   filter: blur(10px);
-  will-change: transform, opacity, filter;
+
+  will-change:
+    transform,
+    opacity,
+    filter;
 }
-/* Heading */
+
 .line-content h2 {
   margin: 0;
+
   font-size: clamp(45px, 7vw, 110px);
+
   line-height: 0.95;
+
   letter-spacing: -0.055em;
+
   font-weight: 500;
 }
-/* Paragraph */
+
 .line-content p {
   width: min(620px, 90%);
+
   margin: 35px auto 0;
+
   font-size: clamp(15px, 1.4vw, 20px);
+
   line-height: 1.55;
+
   color: rgba(255, 255, 255, 0.55);
 }
+
+
 /* =========================================================
    SECTION 3 CTA
 ========================================================= */
+
 .section-link {
   display: inline-flex;
+
   align-items: center;
+
   gap: 35px;
+
   margin-top: 45px;
+
   color: #fff;
+
   text-decoration: none;
+
   font-size: 12px;
+
   letter-spacing: 0.14em;
+
   font-weight: 500;
+
   overflow: hidden;
 }
-/*
-   CTA text
-*/
+
 .section-link-text {
   display: inline-block;
+
   will-change: transform;
 }
-/*
-   Arrow
-*/
+
 .section-link-arrow {
   display: inline-block;
+
   font-size: 24px;
+
   line-height: 1;
+
   will-change: transform;
 }
+
+
 /* =========================================================
    SECTION 3 DECORATIVE CORNERS
 ========================================================= */
+
 .section-corner {
   position: absolute;
+
   width: 5px;
   height: 5px;
+
   border-radius: 50%;
+
   background: #fff;
+
   opacity: 0.7;
 }
+
 .section-corner.top-left {
   left: 7%;
   top: 12%;
 }
+
 .section-corner.top-right {
   right: 7%;
   top: 12%;
 }
+
 .section-corner.bottom-left {
   left: 7%;
   bottom: 12%;
 }
+
 .section-corner.bottom-right {
   right: 7%;
   bottom: 12%;
 }
+
+
 /* =========================================================
-   MOBILE
+   STORIES SECTION
 ========================================================= */
+
+.stories-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #f3f3f1;
+
+  color: #3e4144;
+
+  overflow: hidden;
+
+  z-index: 5;
+}
+
+.stories-inner {
+  width: 100%;
+
+  max-width: 1375px;
+
+  margin: 0 auto;
+
+  padding: 105px 0 0;
+}
+
+
+/* =========================================================
+   TOP HEADING
+========================================================= */
+
+.stories-heading-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: start;
+
+  padding: 0 0 67px;
+}
+
+.stories-heading-row h2 {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(58px, 5.1vw, 78px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.065em;
+
+  line-height: 0.92;
+
+  color: #414346;
+}
+
+.stories-heading-row p {
+  margin: 8px 0 0;
+
+  padding-left: 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.18;
+
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+
+  color: #4c4e50;
+}
+
+
+/* =========================================================
+   DIVIDER + TOP PLUS
+========================================================= */
+
+.stories-divider {
+  position: relative;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(50, 50, 50, 0.12);
+}
+
+.stories-plus {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform:
+    translate(-50%, -50%);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  font-weight: 300;
+
+  color: #46484a;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   MAIN SLIDER
+========================================================= */
+
+.stories-slider {
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  min-height: 560px;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.stories-left {
+  position: relative;
+
+  padding-top: 70px;
+
+  min-height: 560px;
+}
+
+.stories-links {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.story-link {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  width: max-content;
+
+  padding: 0;
+
+  margin: 0 0 16px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: #a1a2a2;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.02em;
+
+  text-align: left;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.story-link:hover {
+  color: #56585a;
+}
+
+.story-link.active {
+  color: #4b4d50;
+
+  transform: translateX(-8px);
+}
+
+.story-link-arrow {
+  position: absolute;
+
+  left: calc(100% + 15px);
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  animation:
+    storyArrowAppear 0.35s ease both;
+}
+
+@keyframes storyArrowAppear {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(-8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.stories-navigation {
+  position: absolute;
+
+  left: 0;
+  bottom: 75px;
+
+  display: flex;
+}
+
+.story-nav-button {
+  position: relative;
+
+  width: 68px;
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.75);
+
+  background: transparent;
+
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.story-nav-button:first-child {
+  border-right: none;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.story-nav-button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.story-arrow-symbol {
+  display: block;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 300;
+
+  color: #222;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.stories-right {
+  padding-top: 68px;
+
+  padding-left: 10px;
+
+  padding-right: 0;
+
+  will-change: opacity;
+}
+
+.story-main-content {
+  width: 100%;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.story-quote {
+  max-width: 690px;
+
+  min-height: 150px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(26px, 2vw, 32px);
+
+  font-weight: 400;
+
+  line-height: 0.97;
+
+  letter-spacing: -0.052em;
+
+  color: #414345;
+}
+
+
+/* =========================================================
+   PERSON
+========================================================= */
+
+.story-person-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 66px;
+
+  min-height: 68px;
+}
+
+.story-person {
+  display: flex;
+
+  align-items: center;
+
+  gap: 19px;
+}
+
+.story-person img {
+  width: 68px;
+  height: 68px;
+
+  object-fit: cover;
+
+  border-radius: 3px;
+
+  display: block;
+}
+
+.story-person-info h4 {
+  margin: 0 0 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.025em;
+
+  color: #4a4c4e;
+}
+
+.story-person-info p {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: #767779;
+}
+
+
+/* =========================================================
+   LISTEN BUTTON
+========================================================= */
+
+.story-listen-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.05em;
+
+  color: #4d4f51;
+}
+
+.listen-icon {
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+.listen-text {
+  display: inline-block;
+
+  will-change:
+    opacity,
+    filter,
+    letter-spacing;
+
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   BECOME CLIENT
+========================================================= */
+
+.story-client-link {
+  width: 172px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 91px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #5a5c5e;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.05em;
+
+  color: #4a4c4e;
+
+  cursor: pointer;
+
+  transition:
+    width 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.story-client-link:hover {
+  width: 195px;
+}
+
+
+/* =========================================================
+   BOTTOM PLUS
+========================================================= */
+
+.stories-bottom-plus {
+  position: relative;
+
+  width: 100%;
+
+  height: 80px;
+}
+
+.stories-bottom-plus .stories-plus {
+  top: 50%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero-content {
+    width: 610px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(60px, 8vw, 100px);
+  }
+
+  .hero-links {
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 50px;
+  }
+
+  .hero-info {
+    width: 290px;
+  }
+
+  .hero-info > p {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   STORIES TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .stories-inner {
+    width: calc(100% - 180px);
+  }
+
+  .stories-heading-row {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .stories-slider {
+    grid-template-columns: 42% 58%;
+  }
+
+  .story-quote {
+    font-size: 29px;
+  }
+
+  .story-person-row {
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
+
+  .hero {
+    min-height: 700px;
+  }
+
+  .navbar {
+    height: 85px;
+
+    padding: 20px;
+  }
+
+  .brand-name {
+    font-size: 23px;
+  }
+
+  .brand-symbol {
+    transform: scale(0.85);
+
+    transform-origin: left center;
+  }
+
+  .sound-button {
+    display: none;
+  }
+
+  .talk-button {
+    min-width: 115px;
+
+    height: 40px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+  }
+
+  .menu-button {
+    min-width: 94px;
+
+    height: 40px;
+
+    padding: 0 13px;
+
+    font-size: 13px;
+  }
+
+  .hero-content {
+    left: 20px;
+
+    right: 20px;
+
+    top: 21%;
+
+    width: auto;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(53px, 13vw, 80px);
+
+    line-height: 0.9;
+  }
+
+  .hero-links {
+    margin-top: 42px;
+
+    gap: 0;
+  }
+
+  .magnetic-link {
+    width: min(100%, 330px);
+
+    height: 45px;
+
+    font-size: 13px;
+  }
+
+  .hero-info {
+    right: 20px;
+
+    bottom: 82px;
+
+    width: 300px;
+  }
+
+  .established {
+    height: 82px;
+  }
+
+  .globe {
+    font-size: 31px;
+  }
+
+  .established-copy strong {
+    font-size: 10px;
+  }
+
+  .hero-info > p {
+    display: none;
+  }
+
+  .hero-bottom-text {
+    bottom: 25px;
+
+    width: 100%;
+
+    padding: 0 40px;
+
+    font-size: 13px;
+
+    white-space: normal;
+  }
+
+  .scroll-indicator {
+    left: 20px;
+
+    bottom: 29px;
+  }
+
+
+  /* MENU */
+
+  .menu-panel {
+    top: 10px;
+
+    right: 10px;
+
+    bottom: 10px;
+
+    width: calc(100vw - 20px);
+
+    padding: 22px;
+  }
+
+  .panel-controls button {
+    height: 39px;
+
+    font-size: 12px;
+  }
+
+  .panel-talk {
+    padding: 0 15px;
+  }
+
+  .panel-close {
+    padding: 0 14px;
+  }
+
+  .menu-navigation {
+    margin-top: 42px;
+  }
+
+  .menu-item {
+    font-size: 31px;
+  }
+
+  .panel-bottom {
+    left: 22px;
+
+    right: 22px;
+
+    bottom: 25px;
+  }
+
+  .socials {
+    margin-top: 35px;
+  }
+
+
+  /* SECTION 2 + SECTION 3 */
+
   .break-section-inner,
   .line-section-inner {
     width: 100%;
   }
-  /* Section 2 */
+
   .break-text {
     width: 90%;
-    font-size: clamp(38px, 11vw, 70px);
+
+    font-size: clamp(
+      38px,
+      11vw,
+      70px
+    );
   }
+
   .break-logo {
     width: 230px;
   }
+
   .break-label {
     left: 6%;
+
     bottom: 5%;
+
     font-size: 9px;
   }
-  /* Section 3 */
+
   .plus-left {
     left: 5%;
   }
+
   .plus-right {
     right: 5%;
   }
+
   .section-line {
     left: 5%;
+
     right: 5%;
   }
+
   .line-content {
     width: 88%;
   }
+
   .line-content h2 {
-    font-size: clamp(42px, 12vw, 72px);
+    font-size: clamp(
+      42px,
+      12vw,
+      72px
+    );
   }
+
   .line-content p {
     width: 90%;
+
     font-size: 15px;
   }
+
   .section-link {
     gap: 22px;
+
     margin-top: 32px;
+
     font-size: 10px;
   }
+
   .section-link-arrow {
     font-size: 20px;
   }
+
+
+  /* STORIES */
+
+  .stories-inner {
+    width: calc(100% - 40px);
+
+    padding-top: 80px;
+  }
+
+  .stories-heading-row {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .stories-heading-row p {
+    padding-left: 0;
+  }
+
+  .stories-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .stories-left {
+    min-height: auto;
+
+    padding-top: 45px;
+
+    padding-bottom: 120px;
+  }
+
+  .stories-navigation {
+    bottom: 25px;
+  }
+
+  .stories-right {
+    padding: 20px 0 50px;
+  }
+
+  .story-quote {
+    font-size: 27px;
+
+    min-height: auto;
+  }
+
+  .story-person-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .story-client-link {
+    margin-top: 55px;
+  }
+
 }
+
+
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
+
 @media (max-width: 480px) {
+
+  .navbar {
+    padding: 18px;
+  }
+
+  .brand-symbol {
+    width: 24px;
+
+    transform: scale(0.72);
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .talk-button {
+    display: none;
+  }
+
+  .menu-button {
+    min-width: 88px;
+  }
+
+  .hero-content {
+    top: 20%;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+
+    letter-spacing: -0.07em;
+  }
+
+  .hero-content h1 span {
+    min-width: 0;
+  }
+
+  .hero-links {
+    margin-top: 35px;
+  }
+
+  .magnetic-link {
+    width: 100%;
+
+    font-size: 12px;
+  }
+
+  .hero-info {
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 82px;
+
+    width: auto;
+  }
+
+  .established {
+    height: 72px;
+
+    width: 100%;
+  }
+
+  .globe {
+    width: 34%;
+
+    font-size: 27px;
+  }
+
+  .established-copy {
+    padding: 10px 12px;
+  }
+
+  .established-copy strong {
+    font-size: 9px;
+  }
+
+  .hero-bottom-text {
+    padding: 0 50px;
+
+    font-size: 11px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+
+  /* MENU */
+
+  .menu-panel {
+    padding: 17px;
+  }
+
+  .panel-controls {
+    gap: 6px;
+  }
+
+  .panel-controls button {
+    height: 36px;
+
+    font-size: 10px;
+  }
+
+  .panel-sound {
+    width: 36px;
+  }
+
+  .panel-talk {
+    padding: 0 11px;
+  }
+
+  .panel-close {
+    padding: 0 10px;
+  }
+
+  .menu-navigation {
+    margin-top: 34px;
+  }
+
+  .menu-item {
+    font-size: 28px;
+  }
+
+  .story-button {
+    margin-top: 25px;
+
+    padding: 9px 14px;
+
+    font-size: 10px;
+  }
+
+  .panel-bottom {
+    left: 17px;
+
+    right: 17px;
+
+    bottom: 20px;
+  }
+
+  .panel-bottom > div > span,
+  .socials > span {
+    font-size: 11px;
+  }
+
+  .business p,
+  .social-grid a {
+    font-size: 13px;
+  }
+
+  .socials {
+    margin-top: 25px;
+  }
+
+  .social-grid {
+    margin-top: 10px;
+  }
+
+
+  /* SECTION 2 */
+
   .break-text {
     font-size: 40px;
   }
+
   .break-logo {
     width: 190px;
   }
+
+
+  /* SECTION 3 */
+
   .plus-mark {
     width: 16px;
     height: 16px;
   }
+
   .plus-mark::before {
     width: 16px;
   }
+
   .plus-mark::after {
     height: 16px;
   }
+
   .section-cross {
     width: 16px;
     height: 16px;
   }
+
   .line-content h2 {
     font-size: 42px;
   }
+
   .line-content p {
     font-size: 14px;
+
     line-height: 1.5;
   }
+
+
+
+  /* =========================================================
+   NAVBAR THEME SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   DARK BACKGROUND
+   WHITE NAVBAR
+========================================================= */
+
+.navbar.navbar-dark {
+  color: #ffffff !important;
+}
+
+
+/* LOGO */
+
+.navbar.navbar-dark .brand-symbol,
+.navbar.navbar-dark .brand-name {
+  filter:
+    brightness(0)
+    invert(1) !important;
+}
+
+
+/* SOUND */
+
+.navbar.navbar-dark .sound-button {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    ) !important;
+
+  color:
+    #ffffff !important;
+}
+
+
+.navbar.navbar-dark .speaker-body,
+.navbar.navbar-dark .speaker-cone {
+  background:
+    #989797 !important;
+}
+
+
+.navbar.navbar-dark .sound-wave {
+  border-color:
+    #989797 !important;
+}
+
+
+.navbar.navbar-dark
+.sound-off::after {
+  background:
+    #989797 !important;
+}
+
+
+/* LET'S TALK */
+
+.navbar.navbar-dark
+.talk-button {
+  background:
+    #f1f1f1 !important;
+
+  color:
+    #111111 !important;
+
+  border-color:
+    #f1f1f1 !important;
+}
+
+
+/* MENU */
+
+.navbar.navbar-dark
+.menu-button {
+  background:
+    transparent !important;
+
+  color:
+    #ffffff !important;
+
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.75
+    ) !important;
+}
+
+
+/* =========================================================
+   LIGHT BACKGROUND
+   BLACK NAVBAR
+========================================================= */
+
+.navbar.navbar-light {
+  color:
+    #111111 !important;
+}
+
+
+/* LOGO */
+
+.navbar.navbar-light
+.brand-symbol,
+
+.navbar.navbar-light
+.brand-name {
+  filter:
+    brightness(0) !important;
+}
+
+
+/* SOUND */
+
+.navbar.navbar-light
+.sound-button {
+  background:
+    rgba(
+      17,
+      17,
+      17,
+      0.08
+    ) !important;
+
+  color:
+    #111111 !important;
+}
+
+
+.navbar.navbar-light
+.speaker-body,
+
+.navbar.navbar-light
+.speaker-cone {
+  background:
+    #555555 !important;
+}
+
+
+.navbar.navbar-light
+.sound-wave {
+  border-color:
+    #555555 !important;
+}
+
+
+.navbar.navbar-light
+.sound-off::after {
+  background:
+    #555555 !important;
+}
+
+
+/* LET'S TALK */
+
+/* .navbar.navbar-light
+.talk-button {
+  background:
+    #111111 !important;
+
+  color:
+    #ffffff !important;
+
+  border-color:
+    #111111 !important;
+} */
+
+
+
+
+.navbar.navbar-light
+.menu-button {
+  background:
+    transparent !important;
+
+  color:
+    #111111 !important;
+
+  border-color:
+    rgba(
+      17,
+      17,
+      17,
+      0.75
+    ) !important;
+}
+
+
+
+.navbar,
+.navbar .brand-symbol,
+.navbar .brand-name,
+.navbar .sound-button,
+.navbar .talk-button,
+.navbar .menu-button,
+.navbar .menu-button span,
+.navbar .menu-lines i,
+.navbar .speaker-body,
+.navbar .speaker-cone,
+.navbar .sound-wave {
+
+  transition:
+    color 0.35s ease,
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    filter 0.35s ease;
+
+}
 }

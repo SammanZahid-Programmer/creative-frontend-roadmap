@@ -98,11 +98,11 @@
 }
 .section-three-left-top p {
   margin: 0;
-  font-size: clamp(17px, 1.18vw, 23px);
+  font-size: clamp(14px, 1.13vw, 15px);
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: -0.045em;
-  color: #eeeeee;
+  color: #d5d5d5;
 }
 /* =========================================================
    RIGHT TOP TEXT
@@ -110,16 +110,16 @@
 .section-three-right-top {
   position: absolute;
   top: clamp(190px, 22.5vh, 215px);
-  right: clamp(20px, 15.2vw, 300px);
+  right: clamp(20px, 7.2vw, 300px);
   width: min(27vw, 390px);
 }
 .section-three-right-top p {
   margin: 0;
-  font-size: clamp(20px, 1.45vw, 29px);
+  font-size: clamp(16px, 1.35vw, 18px);
   font-weight: 400;
   line-height: 1.03;
   letter-spacing: -0.055em;
-  color: #eeeeee;
+color: #d5d5d5;
 }
 /* =========================================================
    MORE ABOUT US
@@ -127,8 +127,8 @@
 .section-three-about {
   position: absolute;
   top: clamp(420px, 51vh, 485px);
-  right: clamp(20px, 15.2vw, 300px);
-  width: min(27vw, 390px);
+  right: clamp(20px, 18.9vw, 300px);
+    width: min(15vw, 390px);
 }
 /* =========================================================
    MORE ABOUT US LINK
@@ -140,10 +140,10 @@
   justify-content: space-between;
   width: 100%;
   padding-bottom: 14px;
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 1px solid #d5d5d5;
   overflow: hidden;
-  color: #eeeeee;
-  font-size: clamp(17px, 1.18vw, 23px);
+  color: #d5d5d5;
+  font-size: clamp(14px, 1.18vw, 15px);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.035em;
@@ -174,11 +174,11 @@
 }
 .section-three-bottom p {
   margin: 0;
-  font-size: clamp(17px, 1.18vw, 23px);
+  font-size: clamp(14px, 1.18vw, 15px);
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: -0.045em;
-  color: #eeeeee;
+  color: #d5d5d5;
 }
 /* =========================================================
    TABLET

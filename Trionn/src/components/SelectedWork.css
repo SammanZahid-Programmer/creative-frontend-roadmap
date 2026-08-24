@@ -1,0 +1,872 @@
+/* =========================================================
+   SELECTED WORK SECTION
+========================================================= */
+
+.swx5-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #f4f4f2;
+
+  color: #4a4a4a;
+
+  overflow: visible;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   STICKY VIEWPORT
+========================================================= */
+
+.swx5-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PLUS
+========================================================= */
+
+.swx5-plus {
+  position: sticky;
+
+  top: 0;
+
+  width: max-content;
+
+  margin: 0 auto;
+
+  height: 0;
+
+  z-index: 100;
+
+  font-size: 22px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  color: #555;
+
+  pointer-events: none;
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   HORIZONTAL TRACK
+========================================================= */
+
+.swx5-track {
+  position: sticky;
+
+  top: 0;
+
+  width: max-content;
+
+  height: 100vh;
+
+  min-height: 650px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+
+  align-items: center;
+
+  transform:
+    translate3d(
+      0,
+      0,
+      0
+    );
+
+  will-change: transform;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   EVERY PANEL
+========================================================= */
+
+.swx5-panel {
+  position: relative;
+
+  width: 82vw;
+
+  height: 100vh;
+
+  min-height: 650px;
+
+  flex:
+    0 0 82vw;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PANEL LINE
+========================================================= */
+
+.swx5-panel-line {
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  width: 1px;
+
+  height: 100%;
+
+  background:
+    rgba(
+      60,
+      60,
+      60,
+      0.16
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SELECTED WORK / INTRO
+========================================================= */
+
+.swx5-intro {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  /*
+   * IMPORTANT:
+   * 255vw HATA THA
+   *
+   * ISI WAJAH SE START MEIN
+   * BOHAT ZYADA GAP THA
+   */
+
+  padding:
+    8vh
+    5vw;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LAST SELECTED WORK
+========================================================= */
+
+.swx5-ending {
+  /*
+   * LAST PANEL KO BHI COMPACT
+   * RAKHNA HAI
+   */
+
+  padding-left: 5vw;
+
+  padding-right: 5vw;
+}
+
+
+.swx5-intro-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.swx5-intro h2 {
+  margin: 0;
+
+  max-width: 620px;
+
+font-size: clamp(29px, 0.7vw, 96px);
+    line-height: 1;
+
+  letter-spacing:
+    -0.065em;
+
+  font-weight: 400;
+text-align: center;
+  color: #4b4b4b;
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.swx5-view-link {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 168px;
+
+  margin-top: 42px;
+
+  padding-bottom: 9px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      50,
+      50,
+      50,
+      0.65
+    );
+
+  text-decoration: none;
+
+  color: #555;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PROJECT PANEL
+========================================================= */
+
+.swx5-project {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    8vh
+    2vw;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
+.swx5-project-content {
+  width: 100%;
+
+  max-width: 760px;
+
+  margin:
+    0
+    auto;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.swx5-image {
+  position: relative;
+
+  width: 74%;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  aspect-ratio:
+    1.62 / 1;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  background: #ddd;
+}
+
+
+.swx5-image img {
+  position: absolute;
+
+  inset: -2%;
+
+  width: 104%;
+
+  height: 104%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+
+  transform:
+    scale(1.02);
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   PROJECT INFO
+========================================================= */
+
+.swx5-info {
+  width: 74%;
+
+  margin:
+    8px
+    auto
+    0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   PROJECT COPY
+========================================================= */
+
+.swx5-copy {
+  min-width: 0;
+}
+
+
+.swx5-copy h3 {
+  margin:
+    0
+    0
+    6px;
+
+  font-size:
+    clamp(
+      24px,
+      1.8vw,
+      31px
+    );
+
+  line-height: 1;
+
+  letter-spacing:
+    -0.045em;
+
+  font-weight: 400;
+
+  color: #4a4a4a;
+}
+
+
+.swx5-copy p {
+  margin: 0;
+ margin-top: 9px;
+  font-size:
+    clamp(
+      14px,
+      0.9vw,
+      16px
+    );
+
+  line-height: 1.19;
+
+  letter-spacing:
+    -0.02em;
+
+  color: #626262;
+}
+
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+.swx5-project-link {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 160px;
+
+  padding-bottom: 9px;
+
+  border-bottom:
+    1px solid
+    rgba(
+      60,
+      60,
+      60,
+      0.55
+    );
+
+  color: #555;
+
+  text-decoration: none;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LINK TEXT
+========================================================= */
+
+.swx5-link-text {
+  display: inline-block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1;
+
+  letter-spacing:
+    -0.01em;
+
+  white-space: nowrap;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.swx5-link-arrow {
+  display: inline-block;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .swx5-panel {
+
+    width: 88vw;
+
+    flex:
+      0 0 88vw;
+  }
+
+
+  .swx5-intro {
+
+    padding-left: 5vw;
+
+    padding-right: 4vw;
+  }
+
+
+  .swx5-ending {
+
+    padding-left: 5vw;
+
+    padding-right: 4vw;
+  }
+
+
+  .swx5-project {
+
+    padding-left: 2vw;
+
+    padding-right: 2vw;
+  }
+
+
+  .swx5-intro h2 {
+
+    font-size:
+      clamp(
+        48px,
+        6vw,
+        80px
+      );
+  }
+
+
+  .swx5-image,
+  .swx5-info {
+
+    width: 80%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .swx5-track,
+  .swx5-panel {
+
+    min-height: 620px;
+  }
+
+
+  .swx5-panel {
+
+    width: 92vw;
+
+    flex:
+      0 0 92vw;
+  }
+
+
+  .swx5-plus {
+
+    left: 6vw;
+
+    margin: 0;
+
+    font-size: 20px;
+  }
+
+
+  .swx5-intro {
+
+    padding:
+      90px
+      5vw
+      60px;
+  }
+
+
+  .swx5-ending {
+
+    padding:
+      90px
+      5vw
+      60px;
+  }
+
+
+  .swx5-intro h2 {
+
+    font-size:
+      clamp(
+        48px,
+        11vw,
+        76px
+      );
+
+    line-height: 0.9;
+  }
+
+
+  .swx5-view-link {
+
+    margin-top: 38px;
+  }
+
+
+  .swx5-project {
+
+    padding:
+      90px
+      1vw
+      60px;
+  }
+
+
+  .swx5-project-content {
+
+    max-width: 100%;
+  }
+
+
+  .swx5-image {
+
+    width: 82%;
+
+    aspect-ratio:
+      1.28 / 1;
+  }
+
+
+  .swx5-info {
+
+    width: 82%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-top: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .swx5-panel {
+
+    width: 95vw;
+
+    flex:
+      0 0 95vw;
+  }
+
+
+  .swx5-intro {
+
+    padding:
+      85px
+      5vw
+      55px;
+  }
+
+
+  .swx5-ending {
+
+    padding:
+      85px
+      5vw
+      55px;
+  }
+
+
+  .swx5-project {
+
+    padding:
+      85px
+      1vw
+      55px;
+  }
+
+
+  .swx5-intro h2 {
+
+    font-size:
+      clamp(
+        42px,
+        12vw,
+        60px
+      );
+
+    letter-spacing:
+      -0.07em;
+  }
+
+
+  .swx5-image {
+
+    width: 88%;
+
+    aspect-ratio:
+      1.12 / 1;
+
+    border-radius: 4px;
+  }
+
+
+  .swx5-info {
+
+    width: 88%;
+
+    margin-top: 7px;
+  }
+
+
+  .swx5-copy h3 {
+
+    font-size: 27px;
+  }
+
+
+  .swx5-copy p {
+
+    font-size: 14px;
+  }
+
+
+  .swx5-desktop-break {
+
+    display: none;
+  }
+
+}
+/* =========================================================
+   NAVBAR DARK THEME
+========================================================= */
+
+.navbar-dark {
+  color: #ffffff;
+}
+
+
+/* White logo for dark sections */
+
+.navbar-dark .brand-symbol,
+.navbar-dark .brand-name {
+  filter:
+    brightness(0)
+    invert(1);
+}
+
+
+/* =========================================================
+   NAVBAR LIGHT THEME
+
+   SelectedWork section ka background light hai.
+   Isliye navbar automatically BLACK hoga.
+========================================================= */
+
+.navbar-light {
+  color: #111111;
+}
+
+
+/* =========================================================
+   LOGO SYMBOL
+========================================================= */
+
+.navbar-light .brand-symbol {
+  filter:
+    brightness(0);
+}
+
+
+/* =========================================================
+   TRIONN NAME
+========================================================= */
+
+.navbar-light .brand-name {
+  filter:
+    brightness(0);
+}
+
+
+/* =========================================================
+   SOUND BUTTON
+========================================================= */
+
+.navbar-light .sound-button {
+  color: #111111 !important;
+}
+
+
+/* Speaker body */
+
+.navbar-light .speaker-body {
+  background: #111111 !important;
+}
+
+
+/* Speaker cone */
+
+.navbar-light .speaker-cone {
+  border-right-color: #111111 !important;
+}
+
+
+/* Sound waves */
+
+.navbar-light .sound-wave {
+  border-color: #111111 !important;
+}
+
+
+/* =========================================================
+   LET'S TALK BUTTON
+========================================================= */
+
+.navbar-light .talk-button {
+  color: #111111 !important;
+
+  border-color:
+    rgba(
+      0,
+      0,
+      0,
+      0.45
+    ) !important;
+}
+
+
+.navbar-light .talk-default,
+.navbar-light .talk-hover {
+  color: #fff !important;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.navbar-light .menu-button {
+  color: #111111 !important;
+}
+
+
+/* MENU LINES */
+
+.navbar-light .menu-lines i {
+  background: #111111 !important;
+}
