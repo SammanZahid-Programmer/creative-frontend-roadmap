@@ -37,8 +37,7 @@
   position: absolute;
   inset: 0;
 
-  background:
-    rgba(3, 6, 10, 0.58);
+  background: rgba(3, 6, 10, 0.58);
 
   z-index: 1;
 
@@ -115,17 +114,11 @@
 
   height: auto;
 
-  transform:
-    translate(
-      -50%,
-      -50%
-    );
+  transform: translate(-50%, -50%);
 
   object-fit: contain;
 
-  will-change:
-    transform,
-    opacity;
+  will-change: transform, opacity;
 
   pointer-events: none;
 
@@ -142,11 +135,7 @@
   top: 50%;
   left: 50%;
 
-  transform:
-    translate(
-      -50%,
-      -50%
-    );
+  transform: translate(-50%, -50%);
 
   z-index: 30;
 
@@ -168,12 +157,7 @@
 
   color: #111;
 
-  font-size:
-    clamp(
-      46px,
-      7vw,
-      118px
-    );
+  font-size: clamp(46px, 7vw, 118px);
 
   line-height: 0.88;
 
@@ -195,14 +179,7 @@
 .srvx7-content-second h2 {
   color: #ffffff;
 
-  text-shadow:
-    0 5px 30px
-    rgba(
-      0,
-      0,
-      0,
-      0.3
-    );
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================================================
@@ -217,9 +194,7 @@
 
   width: 100%;
 
-  padding:
-    0
-    42px;
+  padding: 0 42px;
 
   display: flex;
 
@@ -256,8 +231,7 @@
 
   left: 50%;
 
-  transform:
-    translateX(-50%);
+  transform: translateX(-50%);
 
   display: flex;
 
@@ -295,9 +269,7 @@
 
   pointer-events: auto;
 
-  border-bottom:
-    1px solid
-    currentColor;
+  border-bottom: 1px solid currentColor;
 
   padding-bottom: 7px;
 
@@ -327,25 +299,13 @@
 .srvx7-service-card {
   position: absolute;
 
-  width:
-    clamp(
-      240px,
-      25vw,
-      420px
-    );
+  width: clamp(240px, 25vw, 420px);
 
   min-height: 203px;
 
-  background:
-    rgba(
-      7,
-      10,
-      16,
-      0.22
-    );
+  background: rgba(7, 10, 16, 0.22);
 
-  backdrop-filter:
-    blur(8px);
+  backdrop-filter: blur(8px);
 
   /* border:
     1px solid
@@ -369,9 +329,7 @@
 
   overflow: hidden;
 
-  will-change:
-    transform,
-    opacity;
+  will-change: transform, opacity;
 
   pointer-events: none;
 }
@@ -400,8 +358,8 @@
 
 .srvx7-card-image {
   position: absolute;
-padding-top: 22px;
-    padding-left: 65%;
+  padding-top: 22px;
+  padding-left: 65%;
   inset: 0;
 
   opacity: 0.2;
@@ -419,9 +377,7 @@ padding-top: 22px;
 
   display: block;
 
-  filter:
-    grayscale(1)
-    contrast(1.05);
+  filter: grayscale(1) contrast(1.05);
 
   opacity: 1.9;
 }
@@ -436,24 +392,11 @@ padding-top: 22px;
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(
-        5,
-        8,
-        13,
-        0.3
-      )
-      0%,
-      rgba(
-        5,
-        8,
-        13,
-        0.95
-      )
-      100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(5, 8, 13, 0.3) 0%,
+    rgba(5, 8, 13, 0.95) 100%
+  );
 }
 
 /* =========================================================
@@ -470,10 +413,7 @@ padding-top: 22px;
 
   min-height: 201px;
 
-  padding:
-    34px
-    34px
-    28px;
+  padding: 34px 34px 28px;
 
   display: flex;
 
@@ -495,12 +435,7 @@ padding-top: 22px;
 
   color: #ffffff;
 
-  font-size:
-    clamp(
-      18px,
-      1.14vw,
-      42px
-    );
+  font-size: clamp(18px, 1.14vw, 42px);
 
   line-height: 0.95;
 
@@ -518,13 +453,7 @@ padding-top: 22px;
 
   max-width: 300px;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.72
-    );
+  color: rgba(255, 255, 255, 0.72);
 
   font-size: 14px;
 
@@ -535,9 +464,7 @@ padding-top: 22px;
    RESPONSIVE
 ========================================================= */
 
-@media (
-  max-width: 900px
-) {
+@media (max-width: 900px) {
   .srvx7-rock {
     width: 62vw;
   }
@@ -571,9 +498,7 @@ padding-top: 22px;
    MOBILE
 ========================================================= */
 
-@media (
-  max-width: 640px
-) {
+@media (max-width: 640px) {
   .srvx7-label {
     top: 12%;
     font-size: 11px;
@@ -585,20 +510,13 @@ padding-top: 22px;
   }
 
   .srvx7-content h2 {
-    font-size:
-      clamp(
-        40px,
-        13vw,
-        72px
-      );
+    font-size: clamp(40px, 13vw, 72px);
   }
 
   .srvx7-bottom {
     bottom: 20px;
 
-    padding:
-      0
-      18px;
+    padding: 0 18px;
 
     font-size: 9px;
   }
@@ -651,19 +569,11 @@ padding-top: 22px;
 
     transform-origin: center center;
 
-    background:
-      rgba(
-        7,
-        10,
-        16,
-        0.30
-      );
+    background: rgba(7, 10, 16, 0.3);
 
-    backdrop-filter:
-      blur(8px);
+    backdrop-filter: blur(8px);
 
-    -webkit-backdrop-filter:
-      blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     overflow: hidden;
   }
@@ -676,7 +586,7 @@ padding-top: 22px;
      xPercent / yPercent movement.
   */
 
-  .srvx7-service-card-left{
+  .srvx7-service-card-left {
     left: 14px;
     right: auto;
 
@@ -728,9 +638,7 @@ padding-top: 22px;
 
     display: block;
 
-    filter:
-      grayscale(1)
-      contrast(1.05);
+    filter: grayscale(1) contrast(1.05);
 
     opacity: 1.9;
   }
@@ -742,10 +650,7 @@ padding-top: 22px;
   .srvx7-card-content {
     min-height: 210px;
 
-    padding:
-      24px
-      24px
-      22px;
+    padding: 24px 24px 22px;
 
     display: flex;
 

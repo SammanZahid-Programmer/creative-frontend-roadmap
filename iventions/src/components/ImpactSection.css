@@ -1,0 +1,729 @@
+/* =====================================================
+   MAIN SECTION
+===================================================== */
+
+.impact-section {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+  min-height: 700px;
+
+  overflow: hidden;
+
+  background: #9890e5;
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   PURPLE INITIAL COVER
+
+   This is the first thing user sees.
+===================================================== */
+
+.impact-purple-cover {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #9890e5;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  will-change: opacity;
+}
+
+
+/* =====================================================
+   PURPLE BACKGROUND
+
+   This stays behind cream panel.
+
+   Final state:
+   top-right + bottom-right purple
+===================================================== */
+
+.impact-purple-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #9890e5;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CREAM PANEL
+
+   IMPORTANT PART
+
+   The clip-path is controlled by GSAP.
+===================================================== */
+
+.impact-cream-panel {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #f3f0eb;
+
+  z-index: 5;
+
+  overflow: hidden;
+
+  will-change: clip-path;
+
+  /*
+  No CSS transition here.
+
+  GSAP controls the animation so scrolling
+  remains smooth and reversible.
+  */
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.impact-content {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding:
+    88px
+    28px
+    28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  will-change: transform, opacity;
+}
+
+
+/* =====================================================
+   TOP META
+===================================================== */
+
+.impact-meta {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 30px;
+
+  flex-shrink: 0;
+}
+
+
+.impact-meta-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.impact-meta-item span {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  color: #272727;
+}
+
+
+.impact-meta-item strong {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      18px,
+      1.4vw,
+      25px
+    );
+
+  line-height: 1.1;
+
+  font-weight: 400;
+
+  color: #292929;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.impact-main {
+  position: relative;
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    42%
+    28%
+    15%
+    15%;
+
+  align-items: center;
+
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.impact-quote {
+  max-width: 560px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      32px,
+      3.1vw,
+      55px
+    );
+
+  line-height: 1.12;
+
+  letter-spacing: -0.045em;
+
+  color: #292929;
+}
+
+
+/* =====================================================
+   CLIENT
+===================================================== */
+
+.impact-client {
+  align-self: center;
+}
+
+
+.impact-client h3 {
+  margin: 0 0 7px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      17px,
+      1.4vw,
+      23px
+    );
+
+  line-height: 1.1;
+
+  font-weight: 600;
+
+  letter-spacing: -0.035em;
+
+  color: #272727;
+}
+
+
+.impact-client p {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.2;
+
+  color: #505050;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.impact-logo {
+  align-self: center;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      18px,
+      2vw,
+      32px
+    );
+
+  font-weight: 800;
+
+  letter-spacing: -0.06em;
+
+  color: #202020;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.impact-person {
+  width: min(140px, 100%);
+
+  aspect-ratio: 1 / 1;
+
+  justify-self: end;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+}
+
+
+.impact-person img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   BOTTOM CONTROLS
+===================================================== */
+
+.impact-bottom {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  z-index: 10;
+}
+
+
+/* =====================================================
+   ARROWS
+===================================================== */
+
+.impact-arrows {
+  display: flex;
+
+  gap: 7px;
+}
+
+
+.impact-arrows button {
+  width: 43px;
+  height: 43px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-size: 21px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.impact-arrows button:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.impact-counter {
+  position: absolute;
+
+  left: 20%;
+
+  transform: translateX(-50%);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  color: #333;
+}
+
+
+.impact-counter span {
+  margin: 0 7px;
+}
+
+
+/* =====================================================
+   CASE STUDY
+===================================================== */
+
+.impact-case-study {
+  margin-left: auto;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  padding:
+    12px
+    17px;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.impact-case-study:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .impact-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .impact-meta {
+    gap: 18px;
+  }
+
+
+  .impact-main {
+    grid-template-columns:
+      46%
+      30%
+      24%;
+  }
+
+
+  .impact-logo {
+    display: none;
+  }
+
+
+  .impact-person {
+    width: 120px;
+  }
+
+
+  .impact-bottom {
+    left: 22px;
+    right: 22px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .impact-section {
+    height: 100svh;
+
+    min-height: 680px;
+  }
+
+
+  .impact-content {
+    padding:
+      82px
+      18px
+      18px;
+  }
+
+
+  /* ---------------------------------------------
+     META
+  --------------------------------------------- */
+
+  .impact-meta {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap:
+      18px
+      15px;
+  }
+
+
+  .impact-meta-item {
+    gap: 5px;
+  }
+
+
+  .impact-meta-item span {
+    font-size: 9px;
+  }
+
+
+  .impact-meta-item strong {
+    font-size: 16px;
+  }
+
+
+  /* ---------------------------------------------
+     MAIN
+  --------------------------------------------- */
+
+  .impact-main {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 24px;
+
+    padding:
+      30px
+      0
+      75px;
+  }
+
+
+  /* ---------------------------------------------
+     QUOTE
+  --------------------------------------------- */
+
+  .impact-quote {
+    max-width: 100%;
+
+    font-size:
+      clamp(
+        28px,
+        8vw,
+        42px
+      );
+
+    line-height: 1.08;
+  }
+
+
+  /* ---------------------------------------------
+     CLIENT
+  --------------------------------------------- */
+
+  .impact-client {
+    order: 2;
+  }
+
+
+  .impact-client h3 {
+    font-size: 17px;
+  }
+
+
+  .impact-client p {
+    font-size: 13px;
+  }
+
+
+  /* ---------------------------------------------
+     IMAGE
+  --------------------------------------------- */
+
+  .impact-person {
+    position: absolute;
+
+    right: 0;
+    bottom: 85px;
+
+    width: 85px;
+
+    border-radius: 10px;
+  }
+
+
+  /* ---------------------------------------------
+     BOTTOM
+  --------------------------------------------- */
+
+  .impact-bottom {
+    left: 18px;
+    right: 18px;
+
+    bottom: 18px;
+  }
+
+
+  .impact-arrows button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .impact-counter {
+    left: 50%;
+
+    font-size: 10px;
+  }
+
+
+  .impact-case-study {
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .impact-content {
+    padding-top: 76px;
+  }
+
+
+  .impact-main {
+    gap: 20px;
+  }
+
+
+  .impact-quote {
+    font-size: 27px;
+  }
+
+
+  .impact-person {
+    width: 75px;
+  }
+
+
+  .impact-meta-item strong {
+    font-size: 15px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .impact-cream-panel,
+  .impact-purple-cover,
+  .impact-content {
+    will-change: auto;
+  }
+
+  .impact-arrows button,
+  .impact-case-study {
+    transition: none;
+  }
+}

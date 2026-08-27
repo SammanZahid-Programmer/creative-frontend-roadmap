@@ -1,0 +1,12 @@
+:root {
+  --cream: #e4dfd7;
+  --purple: #8985c6;
+  --purple-text: #4337ac;
+  --dark: #27282d;
+  --lime: #e3ff8d;
+}
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+}

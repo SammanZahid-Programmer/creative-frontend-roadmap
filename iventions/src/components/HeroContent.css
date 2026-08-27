@@ -1,0 +1,92 @@
+.hero-left-content {
+  position: absolute;
+
+  left: clamp(28px, 2vw, 40px);
+  top: 42%;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+.hero-left-content h1 {
+  color: var(--dark);
+
+  font-size: clamp(38px, 3.1vw, 60px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.065em;
+}
+
+/* ================= RIGHT TEXT ================= */
+
+.hero-right-content {
+  position: absolute;
+
+  top: 42%;
+  right: clamp(35px, 5vw, 100px);
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+.hero-right-content p {
+  color: #444349;
+
+  font-size: clamp(17px, 1.45vw, 28px);
+
+  font-weight: 400;
+
+  line-height: 1.32;
+
+  letter-spacing: -0.03em;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 850px) {
+  .hero-left-content {
+    top: 35%;
+  }
+
+  .hero-right-content {
+    top: 53%;
+    right: auto;
+    left: clamp(28px, 4vw, 50px);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .hero-left-content {
+    top: 23%;
+    left: 22px;
+  }
+
+  .hero-left-content h1 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+
+  .hero-right-content {
+    top: auto;
+    bottom: 25%;
+
+    left: 22px;
+    right: 22px;
+  }
+
+  .hero-right-content p {
+    max-width: 350px;
+
+    font-size: 17px;
+  }
+
+  .hero-right-content p br {
+    display: none;
+  }
+}

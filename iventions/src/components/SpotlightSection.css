@@ -1,0 +1,732 @@
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.spotlight-section {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+
+  min-height: 680px;
+
+  overflow: hidden;
+
+  background: #e5ff91;
+}
+
+
+/* =========================================
+   PROJECT SLIDER LAYER
+========================================= */
+
+.projects-slider-layer {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  background: #0b0717;
+
+  cursor: none;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   CURRENT SLIDE
+========================================= */
+
+.project-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  /*
+    GSAP controls the clip-path.
+
+    Initial full state is only used before
+    the first slide transition.
+  */
+
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+
+  will-change: clip-path;
+
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+
+  contain: paint;
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.project-background-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+
+  transform: scale(1.01);
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.project-dark-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 3, 17, 0.6) 0%,
+      rgba(5, 3, 17, 0.12) 38%,
+      rgba(5, 3, 17, 0.5) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HORIZONTAL CENTER LINE
+========================================= */
+
+.project-center-line {
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  width: 100%;
+
+  height: 1px;
+
+  z-index: 5;
+
+  background: rgba(255, 255, 255, 0.28);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PROGRESS LINE
+========================================= */
+
+.project-progress-line {
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  transform-origin: left center;
+
+  transform: scaleX(0);
+
+  background: rgba(255, 255, 255, 0.95);
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   LEFT HIGHLIGHT TEXT
+========================================= */
+
+.project-highlight {
+  position: absolute;
+
+  left: clamp(30px, 2vw, 50px);
+
+  top: 52%;
+
+  z-index: 6;
+
+  display: flex;
+
+  flex-direction: column;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(28px, 2.15vw, 42px);
+
+  font-weight: 400;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.project-title-wrap {
+  position: absolute;
+
+  left: 50%;
+
+  top: 55%;
+
+  z-index: 6;
+
+  width: min(63vw, 1180px);
+
+  transform: translate(-50%, -50%);
+}
+
+
+.project-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(48px, 4.3vw, 86px);
+
+  font-weight: 500;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.06em;
+}
+
+
+/* =========================================
+   BOTTOM CATEGORY
+========================================= */
+
+.project-category {
+  position: absolute;
+
+  left: 35%;
+
+  bottom: clamp(28px, 5vw, 72px);
+
+  z-index: 6;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(21px, 1.8vw, 35px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.project-location {
+  position: absolute;
+
+  left: 52%;
+
+  bottom: clamp(28px, 5vw, 72px);
+
+  z-index: 6;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(21px, 1.8vw, 35px);
+
+  font-weight: 400;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.project-description {
+  position: absolute;
+
+  right: clamp(30px, 3vw, 60px);
+
+  bottom: clamp(28px, 5vw, 72px);
+
+  z-index: 6;
+
+  width: min(24vw, 410px);
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(16px, 1.25vw, 25px);
+
+  font-weight: 400;
+
+  line-height: 1.18;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.project-view-button {
+  position: absolute;
+
+  left: clamp(30px, 2vw, 50px);
+
+  bottom: clamp(30px, 3vw, 55px);
+
+  z-index: 10;
+
+  border: none;
+
+  padding: 15px 22px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #181818;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.project-view-button:hover {
+  background: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+.project-custom-cursor {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  z-index: 50;
+
+  width: clamp(105px, 9vw, 165px);
+
+  aspect-ratio: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e5ff91;
+
+  color: #161616;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(11px, 0.75vw, 14px);
+
+  font-weight: 700;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.7);
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   ANIMATED ITEMS
+========================================= */
+
+.project-animate {
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================
+   LIME COVER
+========================================= */
+
+.spotlight-cover {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 20;
+
+  overflow: hidden;
+
+  background: #e5ff91;
+
+  will-change: transform;
+}
+
+
+/* =========================================
+   COVER CONTENT
+========================================= */
+
+.spotlight-content {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    clamp(100px, 9vw, 150px)
+    clamp(25px, 5vw, 100px)
+    clamp(45px, 5vw, 80px);
+}
+
+
+/* =========================================
+   IMAGE FILLED TEXT
+========================================= */
+
+.spotlight-title {
+  width: 100%;
+
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(50px, 7.8vw, 150px);
+
+  font-weight: 900;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.075em;
+
+  color: #17113f;
+
+  background-image: var(--text-image);
+
+  background-size: cover;
+
+  background-position: center;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  user-select: none;
+}
+
+
+.spotlight-title span {
+  display: block;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   LARGE LAPTOP
+========================================= */
+
+@media (max-width: 1400px) {
+  .project-title-wrap {
+    width: 66vw;
+  }
+
+  .project-category {
+    left: 34%;
+  }
+
+  .project-location {
+    left: 52%;
+  }
+
+  .project-description {
+    width: 26vw;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .project-highlight {
+    left: 30px;
+  }
+
+  .project-title-wrap {
+    width: 70vw;
+  }
+
+  .project-category {
+    left: 31%;
+  }
+
+  .project-location {
+    left: 50%;
+  }
+
+  .project-description {
+    width: 28vw;
+  }
+
+  .spotlight-title {
+    font-size: clamp(
+      55px,
+      7.5vw,
+      105px
+    );
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .spotlight-section {
+    min-height: 100svh;
+  }
+
+  .projects-slider-layer {
+    cursor: auto;
+  }
+
+  .project-custom-cursor {
+    display: none;
+  }
+
+  .project-highlight {
+    left: 24px;
+
+    top: 17%;
+
+    font-size: 28px;
+  }
+
+  .project-center-line {
+    top: 48%;
+  }
+
+  .project-title-wrap {
+    left: 24px;
+
+    top: 54%;
+
+    width: calc(100% - 48px);
+
+    transform: translateY(-50%);
+  }
+
+  .project-title {
+    font-size: clamp(
+      40px,
+      9vw,
+      62px
+    );
+
+    line-height: 0.95;
+  }
+
+  .project-category {
+    left: 24px;
+
+    bottom: 135px;
+
+    font-size: 22px;
+  }
+
+  .project-location {
+    left: 24px;
+
+    bottom: 100px;
+
+    font-size: 22px;
+  }
+
+  .project-description {
+    left: 24px;
+
+    right: auto;
+
+    bottom: 28px;
+
+    width: calc(100% - 48px);
+
+    font-size: 15px;
+
+    line-height: 1.25;
+  }
+
+  .project-view-button {
+    display: none;
+  }
+
+  .spotlight-content {
+    padding:
+      100px
+      18px
+      50px;
+  }
+
+  .spotlight-title {
+    font-size: clamp(
+      42px,
+      11vw,
+      72px
+    );
+
+    line-height: 0.88;
+
+    letter-spacing: -0.065em;
+  }
+
+  .spotlight-title span {
+    white-space: normal;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .project-highlight {
+    top: 14%;
+  }
+
+  .project-title-wrap {
+    top: 49%;
+  }
+
+  .project-title {
+    font-size: 39px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}

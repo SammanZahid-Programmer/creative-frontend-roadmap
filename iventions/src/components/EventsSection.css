@@ -1,0 +1,1207 @@
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.events-section {
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh !important;
+
+  background: transparent;
+
+  color: #181818;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   STAGE
+========================================================= */
+
+.events-stage {
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   EACH BLOCK
+========================================================= */
+
+.events-block {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.events-card {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  box-sizing: border-box;
+
+  padding: 30px 32px 28px;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  transform-origin: 50% 50%;
+
+  will-change:
+    transform,
+    border-radius;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   STACK ORDER
+========================================================= */
+
+.events-block-1 {
+  z-index: 1;
+}
+
+.events-block-2 {
+  z-index: 2;
+}
+
+.events-block-3 {
+  z-index: 3;
+}
+
+
+/* =========================================================
+   TOP TITLE
+========================================================= */
+
+.events-top {
+  position: relative;
+
+  width: 100%;
+
+  height: 125px;
+
+  display: flex;
+
+  align-items: flex-start;
+}
+
+
+.events-main-title {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      80px,
+      9vw,
+      150px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.82;
+
+  letter-spacing:
+    -0.075em;
+
+  color: #171717;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.events-content {
+  position: relative;
+
+  width: 100%;
+
+  height:
+    calc(100% - 210px);
+
+  display: grid;
+
+  grid-template-columns:
+    24%
+    42%
+    34%;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.events-number-wrap {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+}
+
+
+.events-number {
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      80px,
+      9vw,
+      150px
+    );
+
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  letter-spacing:
+    -0.075em;
+
+  color: #181818;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   COPY
+========================================================= */
+
+.events-copy {
+  width: 100%;
+
+  max-width: 540px;
+
+  align-self: center;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   HEADING MASK
+========================================================= */
+
+.events-heading-mask {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.events-heading {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      28px,
+      2.7vw,
+      44px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing:
+    -0.035em;
+
+  color: #181818;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.events-description {
+  margin:
+    32px 0 0;
+
+  max-width: 470px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      16px,
+      1.3vw,
+      21px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  letter-spacing:
+    -0.025em;
+
+  color: #282828;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.events-image-wrap {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: flex-end;
+
+  padding-left: 20px;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+}
+
+
+.events-image {
+  display: block;
+
+  width:
+    min(100%, 535px);
+
+  height:
+    min(67vh, 565px);
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 27px;
+
+  will-change:
+    transform,
+    opacity;
+
+  transform-origin:
+    center center;
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.events-bottom {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 20px;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   CTA CONTAINER
+========================================================= */
+
+.events-cta {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 23px;
+
+  width: max-content;
+
+  cursor: pointer;
+
+  color: #181818;
+
+  will-change:
+    transform,
+    opacity;
+
+  z-index: 30;
+}
+
+
+/* =========================================================
+   TEXT WINDOW
+
+   VERY IMPORTANT
+
+   Is container ke andar text clip hoga.
+
+   Normal:
+   Current text visible.
+
+   Hover:
+   Current text UP.
+   Next text BOTTOM se UP.
+========================================================= */
+
+.events-cta-text-wrap {
+  position: relative;
+
+  width: max-content;
+
+  min-width: 280px;
+
+  height: 48px;
+
+  overflow: hidden;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTH CTA TEXTS
+========================================================= */
+
+.events-cta-text {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 48px;
+
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      27px,
+      2.4vw,
+      42px
+    );
+
+  font-weight: 700;
+
+  line-height: 48px;
+
+  letter-spacing:
+    -0.055em;
+
+  white-space: nowrap;
+
+  color: #181818;
+
+  will-change:
+    transform;
+
+  pointer-events: none;
+
+  transition:
+    transform
+    0.55s
+    cubic-bezier(
+      0.76,
+      0,
+      0.24,
+      1
+    );
+}
+
+
+/* =========================================================
+   CURRENT TEXT
+
+   NORMAL = VISIBLE
+========================================================= */
+
+.events-cta-current {
+  transform:
+    translateY(0%);
+}
+
+
+/* =========================================================
+   NEXT TEXT
+
+   NORMAL = BELOW
+========================================================= */
+
+.events-cta-next {
+  transform:
+    translateY(100%);
+}
+
+
+/* =========================================================
+   HOVER
+
+   CURRENT:
+   0% → -100%
+
+   NEXT:
+   100% → 0%
+========================================================= */
+
+.events-cta:hover
+.events-cta-current {
+  transform:
+    translateY(-100%);
+}
+
+
+.events-cta:hover
+.events-cta-next {
+  transform:
+    translateY(0%);
+}
+
+
+/* =========================================================
+   ARROW BOX
+========================================================= */
+
+.events-cta-arrow {
+  width: 72px;
+
+  height: 72px;
+
+  flex: 0 0 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.events-cta-arrow span {
+  display: block;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 38px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  transition:
+    transform
+    0.45s
+    cubic-bezier(
+      0.76,
+      0,
+      0.24,
+      1
+    );
+}
+
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
+
+.events-cta:hover
+.events-cta-arrow span {
+  transform:
+    translateX(7px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .events-card {
+    padding:
+      28px 24px 25px;
+  }
+
+
+  .events-content {
+    grid-template-columns:
+      20%
+      45%
+      35%;
+  }
+
+
+  .events-main-title {
+    font-size:
+      clamp(
+        70px,
+        8.8vw,
+        125px
+      );
+  }
+
+
+  .events-number {
+    font-size:
+      clamp(
+        70px,
+        8vw,
+        125px
+      );
+  }
+
+
+  .events-heading {
+    font-size:
+      clamp(
+        25px,
+        2.7vw,
+        38px
+      );
+  }
+
+
+  .events-description {
+    margin-top: 26px;
+
+    font-size:
+      clamp(
+        15px,
+        1.5vw,
+        19px
+      );
+  }
+
+
+  .events-image {
+    height:
+      min(60vh, 500px);
+
+    border-radius: 23px;
+  }
+
+
+  .events-cta {
+    gap: 20px;
+  }
+
+
+  .events-cta-text-wrap {
+    min-width: 250px;
+  }
+
+
+  .events-cta-arrow {
+    width: 68px;
+
+    height: 68px;
+
+    flex-basis: 68px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .events-card {
+    padding:
+      25px 20px 23px;
+  }
+
+
+  .events-top {
+    height: 105px;
+  }
+
+
+  .events-main-title {
+    font-size:
+      clamp(
+        62px,
+        10vw,
+        105px
+      );
+  }
+
+
+  .events-content {
+    grid-template-columns:
+      18%
+      47%
+      35%;
+  }
+
+
+  .events-number {
+    font-size:
+      clamp(
+        62px,
+        8vw,
+        105px
+      );
+  }
+
+
+  .events-heading {
+    font-size:
+      clamp(
+        22px,
+        2.7vw,
+        32px
+      );
+  }
+
+
+  .events-description {
+    max-width: 330px;
+
+    margin-top: 21px;
+
+    font-size:
+      clamp(
+        14px,
+        1.7vw,
+        18px
+      );
+  }
+
+
+  .events-image {
+    height:
+      min(54vh, 420px);
+
+    border-radius: 20px;
+  }
+
+
+  /* CTA */
+
+  .events-bottom {
+    bottom: 18px;
+  }
+
+
+  .events-cta {
+    gap: 16px;
+  }
+
+
+  .events-cta-text-wrap {
+    min-width: 220px;
+
+    height: 43px;
+  }
+
+
+  .events-cta-text {
+    height: 43px;
+
+    line-height: 43px;
+
+    font-size:
+      clamp(
+        22px,
+        3vw,
+        32px
+      );
+  }
+
+
+  .events-cta-arrow {
+    width: 62px;
+
+    height: 62px;
+
+    flex-basis: 62px;
+  }
+
+
+  .events-cta-arrow span {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .events-section {
+    height: 300svh;
+  }
+
+
+  .events-stage {
+    height: 100svh;
+  }
+
+
+  .events-card {
+    padding:
+      20px 18px 20px;
+  }
+
+
+  .events-top {
+    height: 90px;
+  }
+
+
+  .events-main-title {
+    font-size:
+      clamp(
+        60px,
+        17vw,
+        100px
+      );
+  }
+
+
+  /* =====================================================
+     MOBILE CONTENT
+  ===================================================== */
+
+  .events-content {
+
+    height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+
+  /* =====================================================
+     NUMBER
+  ===================================================== */
+
+  .events-number-wrap {
+
+    order: 1;
+
+    margin-top: 24px;
+
+  }
+
+
+  .events-number {
+
+    font-size:
+      clamp(
+        70px,
+        19vw,
+        110px
+      );
+
+  }
+
+
+  /* =====================================================
+     COPY
+  ===================================================== */
+
+  .events-copy {
+
+    order: 2;
+
+    max-width: 100%;
+
+    padding-top: 24px;
+
+  }
+
+
+  .events-heading {
+
+    font-size:
+      clamp(
+        23px,
+        6.8vw,
+        34px
+      );
+
+    line-height: 1.08;
+
+  }
+
+
+  .events-description {
+
+    max-width: 95%;
+
+    margin-top: 19px;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+  }
+
+
+  /* =====================================================
+     IMAGE
+  ===================================================== */
+
+  .events-image-wrap {
+
+    order: 3;
+
+    width: 100%;
+
+    padding-left: 0;
+
+    margin-top: 25px;
+
+    align-items: flex-start;
+
+  }
+
+
+  .events-image {
+
+    width: 100%;
+
+    height: 39vw;
+
+    min-height: 175px;
+
+    max-height: 290px;
+
+    border-radius: 17px;
+
+  }
+
+
+  /* =====================================================
+     CTA
+  ===================================================== */
+
+  .events-bottom {
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 15px;
+
+    width: auto;
+
+    justify-content:
+      flex-start;
+
+  }
+
+
+  .events-cta {
+
+    gap: 11px;
+
+  }
+
+
+  .events-cta-text-wrap {
+
+    min-width: 0;
+
+    width: auto;
+
+    height: 38px;
+
+    flex-shrink: 1;
+
+  }
+
+
+  .events-cta-text {
+
+    height: 38px;
+
+    line-height: 38px;
+
+    font-size:
+      clamp(
+        19px,
+        5.5vw,
+        28px
+      );
+
+  }
+
+
+  .events-cta-arrow {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex: 0 0 52px;
+
+  }
+
+
+  .events-cta-arrow span {
+
+    font-size: 28px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .events-card {
+    padding:
+      18px 15px 18px;
+  }
+
+
+  .events-top {
+    height: 75px;
+  }
+
+
+  .events-main-title {
+    font-size: 21vw;
+  }
+
+
+  .events-number-wrap {
+    margin-top: 21px;
+  }
+
+
+  .events-number {
+    font-size: 23vw;
+  }
+
+
+  .events-copy {
+    padding-top: 20px;
+  }
+
+
+  .events-heading {
+    font-size: 22px;
+  }
+
+
+  .events-description {
+    margin-top: 17px;
+
+    font-size: 13.5px;
+  }
+
+
+  .events-image-wrap {
+    margin-top: 22px;
+  }
+
+
+  .events-image {
+    height: 41vw;
+
+    min-height: 160px;
+
+    border-radius: 14px;
+  }
+
+
+  /* CTA */
+
+  .events-bottom {
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 12px;
+
+  }
+
+
+  .events-cta {
+
+    gap: 8px;
+
+  }
+
+
+  .events-cta-text-wrap {
+
+    height: 32px;
+
+    max-width:
+      calc(
+        100vw - 85px
+      );
+
+  }
+
+
+  .events-cta-text {
+
+    height: 32px;
+
+    line-height: 32px;
+
+    font-size: 17px;
+
+  }
+
+
+  .events-cta-arrow {
+
+    width: 45px;
+
+    height: 45px;
+
+    flex-basis: 45px;
+
+  }
+
+
+  .events-cta-arrow span {
+
+    font-size: 23px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .events-cta-text {
+
+    transition:
+      none !important;
+
+  }
+
+
+  .events-cta-arrow span {
+
+    transition:
+      none !important;
+
+  }
+
+}

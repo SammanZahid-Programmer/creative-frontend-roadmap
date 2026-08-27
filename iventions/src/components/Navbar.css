@@ -1,0 +1,202 @@
+.iventions-navbar {
+  position: absolute;
+
+  inset: 0 0 auto 0;
+
+  width: 100%;
+  height: 84px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+/* ================= LEFT BUTTON ================= */
+
+.iventions-menu-btn {
+    width: 119px;
+    padding-left: 16px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+  /* padding: 0 39px; */
+
+  background: var(--lime);
+
+  color: var(--dark);
+
+  border-bottom-right-radius: 28px;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+}
+
+.iventions-menu-lines {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.5px;
+}
+
+.iventions-menu-lines span {
+  display: block;
+
+  width: 22px;
+  height: 1.4px;
+
+  background: var(--dark);
+}
+
+.iventions-menu-label {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+/* ================= CENTER LOGO ================= */
+
+.iventions-logo-wrap {
+  position: absolute;
+
+  top: 7px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: auto;
+}
+
+.iventions-logo-image {
+  display: block;
+
+  width: clamp(122px, 8vw, 183px);
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* ================= RIGHT BUTTON ================= */
+
+.iventions-project-btn {
+    width: 126px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lime);
+    color: var(--dark);
+    border-bottom-left-radius: 28px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.00em;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition: transform 0.35s ease;
+}
+
+.iventions-project-btn:hover {
+  transform: translateY(4px);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .iventions-navbar {
+    height: 70px;
+  }
+
+  .iventions-menu-btn {
+    width: 155px;
+    height: 70px;
+
+    gap: 22px;
+
+    padding: 0 26px;
+  }
+
+  .iventions-menu-lines span {
+    width: 30px;
+  }
+
+  .iventions-menu-label {
+    font-size: 12px;
+  }
+
+  .iventions-project-btn {
+    width: 155px;
+    height: 70px;
+
+    font-size: 11px;
+  }
+
+  .iventions-logo-wrap {
+    top: 25px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .iventions-navbar {
+    height: 60px;
+  }
+
+  .iventions-menu-btn {
+    width: 115px;
+    height: 60px;
+
+    gap: 14px;
+
+    padding: 0 18px;
+
+    border-bottom-right-radius: 22px;
+  }
+
+  .iventions-menu-lines {
+    gap: 6px;
+  }
+
+  .iventions-menu-lines span {
+    width: 24px;
+    height: 1.5px;
+  }
+
+  .iventions-menu-label {
+    font-size: 9px;
+  }
+
+  .iventions-project-btn {
+    width: 125px;
+    height: 60px;
+
+    border-bottom-left-radius: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+  }
+
+  .iventions-logo-wrap {
+    top: 21px;
+  }
+
+  .iventions-logo-image {
+    width: 105px;
+  }
+}

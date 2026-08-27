@@ -1,0 +1,855 @@
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.clients-section {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+
+  min-height: 100vh;
+
+  background: #1d1d1d;
+
+  color: #f4f4f2;
+
+  overflow: hidden;
+
+  z-index: 10;
+
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.clients-inner {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: grid;
+
+  grid-template-columns: 38% 62%;
+
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.clients-left {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+}
+
+
+.clients-left-content {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 32px;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.clients-intro {
+
+  position: absolute;
+
+  left: 32px;
+
+  top: 50%;
+
+  width: 100%;
+
+  max-width: 350px;
+
+  transform: translateY(-50%);
+
+  z-index: 5;
+
+  pointer-events: none;
+
+}
+
+
+.clients-intro p {
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(21px, 1.8vw, 30px);
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.clients-right {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+}
+
+
+.clients-list-viewport {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================================
+   CLIENT LIST
+========================================================= */
+
+.clients-list {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: max-content;
+
+  padding-top: 15vh;
+
+  padding-bottom: 15vh;
+
+  padding-left: 5px;
+
+  padding-right: 35px;
+
+  will-change: transform;
+
+}
+
+
+/* =========================================================
+   CLIENT ROW
+========================================================= */
+
+.clients-name-item {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 1em;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  /*
+    FONT SMALLER THAN BEFORE
+  */
+
+  font-size:
+    clamp(34px, 4.25vw, 70px);
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  color: #f4f4f2;
+
+  opacity: 0.95;
+
+  transform: translateX(0);
+
+  transition:
+    color 0.45s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease;
+
+  white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   SPACE BETWEEN CLIENTS
+========================================================= */
+
+.clients-name-item
+  + .clients-name-item {
+
+  margin-top: 9px;
+
+}
+
+
+/* =========================================================
+   CLIENT TEXT
+========================================================= */
+
+.clients-name-text {
+
+  display: block;
+
+  max-width:
+    calc(100% - 110px);
+
+  position: relative;
+
+  z-index: 1;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+
+/* =========================================================
+   ACTIVE WORD
+========================================================= */
+
+.clients-name-item.clients-name-active {
+
+  color: #d7ff63;
+
+  opacity: 1;
+
+  transform:
+    translateX(5px);
+
+}
+
+
+/* =========================================================
+   IMAGE COLUMN
+========================================================= */
+
+.clients-image-column {
+
+  /*
+    Fixed right-side column
+
+    Har row ki image EXACTLY
+    isi x-position par hogi.
+  */
+
+  width: clamp(
+    55px,
+    5.2vw,
+    78px
+  );
+
+  height: 1em;
+
+  flex: 0 0
+    clamp(
+      55px,
+      5.2vw,
+      78px
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  overflow: visible;
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.clients-inline-image {
+
+  /*
+    Image ka size word se
+    thora proportional rakha hai.
+
+    0.95em = almost same visual size
+  */
+
+  width: 0.95em;
+
+  height: 0.95em;
+
+  flex: 0 0 0.95em;
+
+
+  object-fit: cover;
+
+  object-position: center;
+
+
+  border-radius: 2px;
+
+
+  /*
+    Initial hidden
+  */
+
+  opacity: 0;
+
+
+  transform:
+    translateX(25px)
+    scale(0.72)
+    rotate(3deg);
+
+
+  transform-origin:
+    center center;
+
+
+  pointer-events: none;
+
+
+  will-change:
+    transform,
+    opacity;
+
+
+  display: block;
+
+}
+
+
+/* =========================================================
+   ACTIVE IMAGE
+========================================================= */
+
+.clients-name-active
+  .clients-inline-image {
+
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    scale(1)
+    rotate(0);
+
+}
+
+
+/* =========================================================
+   1400px
+========================================================= */
+
+@media (max-width: 1400px) {
+
+  .clients-inner {
+
+    grid-template-columns:
+      37% 63%;
+
+  }
+
+
+  .clients-name-item {
+
+    font-size:
+      clamp(
+        34px,
+        4.35vw,
+        66px
+      );
+
+  }
+
+
+  .clients-image-column {
+
+    width: 65px;
+
+    flex-basis: 65px;
+
+  }
+
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .clients-inner {
+
+    grid-template-columns:
+      34% 66%;
+
+  }
+
+
+  .clients-intro {
+
+    left: 25px;
+
+    width: 28%;
+
+  }
+
+
+  .clients-intro p {
+
+    font-size: 22px;
+
+  }
+
+
+  .clients-list {
+
+    padding-left: 5px;
+
+    padding-right: 25px;
+
+  }
+
+
+  .clients-name-item {
+
+    font-size:
+      clamp(
+        32px,
+        4.5vw,
+        58px
+      );
+
+  }
+
+
+  .clients-image-column {
+
+    width: 58px;
+
+    flex-basis: 58px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .clients-inner {
+
+    grid-template-columns:
+      30% 70%;
+
+  }
+
+
+  .clients-intro {
+
+    left: 20px;
+
+    width: 25%;
+
+  }
+
+
+  .clients-intro p {
+
+    font-size: 20px;
+
+  }
+
+
+  .clients-name-item {
+
+    font-size:
+      clamp(
+        30px,
+        4.6vw,
+        52px
+      );
+
+  }
+
+
+  .clients-image-column {
+
+    width: 52px;
+
+    flex-basis: 52px;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .clients-section {
+
+    height: 100svh;
+
+    min-height: 100svh;
+
+  }
+
+
+  /* ---------------------------------------------
+     FULL WIDTH
+  --------------------------------------------- */
+
+  .clients-inner {
+
+    display: block;
+
+    width: 100%;
+
+  }
+
+
+  /* ---------------------------------------------
+     LEFT
+  --------------------------------------------- */
+
+  .clients-left {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+  }
+
+
+  /* ---------------------------------------------
+     INTRO
+  --------------------------------------------- */
+
+  .clients-left-content {
+
+    padding-left: 20px;
+
+  }
+
+
+  .clients-intro {
+
+    left: 20px;
+
+    top: 9%;
+
+    width: 70%;
+
+    max-width: 320px;
+
+    transform: none;
+
+  }
+
+
+  .clients-intro p {
+
+    font-size: 21px;
+
+    line-height: 1.05;
+
+  }
+
+
+  /* ---------------------------------------------
+     RIGHT
+  --------------------------------------------- */
+
+  .clients-right {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 3;
+
+  }
+
+
+  /* ---------------------------------------------
+     LIST
+  --------------------------------------------- */
+
+  .clients-list {
+
+    padding-top: 28vh;
+
+    padding-bottom: 32vh;
+
+    padding-left: 20px;
+
+    padding-right: 18px;
+
+  }
+
+
+  /* ---------------------------------------------
+     CLIENT ROW
+  --------------------------------------------- */
+
+  .clients-name-item {
+
+    font-size:
+      clamp(
+        29px,
+        8.2vw,
+        48px
+      );
+
+    line-height: 0.94;
+
+    min-height: 1em;
+
+  }
+
+
+  .clients-name-item
+    + .clients-name-item {
+
+    margin-top: 10px;
+
+  }
+
+
+  /* ---------------------------------------------
+     TEXT
+  --------------------------------------------- */
+
+  .clients-name-text {
+
+    max-width:
+      calc(100% - 65px);
+
+  }
+
+
+  /* ---------------------------------------------
+     IMAGE COLUMN
+  --------------------------------------------- */
+
+  .clients-image-column {
+
+    width: 50px;
+
+    flex: 0 0 50px;
+
+  }
+
+
+  /* ---------------------------------------------
+     IMAGE
+  --------------------------------------------- */
+
+  .clients-inline-image {
+
+    width: 0.9em;
+
+    height: 0.9em;
+
+    flex-basis: 0.9em;
+
+  }
+
+
+  /* ---------------------------------------------
+     ACTIVE
+  --------------------------------------------- */
+
+  .clients-name-item.clients-name-active {
+
+    transform:
+      translateX(4px);
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .clients-intro {
+
+    top: 8%;
+
+  }
+
+
+  .clients-intro p {
+
+    font-size: 19px;
+
+  }
+
+
+  .clients-list {
+
+    padding-top: 27vh;
+
+    padding-left: 16px;
+
+    padding-right: 12px;
+
+  }
+
+
+  .clients-name-item {
+
+    font-size:
+      clamp(
+        27px,
+        8.5vw,
+        40px
+      );
+
+  }
+
+
+  .clients-name-item
+    + .clients-name-item {
+
+    margin-top: 9px;
+
+  }
+
+
+  .clients-image-column {
+
+    width: 43px;
+
+    flex-basis: 43px;
+
+  }
+
+
+  .clients-inline-image {
+
+    width: 0.88em;
+
+    height: 0.88em;
+
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .clients-name-item {
+
+    font-size: 27px;
+
+  }
+
+
+  .clients-image-column {
+
+    width: 38px;
+
+    flex-basis: 38px;
+
+  }
+
+
+  .clients-list {
+
+    padding-left: 14px;
+
+    padding-right: 10px;
+
+  }
+
+}
