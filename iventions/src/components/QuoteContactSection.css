@@ -1,0 +1,1251 @@
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.quote-contact-section {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+
+  overflow: hidden;
+
+  background: #111;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGES
+========================================================= */
+
+.quote-contact-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.75s cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    ),
+    transform 1.1s cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+
+/* =========================================================
+   ORIGINAL IMAGE
+========================================================= */
+
+.quote-image-main {
+  z-index: 1;
+
+  opacity: 1;
+
+  transform: scale(1.001);
+}
+
+
+/* =========================================================
+   QUOTE IMAGE
+========================================================= */
+
+.quote-image-quote {
+  z-index: 2;
+
+  opacity: 0;
+
+  transform: scale(1.07);
+
+  background-image:
+    url(
+      "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=2200"
+    );
+}
+
+
+/* =========================================================
+   CONTACT IMAGE
+
+   Separate image from Quote
+========================================================= */
+
+.quote-image-contact {
+  z-index: 2;
+
+  opacity: 0;
+
+  transform: scale(1.07);
+
+  background-image:
+    url(
+      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=2200"
+    );
+}
+
+
+/* =========================================================
+   QUOTE ACTIVE
+========================================================= */
+
+.spotlight-quote .quote-image-main {
+  opacity: 0;
+}
+
+
+.spotlight-quote .quote-image-quote {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   CONTACT ACTIVE
+========================================================= */
+
+.spotlight-contact .quote-image-main {
+  opacity: 0;
+}
+
+
+.spotlight-contact .quote-image-contact {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.quote-contact-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  background: rgba(
+    0,
+    0,
+    0,
+    0.16
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SPOTLIGHT CONES
+========================================================= */
+
+.spotlight-cone {
+  position: absolute;
+
+  top: 0;
+
+  height: 100%;
+
+  z-index: 8;
+
+  width: 48%;
+
+  background: #e2ff99;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   LEFT QUOTE CONE
+========================================================= */
+
+.spotlight-cone-quote {
+  left: 1.7%;
+
+  clip-path:
+    polygon(
+      37% 0%,
+      64% 0%,
+      100% 100%,
+      0% 100%
+    );
+}
+
+
+/* =========================================================
+   RIGHT CONTACT CONE
+========================================================= */
+
+.spotlight-cone-contact {
+  right: 1.7%;
+
+  clip-path:
+    polygon(
+      36% 0%,
+      63% 0%,
+      100% 100%,
+      0% 100%
+    );
+}
+
+
+/* =========================================================
+   QUOTE CONE OPEN
+========================================================= */
+
+.spotlight-quote
+.spotlight-cone-quote {
+  opacity: 1;
+
+  animation:
+    quoteConeReveal
+    0.9s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+@keyframes quoteConeReveal {
+
+  0% {
+    opacity: 0;
+
+    clip-path:
+      polygon(
+        37% 0%,
+        64% 0%,
+        100% 0%,
+        0% 0%
+      );
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    clip-path:
+      polygon(
+        37% 0%,
+        64% 0%,
+        100% 100%,
+        0% 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   CONTACT CONE OPEN
+========================================================= */
+
+.spotlight-contact
+.spotlight-cone-contact {
+  opacity: 1;
+
+  animation:
+    contactConeReveal
+    0.9s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+@keyframes contactConeReveal {
+
+  0% {
+    opacity: 0;
+
+    clip-path:
+      polygon(
+        36% 0%,
+        63% 0%,
+        100% 0%,
+        0% 0%
+      );
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    clip-path:
+      polygon(
+        36% 0%,
+        63% 0%,
+        100% 100%,
+        0% 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   ORIGINAL QUOTE + CONTACT HIDE
+   WHEN ANY SPOTLIGHT IS ACTIVE
+========================================================= */
+
+.spotlight-quote
+.quote-link,
+
+.spotlight-quote
+.contact-link,
+
+.spotlight-contact
+.quote-link,
+
+.spotlight-contact
+.contact-link {
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translateY(15px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.45s ease;
+}
+
+
+/* =========================================================
+   SPOTLIGHT CONTENT
+========================================================= */
+
+.spotlight-content,
+.contact-spotlight-content {
+  position: absolute;
+
+  inset: 0;
+
+  color: #171717;
+
+  text-align: center;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   QUOTE TOP TEXT
+========================================================= */
+
+.spotlight-small-text {
+  position: absolute;
+
+  top: 20px;
+
+  left: 50%;
+
+  width: 230px;
+
+  transform:
+    translate(
+      -50%,
+      -20px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   QUOTE HEADING
+========================================================= */
+
+.spotlight-main-text {
+  position: absolute;
+
+  top: 37%;
+
+  left: 50%;
+
+  width: 520px;
+
+  transform:
+    translate(
+      -50%,
+      55px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      50px,
+      4.1vw,
+      75px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   QUOTE DESCRIPTION
+========================================================= */
+
+.spotlight-description {
+  position: absolute;
+
+  top: 57%;
+
+  left: 50%;
+
+  width: 480px;
+
+  transform:
+    translate(
+      -50%,
+      45px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.025em;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   QUOTE CTA
+========================================================= */
+
+.spotlight-cta {
+  position: absolute;
+
+  top: 72%;
+
+  left: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  transform:
+    translate(
+      -50%,
+      35px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   CONTACT TOP TEXT
+========================================================= */
+
+.contact-small-text {
+  position: absolute;
+
+  top: 20px;
+
+  left: 50%;
+
+  width: 230px;
+
+  transform:
+    translate(
+      -50%,
+      -20px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   CONTACT HEADING
+========================================================= */
+
+.contact-main-text {
+  position: absolute;
+
+  top: 40%;
+
+  left: 50%;
+
+  transform:
+    translate(
+      -50%,
+      55px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      65px,
+      6vw,
+      110px
+    );
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.075em;
+
+  white-space: nowrap;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   CONTACT DESCRIPTION
+========================================================= */
+
+.contact-description {
+  position: absolute;
+
+  top: 58%;
+
+  left: 50%;
+
+  width: 400px;
+
+  transform:
+    translate(
+      -50%,
+      45px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.35;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   CONTACT CTA
+========================================================= */
+
+.contact-cta {
+  position: absolute;
+
+  top: 72%;
+
+  left: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  transform:
+    translate(
+      -50%,
+      35px
+    );
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  opacity: 0;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.spotlight-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 5px;
+
+  background: #fff;
+
+  font-size: 20px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   QUOTE TEXT SEQUENCE
+========================================================= */
+
+.spotlight-quote
+.spotlight-small-text {
+
+  animation:
+    spotlightSmallIn
+    0.55s
+    0.28s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+.spotlight-quote
+.spotlight-main-text {
+
+  animation:
+    spotlightTextIn
+    0.65s
+    0.42s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+.spotlight-quote
+.spotlight-description {
+
+  animation:
+    spotlightTextIn
+    0.65s
+    0.58s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+.spotlight-quote
+.spotlight-cta {
+
+  animation:
+    spotlightTextIn
+    0.65s
+    0.74s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+/* =========================================================
+   CONTACT TEXT SEQUENCE
+========================================================= */
+
+.spotlight-contact
+.contact-small-text {
+
+  animation:
+    spotlightSmallIn
+    0.55s
+    0.28s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+.spotlight-contact
+.contact-main-text {
+
+  animation:
+    spotlightTextIn
+    0.65s
+    0.42s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+.spotlight-contact
+.contact-description {
+
+  animation:
+    spotlightTextIn
+    0.65s
+    0.58s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+.spotlight-contact
+.contact-cta {
+
+  animation:
+    spotlightTextIn
+    0.65s
+    0.74s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    )
+    both;
+}
+
+
+/* =========================================================
+   SMALL TEXT ANIMATION
+========================================================= */
+
+@keyframes spotlightSmallIn {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(
+        -50%,
+        -25px
+      );
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translate(
+        -50%,
+        0
+      );
+  }
+}
+
+
+/* =========================================================
+   MAIN TEXT ANIMATION
+========================================================= */
+
+@keyframes spotlightTextIn {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(
+        -50%,
+        55px
+      );
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translate(
+        -50%,
+        0
+      );
+  }
+}
+
+
+/* =========================================================
+   NORMAL QUOTE / CONTACT
+========================================================= */
+
+.quote-contact-link {
+  position: absolute;
+
+  display: flex;
+
+  flex-direction: column;
+
+  text-decoration: none;
+
+  color: #e2ff99;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(
+      95px,
+      8vw,
+      165px
+    );
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.075em;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s ease;
+}
+
+
+/* =========================================================
+   SMALL HOVER AREAS
+========================================================= */
+
+.quote-trigger {
+  position: absolute;
+
+  z-index: 20;
+
+  left: 14.7%;
+
+  top: 41%;
+
+  width: 240px;
+
+  height: 145px;
+
+  padding: 15px 20px;
+
+  box-sizing: content-box;
+
+  cursor: pointer;
+}
+
+
+.contact-trigger {
+  position: absolute;
+
+  z-index: 20;
+
+  right: 11.4%;
+
+  top: 41%;
+
+  width: 290px;
+
+  height: 145px;
+
+  padding: 15px 20px;
+
+  box-sizing: content-box;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ACTUAL TEXT POSITION
+========================================================= */
+
+.quote-trigger .quote-link {
+  left: 20px;
+  top: 15px;
+}
+
+
+.contact-trigger .contact-link {
+  right: 20px;
+  top: 15px;
+}
+
+
+/* =========================================================
+   UNDERLINE
+========================================================= */
+
+.quote-contact-line {
+  display: block;
+
+  width: 100%;
+
+  height: 2px;
+
+  margin-top: 18px;
+
+  background: #e2ff99;
+
+  transform-origin: left center;
+
+  transition:
+    transform 0.45s cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.quote-trigger:hover
+.quote-contact-line,
+
+.contact-trigger:hover
+.quote-contact-line {
+  transform:
+    scaleX(0.72);
+}
+
+
+.quote-trigger:hover
+.quote-link > span:first-child,
+
+.contact-trigger:hover
+.contact-link > span:first-child {
+  transform:
+    translateY(-7px);
+}
+
+
+.quote-contact-link
+> span:first-child {
+  transition:
+    transform 0.45s cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .quote-contact-link {
+    font-size: 10vw;
+  }
+
+
+  .quote-trigger {
+    left: 10%;
+
+    width: 190px;
+    height: 120px;
+  }
+
+
+  .contact-trigger {
+    right: 8%;
+
+    width: 235px;
+    height: 120px;
+  }
+
+
+  .spotlight-cone {
+    width: 53%;
+  }
+
+
+  .spotlight-main-text {
+    width: 430px;
+
+    font-size: 5vw;
+  }
+
+
+  .spotlight-description {
+    width: 390px;
+
+    font-size: 16px;
+  }
+
+
+  .contact-main-text {
+    font-size: 7vw;
+  }
+
+
+  .contact-description {
+    width: 350px;
+
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .quote-contact-section {
+    height: 100svh;
+
+    min-height: 700px;
+  }
+
+
+  /* -------------------------------------------------------
+     Mobile par spotlight disable
+     Original image hi rahegi
+  ------------------------------------------------------- */
+
+  .spotlight-cone,
+  .quote-image-quote,
+  .quote-image-contact {
+    display: none;
+  }
+
+
+  .quote-image-main {
+    opacity: 1 !important;
+
+    transform: none;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE OVERLAY
+  ------------------------------------------------------- */
+
+  .quote-contact-overlay {
+    background:
+      rgba(
+        0,
+        0,
+        0,
+        0.18
+      );
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE TRIGGERS
+  ------------------------------------------------------- */
+
+  .quote-trigger,
+  .contact-trigger {
+
+    padding: 0;
+
+    width: auto;
+    height: auto;
+
+    top: auto;
+
+    left: auto;
+    right: auto;
+  }
+
+
+  .quote-trigger {
+    left: 8%;
+
+    top: 42%;
+  }
+
+
+  .contact-trigger {
+    right: 8%;
+
+    top: 57%;
+  }
+
+
+  .quote-trigger .quote-link,
+  .contact-trigger .contact-link {
+
+    position: relative;
+
+    left: auto;
+    right: auto;
+
+    top: auto;
+  }
+
+
+  .quote-contact-link {
+
+    font-size:
+      clamp(
+        58px,
+        17vw,
+        105px
+      );
+  }
+
+
+  .quote-contact-line {
+
+    height: 1.5px;
+
+    margin-top: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .quote-contact-link {
+    font-size: 18vw;
+  }
+
+
+  .quote-trigger {
+    left: 25%;
+
+    top: 40%;
+  }
+
+
+  .contact-trigger {
+    right: 23%;
+
+    top: 56%;
+  }
+
+}

@@ -1,0 +1,514 @@
+.rapora-section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 700px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #8071ff;
+  color: #111;
+}
+
+.rapora-brand {
+  position: absolute;
+  top: clamp(12px, 1.2vw, 20px);
+  left: 50%;
+  z-index: 30;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(16px, 1.4vw, 23px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #687d00;
+  white-space: nowrap;
+}
+
+.rapora-cities {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.rapora-city-track {
+  position: absolute;
+  top: 0;
+  left: clamp(12px, 1.4vw, 25px);
+  width: 100%;
+  animation: citiesUp 34s linear infinite;
+  will-change: transform;
+}
+
+.rapora-city-group {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.rapora-city {
+  margin: 0;
+  padding: 0;
+  color: #e2ff99;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(65px, 7.7vw, 150px);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.067em;
+  white-space: nowrap;
+}
+
+@keyframes citiesUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.rapora-copy {
+  position: absolute;
+  top: clamp(30px, 3vw, 48px);
+  left: 59.2%;
+  width: min(39%, 680px);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.rapora-copy h2 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(44px, 4.05vw, 78px);
+  font-weight: 700;
+  line-height: 0.91;
+  letter-spacing: -0.067em;
+  color: #111;
+}
+
+.rapora-copy p {
+  margin: clamp(22px, 2vw, 32px) 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(16px, 1.2vw, 24px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+  color: #161616;
+}
+
+.rapora-globe {
+  position: absolute;
+  width: min(43vw, 680px);
+  height: min(43vw, 680px);
+  right: clamp(10px, 3.7vw, 60px);
+  bottom: clamp(-150px, -10.5vw, -70px);
+  z-index: 7;
+  pointer-events: none;
+}
+
+.rapora-globe canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.rapora-marker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  z-index: 30;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(15px, 1.18vw, 22px);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.rapora-west {
+  left: 13%;
+  top: 29%;
+}
+
+.rapora-east {
+  right: -3%;
+  top: 27%;
+}
+
+.marker-text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.marker-line {
+  width: clamp(30px, 4.5vw, 70px);
+  height: 1px;
+  background: #111;
+  flex-shrink: 0;
+}
+
+.marker-dot {
+  width: clamp(7px, 0.7vw, 11px);
+  height: clamp(7px, 0.7vw, 11px);
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1600px) {
+  .rapora-copy {
+    top: 42px;
+  }
+
+  .rapora-copy h2 {
+    font-size: clamp(65px, 4vw, 78px);
+  }
+
+  .rapora-copy p {
+    font-size: 22px;
+  }
+
+  .rapora-globe {
+    width: min(42vw, 700px);
+    height: min(42vw, 700px);
+    right: 4vw;
+    bottom: -8vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .rapora-copy {
+    left: 57%;
+    width: 41%;
+  }
+
+  .rapora-copy h2 {
+    font-size: clamp(40px, 4.8vw, 62px);
+  }
+
+  .rapora-copy p {
+    font-size: clamp(15px, 1.5vw, 18px);
+    margin-top: 24px;
+  }
+
+  .rapora-copy p br {
+    display: none;
+  }
+
+  .rapora-globe {
+    width: min(49vw, 570px);
+    height: min(49vw, 570px);
+    right: -2vw;
+    bottom: -3vw;
+  }
+
+  .rapora-city {
+    font-size: clamp(60px, 8vw, 105px);
+  }
+}
+
+@media (max-width: 900px) {
+  .rapora-section {
+    min-height: 650px;
+  }
+
+  .rapora-cities {
+    width: 50%;
+  }
+
+  .rapora-copy {
+    top: 34px;
+    left: 55%;
+    width: 43%;
+  }
+
+  .rapora-copy h2 {
+    font-size: clamp(36px, 5.2vw, 52px);
+  }
+
+  .rapora-copy p {
+    font-size: 15px;
+    line-height: 1.28;
+  }
+
+  .rapora-globe {
+    width: min(51vw, 500px);
+    height: min(51vw, 500px);
+    right: -2vw;
+    bottom: -3vw;
+  }
+
+  .rapora-city {
+    font-size: clamp(54px, 8vw, 90px);
+  }
+}
+
+@media (max-width: 767px) {
+  .rapora-section {
+    height: 100svh;
+    min-height: 680px;
+  }
+
+  .rapora-brand {
+    top: 12px;
+    font-size: 17px;
+  }
+
+  .rapora-cities {
+    width: 100%;
+    height: 42%;
+  }
+
+  .rapora-city-track {
+    left: 4vw;
+    animation-duration: 30s;
+  }
+
+  .rapora-city {
+    font-size: clamp(58px, 17vw, 105px);
+  }
+
+  .rapora-copy {
+    top: 39%;
+    left: 0;
+    width: 100%;
+    padding: 0 5vw;
+    box-sizing: border-box;
+  }
+
+  .rapora-copy h2 {
+    max-width: 620px;
+    font-size: clamp(36px, 10.5vw, 62px);
+    line-height: 0.94;
+  }
+
+  .rapora-copy p {
+    width: min(90%, 520px);
+    margin-top: 18px;
+    font-size: clamp(14px, 3.8vw, 17px);
+    line-height: 1.28;
+  }
+
+  .rapora-copy p br {
+    display: none;
+  }
+
+  .rapora-globe {
+    width: clamp(270px, 68vw, 500px);
+    height: clamp(270px, 68vw, 500px);
+    right: -2vw;
+    bottom: -2vw;
+  }
+
+  .rapora-marker {
+    font-size: 11px;
+  }
+
+  .rapora-west {
+    left: 9%;
+    top: 29%;
+  }
+
+  .rapora-east {
+    right: -5%;
+    top: 28%;
+  }
+
+  .marker-line {
+    width: 30px;
+  }
+
+  .marker-dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rapora-section {
+    min-height: 650px;
+  }
+
+  .rapora-cities {
+    height: 40%;
+  }
+
+  .rapora-city-track {
+    left: 3vw;
+  }
+
+  .rapora-city {
+    font-size: 17vw;
+  }
+
+  .rapora-copy {
+    top: 44%;
+    padding: 0 5vw;
+  }
+
+  .rapora-copy h2 {
+    font-size: clamp(34px, 10.5vw, 54px);
+  }
+
+  .rapora-copy p {
+    width: 94%;
+    font-size: 14px;
+  }
+
+  .rapora-globe {
+    width: 72vw;
+    height: 72vw;
+    right: -1vw;
+    bottom: -1vw;
+  }
+
+  .rapora-marker {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .rapora-section {
+    min-height: 630px;
+  }
+
+  .rapora-brand {
+    font-size: 16px;
+  }
+
+  .rapora-cities {
+    height: 39%;
+  }
+
+  .rapora-city {
+    font-size: 18vw;
+  }
+
+  .rapora-copy {
+    top: 44%;
+    padding: 0 18px;
+  }
+
+  .rapora-copy h2 {
+    font-size: 10.7vw;
+    line-height: 0.94;
+  }
+
+  .rapora-copy p {
+    width: 95%;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .rapora-globe {
+    width: 74vw;
+    height: 74vw;
+    right: -1vw;
+    bottom: -1vw;
+  }
+}
+
+@media (max-width: 380px) {
+  .rapora-section {
+    min-height: 600px;
+  }
+
+  .rapora-brand {
+    top: 10px;
+    font-size: 15px;
+  }
+
+  .rapora-cities {
+    height: 37%;
+  }
+
+  .rapora-city-track {
+    left: 2vw;
+  }
+
+  .rapora-city {
+    font-size: 18.5vw;
+  }
+
+  .rapora-copy {
+    top: 37%;
+    padding: 0 15px;
+  }
+
+  .rapora-copy h2 {
+    font-size: 10.8vw;
+  }
+
+  .rapora-copy p {
+    margin-top: 14px;
+    font-size: 12.5px;
+  }
+
+  .rapora-globe {
+    width: 76vw;
+    height: 76vw;
+    right: -2vw;
+    bottom: -2vw;
+  }
+}
+
+@media (max-height: 720px) and (min-width: 768px) {
+  .rapora-section {
+    min-height: 620px;
+  }
+
+  .rapora-copy {
+    top: 28px;
+  }
+
+  .rapora-copy p {
+    margin-top: 18px;
+  }
+
+  .rapora-globe {
+    width: min(42vw, 470px);
+    height: min(42vw, 470px);
+    bottom: -5vw;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 767px) {
+  .rapora-section {
+    min-height: 600px;
+  }
+
+  .rapora-cities {
+    height: 36%;
+  }
+
+  .rapora-copy {
+    top: 35%;
+  }
+
+  .rapora-copy h2 {
+    font-size: clamp(32px, 9.5vw, 48px);
+  }
+
+  .rapora-copy p {
+    margin-top: 13px;
+    font-size: 13px;
+  }
+
+  .rapora-globe {
+    width: 65vw;
+    height: 65vw;
+    bottom: -4vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rapora-city-track {
+    animation: none;
+  }
+}

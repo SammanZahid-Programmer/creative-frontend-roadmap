@@ -1,0 +1,181 @@
+.hero-menu-panel {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 20;
+
+  background: var(--lime);
+
+  clip-path:
+    polygon(
+      100% 0,
+      100% 0,
+      100% 100%,
+      100% 100%
+    );
+
+  overflow: hidden;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   INNER
+========================================================= */
+
+.hero-menu-inner {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   MENU LIST
+========================================================= */
+
+.hero-menu-list {
+
+  position: absolute;
+
+  right: clamp(
+    30px,
+    2vw,
+    42px
+  );
+
+  top: 50%;
+
+  transform: translateY(-43%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.hero-menu-item {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #050505;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(
+    40px,
+    4vw,
+    70px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.99;
+
+  letter-spacing: -0.065em;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.hero-menu-item:hover {
+
+  transform:
+    translateX(-12px);
+
+  opacity: 0.55 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-menu-list {
+
+    right: 25px;
+  }
+
+
+  .hero-menu-item {
+
+    font-size: clamp(
+      36px,
+      6vw,
+      58px
+    );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-menu-list {
+
+    right: 18px;
+
+    top: 53%;
+
+    transform:
+      translateY(-50%);
+  }
+
+
+  .hero-menu-item {
+
+    font-size: clamp(
+      32px,
+      10vw,
+      48px
+    );
+
+    line-height: 1;
+  }
+
+
+  .hero-menu-item:hover {
+
+    transform:
+      translateX(-6px);
+  }
+}

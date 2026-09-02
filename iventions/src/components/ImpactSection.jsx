@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ImpactSection.css";
@@ -131,162 +131,65 @@ export default function ImpactSection() {
     }
 
     const ctx = gsap.context(() => {
-      /*
-      =====================================================
-      INITIAL STATE
-
-      Purple completely covers everything.
-      =====================================================
-      */
-
       gsap.set(purpleCover, {
         opacity: 1,
       });
-
-      /*
-      Cream starts BELOW the viewport.
-
-      Screenshot wali reveal:
-      bottom se cream upar aa rahi hai,
-      aur uski upper edge diagonal hai.
-      */
 
       gsap.set(creamPanel, {
         clipPath:
           "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
       });
 
-      /*
-      Content initially thora neeche + invisible.
-      */
-
       gsap.set(content, {
         y: 45,
         opacity: 0,
       });
 
-      /*
-      =====================================================
-      SCROLL ANIMATION
-
-      IMPORTANT:
-      once:false behavior by default.
-
-      Scroll DOWN:
-      purple -> cream opens
-
-      Scroll UP:
-      cream -> purple closes
-
-      Dobara section mein enter:
-      animation dobara chalegi.
-      =====================================================
-      */
-
       const tl = gsap.timeline({
         paused: true,
       });
 
-      /*
-      -----------------------------------------------------
-      PHASE 1
-      Purple cover se cream ka bottom portion reveal.
-      -----------------------------------------------------
-      */
-
       tl.to(creamPanel, {
         clipPath:
-          // "polygon(0% 25%, 100% 56%, 100% 100%, 0% 100%)",
           "polygon(0% 0%, 0% 0%, 100% 36.5%, 100% 63.5%, 0% 100%, 0% 100%)",
-        duration: 4.48,
-        ease: "power2.inOut",
-        
-        scrub: 2,
+        duration: 1,
+        ease: "none",
       });
-
-      /*
-      -----------------------------------------------------
-      PHASE 2
-      Content cream ke saath smoothly reveal.
-      -----------------------------------------------------
-      */
 
       tl.to(
         content,
         {
           y: 0,
           opacity: 1,
-          duration: 0.38,
-          ease: "power3.out",
+          duration: 0.35,
+          ease: "power2.out",
         },
-        "-=0.28"
+        "-=0.18"
       );
-
-      /*
-      -----------------------------------------------------
-      PHASE 3
-      Screenshot wali final shape.
-
-      Cream full area cover karegi,
-      right side par diagonal purple areas
-      visible rahengi.
-      -----------------------------------------------------
-      */
 
       tl.to(creamPanel, {
         clipPath:
           "polygon(0% 0%, 91% 0%, 100% 25%, 100% 75%, 91% 100%, 0% 100%)",
-        duration: 0.55,
-        ease: "power3.inOut",
+        duration: 0.45,
+        ease: "none",
       });
-
-      /*
-      Purple cover slowly disappear karega
-      as cream opens.
-      */
 
       tl.to(
         purpleCover,
         {
           opacity: 0,
-          duration: 0.28,
-          ease: "power2.out",
+          duration: 0.25,
+          ease: "none",
         },
-        "-=0.42"
+        "-=0.35"
       );
-
-      /*
-      =====================================================
-      SCROLLTRIGGER
-
-      Section ke enter hote hi animation progress
-      scroll ke saath connected hai.
-
-      NO once:true.
-      =====================================================
-      */
 
       ScrollTrigger.create({
         trigger: section,
-
-        /*
-        Jab section viewport ke bottom se enter hota hai
-        animation start.
-        */
-
         start: "top bottom",
-
-        /*
-        Jab section ka top viewport ke top ke paas
-        aa jata hai animation complete.
-        */
-
-        end: "top top",
-
-        scrub: 1.2,
-
+        end: "top -20%",
+        scrub: 2,
         animation: tl,
-
         invalidateOnRefresh: true,
       });
     }, section);
@@ -296,16 +199,9 @@ export default function ImpactSection() {
     };
   }, []);
 
-  /*
-  =====================================================
-  SLIDER
-  =====================================================
-  */
-
   const changeSlide = (direction) => {
     const next =
-      (current + direction + slides.length) %
-      slides.length;
+      (current + direction + slides.length) % slides.length;
 
     const content = contentRef.current;
 
@@ -316,7 +212,8 @@ export default function ImpactSection() {
 
     gsap.killTweensOf(content);
 
-    gsap.timeline()
+    gsap
+      .timeline()
       .to(content, {
         opacity: 0,
         y: direction > 0 ? -20 : 20,
@@ -341,24 +238,12 @@ export default function ImpactSection() {
       ref={sectionRef}
       className="impact-section"
     >
-      {/* =================================================
-          PURPLE BACKGROUND
-      ================================================= */}
-
       <div
         ref={purpleCoverRef}
         className="impact-purple-cover"
       />
 
-      {/* =================================================
-          FINAL PURPLE DIAGONAL BACKGROUND
-      ================================================= */}
-
       <div className="impact-purple-background" />
-
-      {/* =================================================
-          CREAM PANEL
-      ================================================= */}
 
       <div
         ref={creamPanelRef}
@@ -368,10 +253,6 @@ export default function ImpactSection() {
           ref={contentRef}
           className="impact-content"
         >
-          {/* =================================================
-              TOP INFORMATION
-          ================================================= */}
-
           <div className="impact-meta">
             <div className="impact-meta-item">
               <span>PARTICIPANTS</span>
@@ -394,31 +275,19 @@ export default function ImpactSection() {
             </div>
           </div>
 
-          {/* =================================================
-              MAIN AREA
-          ================================================= */}
-
           <div className="impact-main">
-            {/* QUOTE */}
-
             <div className="impact-quote">
               {slide.quote}
             </div>
-
-            {/* CLIENT */}
 
             <div className="impact-client">
               <h3>{slide.title}</h3>
               <p>{slide.client}</p>
             </div>
 
-            {/* LOGO */}
-
             <div className="impact-logo">
               {slide.logo}
             </div>
-
-            {/* IMAGE */}
 
             <div className="impact-person">
               <img
@@ -427,10 +296,6 @@ export default function ImpactSection() {
               />
             </div>
           </div>
-
-          {/* =================================================
-              BOTTOM CONTROLS
-          ================================================= */}
 
           <div className="impact-bottom">
             <div className="impact-arrows">

@@ -1,73 +1,138 @@
 .iventions-navbar {
   position: absolute;
-
   inset: 0 0 auto 0;
 
   width: 100%;
-  height: 84px;
+  height: 70px;
 
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 
-  z-index: 30;
+  z-index: 1000;
 
   pointer-events: none;
 }
 
-/* ================= LEFT BUTTON ================= */
+
+/* =========================================================
+   LEFT BUTTON
+========================================================= */
 
 .iventions-menu-btn {
-    width: 119px;
-    padding-left: 16px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  position: relative;
 
-  /* padding: 0 39px; */
+  width: 120px;
+  height: 58px;
+
+  padding: 0 0 0 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border: none;
+  outline: none;
 
   background: var(--lime);
-
   color: var(--dark);
 
-  border-bottom-right-radius: 28px;
+  border-bottom-right-radius: 30px;
 
   cursor: pointer;
 
   pointer-events: auto;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* small decorative slash */
+.iventions-menu-btn::before {
+  content: "↙";
+
+  position: absolute;
+  left: 42px;
+  top: 16px;
+
+  font-size: 9px;
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+.iventions-navbar.is-open .iventions-menu-btn::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   MENU LINES
+========================================================= */
+
 .iventions-menu-lines {
+  position: relative;
+
+  width: 22px;
+  height: 14px;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
-  gap: 3.5px;
+  gap: 5px;
 }
 
 .iventions-menu-lines span {
   display: block;
 
   width: 22px;
-  height: 1.4px;
+  height: 1.5px;
 
   background: var(--dark);
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
+
+
+/* OPEN -> X */
+.iventions-navbar.is-open
+.iventions-menu-lines span:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.iventions-navbar.is-open
+.iventions-menu-lines span:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
 
 .iventions-menu-label {
   font-size: 10px;
 
   font-weight: 700;
 
-  letter-spacing: 0.13em;
+  letter-spacing: 0.02em;
+
+  white-space: nowrap;
 }
 
-/* ================= CENTER LOGO ================= */
+
+/* =========================================================
+   CENTER LOGO
+========================================================= */
 
 .iventions-logo-wrap {
   position: absolute;
 
-  top: 7px;
+  top: 17px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -82,121 +147,135 @@
 .iventions-logo-image {
   display: block;
 
-  width: clamp(122px, 8vw, 183px);
+  width: clamp(120px, 8vw, 175px);
+
   height: auto;
 
   object-fit: contain;
 }
 
-/* ================= RIGHT BUTTON ================= */
+
+/* =========================================================
+   PROJECT BUTTON
+========================================================= */
 
 .iventions-project-btn {
-    width: 126px;
-    height: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--lime);
-    color: var(--dark);
-    border-bottom-left-radius: 28px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.00em;
+  width: 148px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  outline: none;
+
+  background: var(--lime);
+  color: var(--dark);
+
+  border-bottom-left-radius: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
 
   cursor: pointer;
 
   pointer-events: auto;
 
-  transition: transform 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    border-radius 0.35s ease;
 }
 
 .iventions-project-btn:hover {
   transform: translateY(4px);
 }
 
-/* ================= TABLET ================= */
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 900px) {
+
   .iventions-navbar {
-    height: 70px;
+    height: 65px;
   }
 
   .iventions-menu-btn {
-    width: 155px;
-    height: 70px;
+    width: 125px;
+    height: 55px;
 
-    gap: 22px;
-
-    padding: 0 26px;
-  }
-
-  .iventions-menu-lines span {
-    width: 30px;
-  }
-
-  .iventions-menu-label {
-    font-size: 12px;
+    padding-left: 20px;
   }
 
   .iventions-project-btn {
-    width: 155px;
-    height: 70px;
-
-    font-size: 11px;
+    width: 140px;
+    height: 55px;
   }
 
   .iventions-logo-wrap {
-    top: 25px;
+    top: 17px;
+  }
+
+  .iventions-logo-image {
+    width: 140px;
   }
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
+
   .iventions-navbar {
     height: 60px;
   }
 
   .iventions-menu-btn {
-    width: 115px;
-    height: 60px;
+    width: 108px;
+    height: 52px;
 
-    gap: 14px;
+    padding-left: 15px;
 
-    padding: 0 18px;
+    gap: 12px;
 
     border-bottom-right-radius: 22px;
   }
 
   .iventions-menu-lines {
-    gap: 6px;
+    width: 19px;
   }
 
   .iventions-menu-lines span {
-    width: 24px;
-    height: 1.5px;
+    width: 19px;
   }
 
   .iventions-menu-label {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .iventions-project-btn {
-    width: 125px;
-    height: 60px;
+    width: 118px;
+    height: 52px;
 
     border-bottom-left-radius: 22px;
 
-    font-size: 9px;
-
-    letter-spacing: 0.08em;
+    font-size: 8px;
   }
 
   .iventions-logo-wrap {
-    top: 21px;
+    top: 17px;
   }
 
   .iventions-logo-image {
-    width: 105px;
+    width: 100px;
   }
 }

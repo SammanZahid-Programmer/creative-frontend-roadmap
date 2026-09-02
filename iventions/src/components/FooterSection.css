@@ -1,0 +1,1320 @@
+/* =========================================================
+   FOOTER SECTION
+========================================================= */
+
+.footer-section,
+.footer-section * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.footer-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+  height: 100svh;
+
+  overflow: hidden;
+
+  background: #1c1c1c;
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.footer-badges {
+  position: absolute;
+
+  top: clamp(35px, 5vw, 75px);
+  left: clamp(18px, 2vw, 30px);
+
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: clamp(14px, 1.5vw, 22px);
+}
+
+
+/* =========================================================
+   GREAT PLACE BADGE
+========================================================= */
+
+.great-place-badge {
+  width: clamp(58px, 5vw, 78px);
+  height: clamp(88px, 7.5vw, 116px);
+
+  padding: clamp(6px, 0.5vw, 8px);
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  color: #171717;
+
+  font-size: clamp(12px, 1vw, 16px);
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.04em;
+}
+
+.great-place-badge span {
+  display: block;
+}
+
+.great-place-badge .badge-line {
+  width: 100%;
+  height: 1px;
+
+  margin-top: clamp(6px, 0.5vw, 8px);
+
+  background: #111111;
+}
+
+.great-place-badge small {
+  margin-top: clamp(5px, 0.45vw, 7px);
+
+  font-size: clamp(5px, 0.45vw, 7px);
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CSSDA BADGE
+========================================================= */
+
+.cssda-badge {
+  width: clamp(58px, 5vw, 78px);
+  height: clamp(58px, 5vw, 78px);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #222222;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.cssda-badge strong {
+  font-size: clamp(9px, 0.8vw, 12px);
+  line-height: 1;
+}
+
+.cssda-badge span {
+  margin-top: 5px;
+
+  font-size: clamp(4px, 0.35vw, 5px);
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+.cssda-badge small {
+  margin-top: 4px;
+
+  font-size: clamp(4px, 0.35vw, 5px);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.footer-content {
+  position: absolute;
+
+  top: clamp(65px, 7.8%, 90px);
+
+  left: clamp(120px, 16.6%, 270px);
+  right: clamp(35px, 8%, 130px);
+
+  z-index: 10;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 1fr)
+    minmax(360px, 0.85fr);
+
+  column-gap: clamp(50px, 7vw, 150px);
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.footer-title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      58px,
+      5.4vw,
+      106px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.065em;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.footer-address {
+  margin-top: clamp(40px, 4.5vw, 72px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.footer-address p {
+  margin: 0 0 20px;
+
+  color: #eeeeee;
+
+  font-size:
+    clamp(
+      13px,
+      0.9vw,
+      18px
+    );
+
+  line-height: 1.28;
+
+  font-weight: 400;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.footer-navigation {
+  display: grid;
+
+  grid-template-columns: minmax(130px, 1fr) minmax(100px, 0.7fr);
+
+  gap: clamp(35px, 5vw, 110px);
+
+  padding-top: 5px;
+}
+
+.footer-nav-column {
+  min-width: 0;
+}
+
+.footer-nav-label {
+  margin-bottom: clamp(14px, 1.3vw, 20px);
+
+  color: #eeeeee;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.footer-nav-column nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-nav-column a {
+  display: block;
+
+  width: max-content;
+  max-width: 100%;
+
+  color: #eeeeee;
+
+  text-decoration: none;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      22px,
+      1.75vw,
+      34px
+    );
+
+  line-height: 1.12;
+
+  letter-spacing: -0.04em;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-nav-column a:hover {
+  color: #dfff83;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   BOTTOM LINKS
+========================================================= */
+
+.footer-bottom {
+  position: absolute;
+
+  left: clamp(18px, 2vw, 30px);
+  right: clamp(35px, 8%, 130px);
+
+  bottom: clamp(190px, 31.3%, 320px);
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.footer-legal {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px 30px;
+}
+
+.footer-legal a,
+.footer-copyright {
+  color: #eeeeee;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.footer-legal a:hover {
+  color: #dfff83;
+}
+
+
+/* =========================================================
+   IVENTIONS WORD WINDOW
+========================================================= */
+
+.footer-word-window {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+
+  height: clamp(190px, 31%, 330px);
+
+  overflow: hidden;
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IVENTIONS IMAGE
+========================================================= */
+
+.footer-word {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100vw;
+
+  height: auto;
+
+  max-width: none;
+
+  display: block;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DARK IVENTIONS
+========================================================= */
+
+.footer-word-dark {
+  z-index: 1;
+
+  filter: brightness(0.18);
+}
+
+
+/* =========================================================
+   MOVING SOFT LIGHT
+========================================================= */
+
+.iventions-light {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  --light-x: 50%;
+
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 270px 190px at var(--light-x) 78%,
+
+      #000000 0%,
+      #000000 8%,
+
+      rgba(0, 0, 0, 0.98) 18%,
+      rgba(0, 0, 0, 0.90) 30%,
+      rgba(0, 0, 0, 0.72) 42%,
+      rgba(0, 0, 0, 0.50) 55%,
+      rgba(0, 0, 0, 0.28) 68%,
+      rgba(0, 0, 0, 0.10) 82%,
+
+      transparent 100%
+    );
+
+  mask-image:
+    radial-gradient(
+      ellipse 270px 190px at var(--light-x) 78%,
+
+      #000000 0%,
+      #000000 8%,
+
+      rgba(0, 0, 0, 0.98) 18%,
+      rgba(0, 0, 0, 0.90) 30%,
+      rgba(0, 0, 0, 0.72) 42%,
+      rgba(0, 0, 0, 0.50) 55%,
+      rgba(0, 0, 0, 0.28) 68%,
+      rgba(0, 0, 0, 0.10) 82%,
+
+      transparent 100%
+    );
+}
+
+
+/* =========================================================
+   BRIGHT IVENTIONS
+========================================================= */
+
+.footer-word-bright {
+  z-index: 2;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(89%)
+    sepia(38%)
+    saturate(1038%)
+    hue-rotate(32deg)
+    brightness(111%)
+    contrast(104%);
+}
+
+
+/* =========================================================
+   SOFT AMBIENT GLOW
+========================================================= */
+
+.iventions-light::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse 300px 210px at var(--light-x) 78%,
+
+      rgba(225, 255, 125, 0.13) 0%,
+      rgba(225, 255, 125, 0.10) 18%,
+      rgba(225, 255, 125, 0.065) 35%,
+      rgba(225, 255, 125, 0.035) 52%,
+      rgba(225, 255, 125, 0.015) 70%,
+
+      transparent 100%
+    );
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .footer-content {
+    column-gap: 10vw;
+  }
+
+  .footer-navigation {
+    gap: 7vw;
+  }
+
+  .footer-word-window {
+    height: 32%;
+  }
+
+  .iventions-light {
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 310px 215px at var(--light-x) 78%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.98) 18%,
+        rgba(0, 0, 0, 0.90) 30%,
+        rgba(0, 0, 0, 0.72) 43%,
+        rgba(0, 0, 0, 0.48) 57%,
+        rgba(0, 0, 0, 0.25) 72%,
+        rgba(0, 0, 0, 0.08) 85%,
+
+        transparent 100%
+      );
+
+    mask-image:
+      radial-gradient(
+        ellipse 310px 215px at var(--light-x) 78%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.98) 18%,
+        rgba(0, 0, 0, 0.90) 30%,
+        rgba(0, 0, 0, 0.72) 43%,
+        rgba(0, 0, 0, 0.48) 57%,
+        rgba(0, 0, 0, 0.25) 72%,
+        rgba(0, 0, 0, 0.08) 85%,
+
+        transparent 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1200px) and (min-width: 901px) {
+
+  .footer-content {
+    left: 14%;
+    right: 5%;
+
+    grid-template-columns:
+      minmax(280px, 1fr)
+      minmax(320px, 0.9fr);
+
+    column-gap: 5vw;
+  }
+
+  .footer-title {
+    font-size: clamp(58px, 6vw, 82px);
+  }
+
+  .footer-navigation {
+    gap: 4vw;
+  }
+
+  .footer-nav-column a {
+    font-size: clamp(21px, 2vw, 28px);
+  }
+
+  .footer-bottom {
+    right: 5%;
+  }
+
+  .footer-word-window {
+    height: 29%;
+  }
+
+  .footer-word {
+    width: 105vw;
+  }
+
+  .iventions-light {
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 230px 175px at var(--light-x) 78%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.98) 18%,
+        rgba(0, 0, 0, 0.90) 30%,
+        rgba(0, 0, 0, 0.70) 44%,
+        rgba(0, 0, 0, 0.45) 58%,
+        rgba(0, 0, 0, 0.22) 73%,
+        rgba(0, 0, 0, 0.07) 86%,
+
+        transparent 100%
+      );
+
+    mask-image:
+      radial-gradient(
+        ellipse 230px 175px at var(--light-x) 78%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.98) 18%,
+        rgba(0, 0, 0, 0.90) 30%,
+        rgba(0, 0, 0, 0.70) 44%,
+        rgba(0, 0, 0, 0.45) 58%,
+        rgba(0, 0, 0, 0.22) 73%,
+        rgba(0, 0, 0, 0.07) 86%,
+
+        transparent 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) and (min-width: 601px) {
+
+  .footer-section {
+    min-height: 100svh;
+    height: 100svh;
+  }
+
+  .footer-badges {
+    top: 35px;
+    left: 18px;
+  }
+
+  .footer-content {
+    top: 9%;
+
+    left: 14%;
+    right: 5%;
+
+    grid-template-columns:
+      minmax(250px, 1fr)
+      minmax(270px, 0.85fr);
+
+    column-gap: 35px;
+  }
+
+  .footer-title {
+    font-size: clamp(52px, 7vw, 70px);
+  }
+
+  .footer-address {
+    margin-top: 40px;
+  }
+
+  .footer-address p {
+    font-size: 13px;
+  }
+
+  .footer-navigation {
+    grid-template-columns: 1fr 0.75fr;
+    gap: 25px;
+  }
+
+  .footer-nav-label {
+    font-size: 9px;
+  }
+
+  .footer-nav-column a {
+    font-size: clamp(19px, 2.8vw, 25px);
+  }
+
+  .footer-bottom {
+    left: 18px;
+    right: 5%;
+
+    bottom: 28%;
+
+    gap: 15px;
+  }
+
+  .footer-legal {
+    gap: 10px 18px;
+  }
+
+  .footer-legal a,
+  .footer-copyright {
+    font-size: 8px;
+  }
+
+  .footer-word-window {
+    height: 27%;
+  }
+
+  .footer-word {
+    width: 115vw;
+  }
+
+  .iventions-light {
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 210px 165px at var(--light-x) 78%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.96) 20%,
+        rgba(0, 0, 0, 0.80) 35%,
+        rgba(0, 0, 0, 0.55) 50%,
+        rgba(0, 0, 0, 0.28) 68%,
+        rgba(0, 0, 0, 0.08) 85%,
+
+        transparent 100%
+      );
+
+    mask-image:
+      radial-gradient(
+        ellipse 210px 165px at var(--light-x) 78%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.96) 20%,
+        rgba(0, 0, 0, 0.80) 35%,
+        rgba(0, 0, 0, 0.55) 50%,
+        rgba(0, 0, 0, 0.28) 68%,
+        rgba(0, 0, 0, 0.08) 85%,
+
+        transparent 100%
+      );
+  }
+
+  .iventions-light::after {
+    background:
+      radial-gradient(
+        ellipse 240px 180px at var(--light-x) 78%,
+
+        rgba(225, 255, 125, 0.11) 0%,
+        rgba(225, 255, 125, 0.07) 25%,
+        rgba(225, 255, 125, 0.035) 48%,
+        rgba(225, 255, 125, 0.015) 70%,
+
+        transparent 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .footer-section {
+    height: auto;
+    min-height: 100svh;
+
+    padding-top: 10px;
+    padding-bottom: 0;
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     BADGES
+  ======================================================= */
+
+  .footer-badges {
+    position: absolute;
+
+    top: 28px;
+    left: 18px;
+
+    transform: scale(0.62);
+    transform-origin: top left;
+
+    gap: 15px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .footer-content {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+
+    width: 100%;
+
+    padding: 0 22px 0 78px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 55px;
+
+    z-index: 10;
+  }
+
+
+  /* =======================================================
+     MAIN
+  ======================================================= */
+
+  .footer-main {
+    width: 100%;
+    margin: 0;
+  }
+
+
+  /* =======================================================
+     TITLE
+  ======================================================= */
+
+  .footer-title {
+    margin: 0;
+
+    font-size:
+      clamp(
+        52px,
+        14vw,
+        78px
+      );
+
+    line-height: 0.9;
+
+    letter-spacing: -0.065em;
+  }
+
+
+  /* =======================================================
+     ADDRESS
+  ======================================================= */
+
+  .footer-address {
+    margin-top: 40px;
+  }
+
+  .footer-address p {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.32;
+  }
+
+
+  /* =======================================================
+     NAVIGATION
+  ======================================================= */
+
+  .footer-navigation {
+    width: 100%;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(80px, 0.65fr);
+
+    gap: 30px;
+  }
+
+  .footer-nav-column {
+    min-width: 0;
+  }
+
+  .footer-nav-label {
+    margin-bottom: 14px;
+
+    font-size: 9px;
+  }
+
+  .footer-nav-column a {
+    font-size:
+      clamp(
+        19px,
+        5.8vw,
+        26px
+      );
+
+    line-height: 1.13;
+  }
+
+
+  /* =======================================================
+     BOTTOM
+  ======================================================= */
+
+  .footer-bottom {
+    position: relative;
+
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding:
+      0 22px
+      170px
+      22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    z-index: 20;
+  }
+
+  .footer-legal {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px 18px;
+  }
+
+  .footer-legal a,
+  .footer-copyright {
+    font-size: 8px;
+
+    line-height: 1.2;
+  }
+
+  .footer-copyright {
+    align-self: flex-start;
+  }
+
+
+  /* =======================================================
+     IVENTIONS WINDOW
+  ======================================================= */
+
+  .footer-word-window {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 155px;
+
+    z-index: 4;
+  }
+
+  .footer-word {
+    width: 150vw;
+
+    left: -20vw;
+
+    bottom: 0;
+  }
+
+  .footer-word-bright {
+    width: 150vw;
+
+    left: -20vw;
+  }
+
+
+  /* =======================================================
+     MOBILE LIGHT
+  ======================================================= */
+
+  .iventions-light {
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 185px 145px at var(--light-x) 80%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(0, 0, 0, 0.82) 34%,
+        rgba(0, 0, 0, 0.60) 48%,
+        rgba(0, 0, 0, 0.35) 63%,
+        rgba(0, 0, 0, 0.14) 79%,
+
+        transparent 100%
+      );
+
+    mask-image:
+      radial-gradient(
+        ellipse 185px 145px at var(--light-x) 80%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.95) 20%,
+        rgba(0, 0, 0, 0.82) 34%,
+        rgba(0, 0, 0, 0.60) 48%,
+        rgba(0, 0, 0, 0.35) 63%,
+        rgba(0, 0, 0, 0.14) 79%,
+
+        transparent 100%
+      );
+  }
+
+  .iventions-light::after {
+    background:
+      radial-gradient(
+        ellipse 200px 155px at var(--light-x) 80%,
+
+        rgba(225, 255, 125, 0.12) 0%,
+        rgba(225, 255, 125, 0.075) 25%,
+        rgba(225, 255, 125, 0.04) 45%,
+        rgba(225, 255, 125, 0.015) 68%,
+
+        transparent 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .footer-section {
+    min-height: 100svh;
+
+    padding-top: 21px;
+  }
+
+
+  /* BADGES */
+
+  .footer-badges {
+    top: 24px;
+    left: 14px;
+
+    transform: scale(0.56);
+  }
+
+
+  /* CONTENT */
+
+  .footer-content {
+    padding:
+      0
+      18px
+      0
+      65px;
+
+    gap: 48px;
+  }
+
+
+  /* TITLE */
+
+  .footer-title {
+    font-size:
+      clamp(
+        48px,
+        14.5vw,
+        68px
+      );
+  }
+
+
+  /* ADDRESS */
+
+  .footer-address {
+    margin-top: 32px;
+  }
+
+  .footer-address p {
+    font-size: 12px;
+  }
+
+
+  /* NAV */
+
+  .footer-navigation {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(70px, 0.6fr);
+
+    gap: 20px;
+  }
+
+  .footer-nav-label {
+    margin-bottom: 12px;
+
+    font-size: 8px;
+  }
+
+  .footer-nav-column a {
+    font-size: 18px;
+  }
+
+
+  /* BOTTOM */
+
+  .footer-bottom {
+    margin-top: 55px;
+
+    padding:
+      0
+      18px
+      145px
+      18px;
+  }
+
+  .footer-legal {
+    gap: 8px 14px;
+  }
+
+  .footer-legal a,
+  .footer-copyright {
+    font-size: 7px;
+  }
+
+
+  /* IVENTIONS */
+
+  .footer-word-window {
+    height: 125px;
+  }
+
+  .footer-word {
+    width: 175vw;
+
+    left: -30vw;
+  }
+
+  .footer-word-bright {
+    width: 175vw;
+
+    left: -30vw;
+  }
+
+
+  /* LIGHT */
+
+  .iventions-light {
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 150px 120px at var(--light-x) 80%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.95) 22%,
+        rgba(0, 0, 0, 0.78) 38%,
+        rgba(0, 0, 0, 0.52) 55%,
+        rgba(0, 0, 0, 0.25) 72%,
+        rgba(0, 0, 0, 0.08) 87%,
+
+        transparent 100%
+      );
+
+    mask-image:
+      radial-gradient(
+        ellipse 150px 120px at var(--light-x) 80%,
+
+        #000000 0%,
+        #000000 8%,
+
+        rgba(0, 0, 0, 0.95) 22%,
+        rgba(0, 0, 0, 0.78) 38%,
+        rgba(0, 0, 0, 0.52) 55%,
+        rgba(0, 0, 0, 0.25) 72%,
+        rgba(0, 0, 0, 0.08) 87%,
+
+        transparent 100%
+      );
+  }
+
+  .iventions-light::after {
+    background:
+      radial-gradient(
+        ellipse 170px 130px at var(--light-x) 80%,
+
+        rgba(225, 255, 125, 0.11) 0%,
+        rgba(225, 255, 125, 0.065) 25%,
+        rgba(225, 255, 125, 0.03) 48%,
+        rgba(225, 255, 125, 0.01) 70%,
+
+        transparent 100%
+      );
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .footer-section {
+    padding-top: 90px;
+  }
+
+  .footer-content {
+    padding-left: 58px;
+    padding-right: 15px;
+
+    gap: 42px;
+  }
+
+  .footer-title {
+    font-size: 15vw;
+  }
+
+  .footer-address {
+    margin-top: 28px;
+  }
+
+  .footer-address p {
+    font-size: 11px;
+  }
+
+  .footer-navigation {
+    gap: 15px;
+  }
+
+  .footer-nav-column a {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    padding-bottom: 125px;
+  }
+
+  .footer-word-window {
+    height: 110px;
+  }
+
+  .footer-word {
+    width: 190vw;
+    left: -38vw;
+  }
+
+  .footer-word-bright {
+    width: 190vw;
+    left: -38vw;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .footer-nav-column a {
+    transition: color 0.2s ease;
+  }
+
+  .footer-nav-column a:hover {
+    transform: none;
+  }
+
+  .footer-legal a:hover {
+    color: #eeeeee;
+  }
+
+  .footer-section {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
